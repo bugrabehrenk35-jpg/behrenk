@@ -1,0 +1,75 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+/* Geçici fontlar — kendi fontlarınız gelince yalnızca bu blok değişecek */
+@font-face{font-family:Baslik;src:url(fontlar-gecici/Montserrat-900.ttf);font-weight:900}
+@font-face{font-family:Metin;src:url(fontlar-gecici/Montserrat-700.ttf);font-weight:700}
+@font-face{font-family:Sehir;src:url(fontlar-gecici/Montserrat-800.ttf);font-weight:800}
+
+:root{--kirmizi:#DD0004;--zemin:#0B0B0C;--beyaz:#F4F1EC;--gri:#A9A6A1}
+html,body{margin:0;width:1080px;height:1920px;background:var(--zemin);overflow:hidden}
+body{position:relative;color:var(--beyaz);font-family:Metin,sans-serif}
+
+/* hafif doku */
+body::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 40% at 50% 30%,rgba(221,0,4,.16),transparent 70%)}
+
+.saat{position:absolute;left:50%;top:330px;width:420px;height:420px;transform:translateX(-50%)}
+
+.tarih{position:absolute;top:840px;width:100%;text-align:center;
+  font:900 170px/1 Baslik;letter-spacing:-.01em}
+.yil{position:absolute;top:1036px;width:100%;text-align:center;
+  font:900 40px/1 Baslik;color:var(--kirmizi);letter-spacing:.42em;padding-left:.42em;box-sizing:border-box}
+.olay{position:absolute;top:1110px;width:100%;text-align:center;
+  font:700 34px/1 Metin;letter-spacing:.14em;padding-left:.14em;box-sizing:border-box}
+.cizgi{position:absolute;top:1182px;left:50%;width:120px;height:4px;margin-left:-60px;background:var(--kirmizi)}
+
+
+.slogan{position:absolute;top:1232px;width:100%;text-align:center;
+  font:900 38px/1 Baslik;letter-spacing:.04em}
+
+/* logo: logo-didim.html ile aynı ölçüler, küçültülmüş */
+.logo{position:absolute;left:50%;top:1400px;width:835px;height:705px;
+  transform:translateX(-50%) scale(.3);transform-origin:50% 0}
+.logo img{position:absolute;left:0;top:0}
+.logo .sehir{position:absolute;left:0;width:852px;text-align:center;top:613px;
+  font:800 119px/1 Sehir;color:#fff;letter-spacing:.01em}
+</style>
+<body>
+
+<!-- Saat 10.04'te durmuş -->
+<svg class="saat" viewBox="-150 -150 300 300">
+  <circle r="140" fill="none" stroke="#F4F1EC" stroke-width="5"/>
+  <g stroke="#F4F1EC" stroke-linecap="round">
+    <line y1="-128" y2="-108" stroke-width="6"/>
+    <line y1="-128" y2="-108" stroke-width="6" transform="rotate(90)"/>
+    <line y1="-128" y2="-108" stroke-width="6" transform="rotate(180)"/>
+    <line y1="-128" y2="-108" stroke-width="6" transform="rotate(270)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(30)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(60)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(120)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(150)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(210)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(240)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(300)"/>
+    <line y1="-128" y2="-118" stroke-width="3" transform="rotate(330)"/>
+    <!-- akrep 10.04 → 302°, yelkovan 4 dk → 24° -->
+    <line y1="12" y2="-70" stroke-width="10" transform="rotate(302)"/>
+    <line y1="16" y2="-108" stroke-width="6" stroke="#DD0004" transform="rotate(24)"/>
+  </g>
+  <circle r="9" fill="#DD0004"/>
+</svg>
+
+<div class="tarih">10 EKİM</div>
+<div class="yil">2015</div>
+<div class="olay">ANKARA GAR KATLİAMI</div>
+<div class="cizgi"></div>
+
+
+<div class="slogan">UNUTMADIK, UNUTTURMAYACAĞIZ.</div>
+
+<div class="logo">
+  <img src="varliklar/yeni-genclik-beyaz.png">
+  <div class="sehir">DİDİM</div>
+</div>
+
+</body></html>
