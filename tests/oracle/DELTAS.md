@@ -7021,3 +7021,14 @@ Product decision (maintainer, 2026-10-07/08). Blind ratings put image comps of w
 Re-recorded from the binary and reviewed by hand, 20 goldens. The nine seed cases that roll in operate or read mode (`seed-mode-rules-operate`, `-read`, `-missing-file`, `-missing-section`, `seed-surface-local`, `-default-scope`, `-grain-flow`, `seed-degraded-surface`, `seed-presentation-build-path-local`) change only those PRESENTATION lines. The seven context cases that print the directive (`context-full`, its four `-target-*` cases, `context-build-path-local-over-shared`, `context-build-path-invalid-ignored`) change only by the added sentence. Four more goldens were stale behind this file's exemption (a case named here is skipped when it differs) and are re-recorded so they match the binary again: `seed-direction-local-operate` and `seed-direction-local-count-5` (operate direction rolls) and `question-start-surface-missing-comps` and `question-update-surface-missing-comps` (their operate surface roll step); in all four only the same PRESENTATION lines move, and the missing-comp refusal itself is unchanged.
 
 Review round, same day, 17 of those goldens plus `context-build-path-unset-with-surfaces` and the two `seed-surface-local-compositions` / `-card-base` cases re-recorded, one line each. The `BUILD_PATH_DEFAULT` directive now scopes its authoring instruction to Persuade and Experience rounds and states the Operate and Read rule beside it, where the first wording told the agent to author every round with the recorded value and contradicted itself a sentence later. The surface roll body says "a comp-led build path (the PRESENTATION block below names the path for this surface)" where it said "a comp-led default (.impeccable/config.json buildPath)", which sent Operate and Read surface rolls back to the recorded value. The `config-build-path-unset` staleness finding names Persuade and Experience rounds and says what the choice covers.
+
+## Hard offset shadow advisory (#929)
+
+Added four reviewed goldens: the new fixture in JSON/text modes, plus an isolated
+advisory-only target with and without `--no-advisory`. The fixture has exactly
+four `hard-offset-shadow` advisory findings and exits 0. The isolated case also
+exits 0, and its `--no-advisory` control returns `[]`. None of the existing
+individual fixture goldens changed. Three directory goldens were refreshed after
+confirming the only finding-array additions were the four new advisories, with
+no removals. The primary count remains 945; the advisory count is 164 → 168.
+Frozen function-level vectors were not regenerated.
