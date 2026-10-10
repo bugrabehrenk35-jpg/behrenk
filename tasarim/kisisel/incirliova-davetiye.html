@@ -1,0 +1,92 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Pano;src:url(../fontlar-gecici/Oswald-500.ttf);font-weight:500}
+@font-face{font-family:Pano;src:url(../fontlar-gecici/Oswald-600.ttf);font-weight:600}
+@font-face{font-family:Pano;src:url(../fontlar-gecici/Oswald-700.ttf);font-weight:700}
+@font-face{font-family:Metin;src:url(../fontlar-gecici/Inter-400.ttf);font-weight:400}
+@font-face{font-family:Metin;src:url(../fontlar-gecici/Inter-500.ttf);font-weight:500}
+
+:root{--lacivert:#16245C;--lacivert-koyu:#0B1233;--kirmizi:#E30A17;--gri:#5B6380;--kagit:#FBFAF7}
+html,body{margin:0;width:1080px;height:var(--h,1440px);overflow:hidden}
+body{position:relative;font-family:Metin,sans-serif;color:var(--lacivert);
+  background:linear-gradient(160deg,#22357F 0%,var(--lacivert) 45%,var(--lacivert-koyu) 100%)}
+/* ince çapraz çizgi dokusu */
+body::before{content:"";position:absolute;inset:0;opacity:.07;
+  background:repeating-linear-gradient(-35deg,#fff 0 2px,transparent 2px 26px)}
+
+.alan{position:absolute;left:56px;right:56px;top:var(--ust,124px)}
+
+/* bilet */
+.bilet{position:relative;height:1080px;
+  --delik:892px;
+  -webkit-mask:
+    radial-gradient(circle 26px at 0 var(--delik),transparent 25px,#000 26px) left/51% 100% no-repeat,
+    radial-gradient(circle 26px at 100% var(--delik),transparent 25px,#000 26px) right/51% 100% no-repeat}
+.bilet .kagit{position:absolute;inset:0;background:var(--kagit);border-radius:30px}
+.delikli{position:absolute;left:40px;right:40px;top:var(--delik);border-top:3px dashed rgba(22,36,92,.25)}
+
+/* portre */
+.daire{position:absolute;left:50%;top:-10px;width:470px;height:470px;margin-left:-235px;border-radius:50%;
+  background:var(--kirmizi)}
+.daire::after{content:"";position:absolute;inset:26px;border-radius:50%;border:3px solid rgba(255,255,255,.35)}
+.portre{position:absolute;left:50%;top:-70px;width:640px;margin-left:-320px;
+  -webkit-mask:linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%)}
+.sis{position:absolute;left:0;right:0;top:300px;height:130px;
+  background:linear-gradient(to bottom,rgba(251,250,247,0),var(--kagit) 92%)}
+.etiket{position:absolute;left:50%;top:400px;transform:translateX(-50%) rotate(-2deg);text-align:center;white-space:nowrap}
+.etiket .ad{display:inline-block;background:var(--kirmizi);color:#fff;font:700 54px/1 Pano;
+  letter-spacing:.04em;padding:14px 30px 16px}
+.etiket .unvan{display:block;width:max-content;margin:-2px auto 0;background:var(--lacivert);color:#fff;
+  font:500 22px/1 Pano;letter-spacing:.2em;padding:11px 22px 12px 26px}
+
+/* başlık */
+.basliklar{position:absolute;left:0;right:0;top:560px;text-align:center}
+.ust-yazi{font:600 58px/1 Pano;letter-spacing:.06em;color:var(--lacivert)}
+.yer-adi{margin-top:26px;font:700 120px/1 Pano;color:var(--kirmizi);letter-spacing:.01em}
+.mesaj{margin:16px auto 0;max-width:720px;font:400 25px/1.45 Metin;color:var(--gri)}
+.soz{margin-top:14px;font:600 34px/1 Pano;color:var(--lacivert);letter-spacing:.03em}
+.soz b{color:var(--kirmizi);font-weight:600}
+
+/* koçan */
+.kocan{position:absolute;left:0;right:0;top:calc(var(--delik) + 3px);bottom:0;display:grid;
+  grid-template-columns:1.05fr .7fr 1.25fr;align-items:start;align-content:center;padding:0 52px}
+.kocan > div{padding:0 26px;border-left:2px dashed rgba(22,36,92,.18)}
+.kocan > div:first-child{border-left:0;padding-left:0}
+.kocan small{display:block;font:600 19px/1 Pano;letter-spacing:.3em;color:var(--kirmizi);margin-bottom:12px}
+.kocan strong{display:block;font:700 54px/1 Pano;color:var(--lacivert)}
+.kocan span{display:block;margin-top:8px;font:500 20px/1.2 Metin;color:var(--gri)}
+.kocan .yer strong{font-size:31px;line-height:1.12}
+
+.imza{position:absolute;left:50%;bottom:var(--imza-alt,48px);width:var(--imza-g,380px);transform:translateX(-50%)}
+</style>
+<body>
+<div class="alan">
+  <div class="bilet">
+    <div class="kagit"></div>
+    <div class="delikli"></div>
+    <div class="kocan">
+      <div><small>TARİH</small><strong>11 EKİM</strong><span>2026 · Pazar</span></div>
+      <div><small>SAAT</small><strong>17.00</strong></div>
+      <div class="yer"><small>YER</small><strong>Yeni Parti İncirliova<br>İlçe Başkanlığı</strong></div>
+    </div>
+  </div>
+
+  <!-- portre biletin üstünden taşar -->
+  <div class="daire"></div>
+  <img class="portre" src="dilaver-demir-kesik.png">
+  <div class="sis"></div>
+  <div class="etiket">
+    <span class="ad">DİLAVER DEMİR</span>
+    <span class="unvan">AYDIN İL BAŞKAN ADAYI</span>
+  </div>
+
+  <div class="basliklar">
+    <div class="ust-yazi">ADAY TANITIM TOPLANTISI</div>
+    <div class="yer-adi">İNCİRLİOVA</div>
+    <p class="mesaj">Üyelerimizle buluşuyor, geleceğimizi konuşuyoruz.</p>
+    <div class="soz">Söz, yetki, karar <b>üyelerimizin!</b></div>
+  </div>
+</div>
+
+<img class="imza" src="imza-beyaz.png">
+</body></html>
