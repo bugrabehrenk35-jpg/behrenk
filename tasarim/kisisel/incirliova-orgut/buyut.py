@@ -15,7 +15,7 @@ for y in range(m.shape[0]):
   Y=y+OY; xs=np.nonzero(~row)[0]
   for ch in range(3):
     z[Y,:,ch]=np.where(row,np.interp(np.arange(W),xs,z[Y,xs,ch]),z[Y,:,ch])
-s=1.2; ax_old,ay_old=540,655; ax_new,ay_new=540,602
+s=1.2; ax_old,ay_old=540,655; ax_new,ay_new=428,602
 big=cut.resize((int(cut.width*s),int(cut.height*s)),Image.LANCZOS)
 px=int(round(ax_new-s*ax_old)); py=int(round(ay_new-s*(ay_old-OY)))
 lay=Image.new("RGBA",(W,H),(0,0,0,0)); lay.paste(big,(px,py))
