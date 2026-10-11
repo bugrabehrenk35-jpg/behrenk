@@ -15,6 +15,21 @@
         ],
         "createdAt": "2026-07-17T00:00:00.000Z",
         "reason": "Live overlay chrome is injected over arbitrary host pages and builds a self-contained UI with its own small type scale; DESIGN.md's ramp describes the impeccable website, not this widget"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "baslik",
+        "createdAt": "2026-10-11T13:13:41.188Z",
+        "reason": "agent: tasarim/ social-media visuals are separate from the impeccable product DESIGN.md; Playfair headline is intentional for the 11 Ekim post"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "tasarim/kiz-cocuklari/kiz-cocuklari.html"
+        ],
+        "createdAt": "2026-10-11T13:13:41.204Z",
+        "reason": "agent: warm paper tone chosen to match the sepia archival photo for the airy 11 Ekim post the user asked for"
       }
     ]
   },
