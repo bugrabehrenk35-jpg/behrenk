@@ -1,0 +1,70 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Baslik;src:url(../fontlar-gecici/PlayfairDisplay-800.ttf);font-weight:800}
+@font-face{font-family:Baslik;src:url(../fontlar-gecici/PlayfairDisplay-600.ttf);font-weight:600}
+@font-face{font-family:El;src:url(../fontlar-gecici/GreatVibes.ttf)}
+@font-face{font-family:Soz;src:url(../fontlar-gecici/CormorantGaramond-500i.ttf);font-style:italic}
+@font-face{font-family:Sehir;src:url(../fontlar-gecici/Montserrat-800.ttf);font-weight:800}
+@font-face{font-family:Kucuk;src:url(../fontlar-gecici/Montserrat-700.ttf);font-weight:700}
+
+:root{--kirmizi:#D7141F;--murekkep:#3B2F2A;--kagit:#FBF6EF;--soluk:#8A7A70}
+html,body{margin:0;width:1080px;height:1440px;overflow:hidden;background:var(--kagit)}
+body{position:relative;font-family:Baslik,serif;color:var(--murekkep)}
+/* ferah, sıcak ışık ve hafif kâğıt dokusu */
+body::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 8%,rgba(255,214,200,.45),transparent 70%),
+    radial-gradient(ellipse 60% 30% at 85% 75%,rgba(255,226,214,.35),transparent 70%)}
+body::after{content:"";position:absolute;inset:0;opacity:.18;mix-blend-mode:multiply;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .45 0 0 0 .6 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>")}
+
+/* kemer çerçeve */
+.kemer-cizgi{position:absolute;left:96px;right:96px;top:70px;height:700px;
+  border:3px solid var(--kirmizi);border-bottom:0;border-radius:444px 444px 0 0;opacity:.85;z-index:1;
+  -webkit-mask:linear-gradient(to bottom,#000 70%,transparent 100%)}
+.kemer{position:absolute;left:120px;right:120px;top:94px;height:676px;border-radius:420px 420px 0 0;overflow:hidden;z-index:1;
+  -webkit-mask:linear-gradient(to bottom,#000 80%,transparent 100%)}
+.kemer img{position:absolute;left:0;bottom:0;width:100%}
+
+/* 11 Ekim mührü */
+.muhur{position:absolute;left:66px;top:330px;width:178px;height:178px;border-radius:50%;z-index:2;
+  background:var(--kirmizi);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(150,20,20,.28);transform:rotate(-8deg)}
+.muhur::after{content:"";position:absolute;inset:9px;border-radius:50%;border:2px dashed rgba(255,255,255,.7)}
+.muhur b{font:800 80px/0.9 Baslik}
+.muhur span{font:700 20px/1 Kucuk;letter-spacing:.32em;padding-left:.32em;margin-top:6px}
+
+.baslik{position:absolute;left:0;right:0;top:var(--baslik-ust,770px);text-align:center;z-index:2}
+.baslik .ust{font:800 92px/1 Baslik;color:var(--kirmizi);letter-spacing:-.005em}
+.baslik .alt{font:800 92px/1 Baslik;color:var(--kirmizi);letter-spacing:-.005em;margin-top:6px}
+.baslik .el{font:118px/1 El;color:var(--murekkep);margin-top:2px;transform:rotate(-4deg);margin-left:250px}
+
+.soz{position:absolute;left:0;right:0;top:var(--soz-ust,1110px);text-align:center;z-index:2}
+.soz q{font:italic 38px/1.2 Soz;color:var(--murekkep);quotes:"“" "”"}
+.soz small{display:block;margin-top:10px;font:700 17px/1 Kucuk;letter-spacing:.34em;padding-left:.34em;color:var(--soluk)}
+
+.alt-imza{position:absolute;left:50%;bottom:var(--imza-alt,44px);transform:translateX(-50%);z-index:2}
+/* Didim logosu (logo-didim.html ölçüleri) */
+.logo{position:relative;width:835px;height:705px;zoom:var(--logo-zoom,.19)}
+.logo img{position:absolute;left:0;top:0}
+.logo .sehir{position:absolute;left:0;width:852px;text-align:center;top:613px;font:800 119px/1 Sehir;color:#DD0004}
+.imza{display:block;width:var(--imza-g,400px)}
+</style>
+<body class="kisisel">
+<div class="kemer-cizgi"></div>
+<div class="kemer"><img src="ataturk-ulku.png"></div>
+<div class="muhur"><b>11</b><span>EKİM</span></div>
+
+<div class="baslik">
+  <div class="ust">Dünya Kız</div>
+  <div class="alt">Çocukları Günü</div>
+  <div class="el">Kutlu olsun</div>
+</div>
+
+<div class="soz">
+  <q>Dünyada her şey kadının eseridir.</q>
+  <small>MUSTAFA KEMAL ATATÜRK</small>
+</div>
+
+<div class="alt-imza"><img class="imza" src="../kisisel/imza-orijinal.png"></div>
+</body></html>
