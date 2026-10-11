@@ -12,8 +12,8 @@ cat > _post.html <<H
 @font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
 html,body{margin:0;width:1080px;height:1440px;overflow:hidden}
 body{position:relative;background:url(_post-zemin.png) 0 0/1080px 1440px no-repeat}
-.slogan{position:absolute;right:22px;top:${SLOGAN_UST:-712}px;border-left:7px solid #ED1C24;padding:3px 0 5px 18px;
-  white-space:nowrap;font:${SLOGAN_BOY:-46}px/1.04 O7;color:#414042}
+.slogan{position:absolute;right:22px;top:${SLOGAN_UST:-700}px;border-left:7px solid #ED1C24;padding:3px 0 5px 18px;
+  white-space:nowrap;font:${SLOGAN_BOY:-46}px/1.13 O7;color:#414042}
 .slogan em{display:block;font-style:normal;color:#ED1C24}
 </style><body><div class="slogan">SÖZ, YETKİ,<br>KARAR<em>ARTIK<br>ÜYELERİMİZİN!</em></div></body></html>
 H
