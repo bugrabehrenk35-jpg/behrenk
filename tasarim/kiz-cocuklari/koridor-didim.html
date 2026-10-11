@@ -1,0 +1,53 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Baslik;src:url(../fontlar-gecici/PlayfairDisplay-800.ttf)}
+@font-face{font-family:BaslikI;src:url(../fontlar-gecici/PlayfairDisplay-500i.ttf)}
+@font-face{font-family:El;src:url(../fontlar-gecici/GreatVibes.ttf)}
+@font-face{font-family:Kucuk;src:url(../fontlar-gecici/Montserrat-700.ttf)}
+@font-face{font-family:Sehir;src:url(../fontlar-gecici/Montserrat-800.ttf)}
+
+/* fotoğrafın kendi sepya tonları */
+:root{--krem:#F7EBDA;--kahve:#2A1A10;--altin:#E7B66B;--kiremit:#D9483B}
+html,body{margin:0;width:1080px;height:1440px;overflow:hidden;background:var(--kahve)}
+body{position:relative;color:var(--krem)}
+.foto{position:absolute;left:0;top:-40px;width:1080px}
+/* güneş ışığı ve alttan sıcak karartma */
+.isik{position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 45% at 18% 10%,rgba(255,236,200,.35),transparent 70%),
+    linear-gradient(to bottom,rgba(42,26,16,0) 48%,rgba(42,26,16,.6) 62%,rgba(42,26,16,.93) 80%,#2A1A10 100%)}
+
+/* koşan kızın yolunu izleyen kesik çizgi */
+.yol{position:absolute;inset:0}
+
+.ust{position:absolute;left:64px;top:64px;font:700 22px/1 Kucuk;letter-spacing:.42em;color:var(--kahve);
+  background:var(--krem);padding:14px 18px 14px 22px;border-radius:4px}
+
+.metin{position:absolute;left:0;right:0;top:948px;text-align:center}
+.metin .davet{font:30px/1 BaslikI;color:var(--altin)}
+.metin .b1{margin-top:20px;font:800 86px/1 Baslik;letter-spacing:-.01em}
+.metin .b2{font:800 86px/1.02 Baslik;letter-spacing:-.01em}
+.metin .b2 em{font-style:normal;color:var(--kiremit)}
+.metin .el{margin-top:-6px;font:96px/1 El;color:var(--altin);margin-left:330px;transform:rotate(-5deg)}
+
+.logo-kutu{position:absolute;left:50%;bottom:34px;transform:translateX(-50%)}
+.logo{position:relative;width:835px;height:705px;zoom:.15}
+.logo img{position:absolute;left:0;top:0}
+.logo .sehir{position:absolute;left:0;width:852px;text-align:center;top:613px;font:800 119px/1 Sehir;color:#fff}
+</style>
+<body>
+<img class="foto" src="koridor.jpg">
+<div class="isik"></div>
+
+
+<div class="ust">11 EKİM</div>
+
+<div class="metin">
+  <div class="davet">Geleceğe koşan bütün kız çocuklarımızın</div>
+  <div class="b1">Dünya <em style="font-style:normal;color:var(--kiremit)">Kız Çocukları</em></div>
+  <div class="b2">Günü</div>
+  <div class="el">kutlu olsun</div>
+</div>
+
+<div class="logo-kutu"><div class="logo"><img src="../varliklar/yeni-genclik-beyaz.png"><div class="sehir">DİDİM</div></div></div>
+</body></html>

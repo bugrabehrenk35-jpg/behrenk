@@ -39,6 +39,36 @@
         ],
         "createdAt": "2026-10-11T13:15:31.761Z",
         "reason": "agent: soft lilac-to-peach is a deliberate light palette for a Kız Çocukları Günü social post the user asked to recolor; not a UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "kucuk",
+        "createdAt": "2026-10-11T13:22:42.395Z",
+        "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "basliki",
+        "createdAt": "2026-10-11T13:22:42.414Z",
+        "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "el",
+        "createdAt": "2026-10-11T13:22:42.430Z",
+        "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "sehir",
+        "createdAt": "2026-10-11T13:22:42.448Z",
+        "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "soz",
+        "createdAt": "2026-10-11T13:22:42.466Z",
+        "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
       }
     ]
   },
