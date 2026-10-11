@@ -30,6 +30,15 @@
         ],
         "createdAt": "2026-10-11T13:13:41.204Z",
         "reason": "agent: warm paper tone chosen to match the sepia archival photo for the airy 11 Ekim post the user asked for"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "tasarim/kiz-cocuklari/kiz-cocuklari-v2.html"
+        ],
+        "createdAt": "2026-10-11T13:15:31.761Z",
+        "reason": "agent: soft lilac-to-peach is a deliberate light palette for a Kız Çocukları Günü social post the user asked to recolor; not a UI"
       }
     ]
   },
