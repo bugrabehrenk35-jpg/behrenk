@@ -6,7 +6,7 @@
 @font-face{font-family:M7;src:url(../../fontlar-gecici/Montserrat-700.ttf)}
 :root{--koyu:#414042;--kirmizi:#ED1C24;--etiket:#F6DFE0}
 html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
-body{position:relative;background:url(zemin.png) 0 0/1080px 1920px no-repeat}
+body{position:relative;background:url(zemin-buyuk.png) 0 0/1080px 1920px no-repeat}
 .m{position:absolute;left:0;width:1080px;text-align:center;white-space:nowrap;line-height:1}
 
 /* Kuşadası şablonundan ölçülen değerler */
@@ -29,10 +29,10 @@ body{position:relative;background:url(zemin.png) 0 0/1080px 1920px no-repeat}
 .kutu b.yer{display:block;font-size:var(--yer-boy,60px);line-height:1.14;white-space:nowrap}
 .kutu .sol{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none}
 .kutu .sol small{margin:0}
-.slogan{position:absolute;left:50%;top:1232px;transform:translateX(-50%) rotate(-4.76deg);
-  background:#fff;padding:14px 36px 16px;border-radius:6px;white-space:nowrap;
-  box-shadow:0 10px 24px rgba(0,0,0,.28);font:52px/1 O7;letter-spacing:.02em;color:var(--koyu)}
-.slogan em{font-style:normal;color:var(--kirmizi)}
+.slogan{position:absolute;left:34px;top:var(--slogan-ust,1196px);transform:rotate(-4.76deg);transform-origin:0 100%;
+  background:#fff;padding:16px 30px 18px;border-radius:8px;white-space:nowrap;
+  box-shadow:0 12px 28px rgba(0,0,0,.3);font:57px/1.08 O7;letter-spacing:.015em;color:var(--koyu)}
+.slogan em{display:block;font-style:normal;color:var(--kirmizi)}
 </style>
 <body style="--t1:var(--T1,280px);--t2:var(--T2,332px);--t3:var(--T3,500px)">
 
@@ -40,7 +40,7 @@ body{position:relative;background:url(zemin.png) 0 0/1080px 1920px no-repeat}
 <div class="m sehir">SÖKE</div>
 <div class="m program">PROGRAMI</div>
 
-<div class="slogan">SÖZ, YETKİ, KARAR <em>ARTIK ÜYELERİMİZİN!</em></div>
+<div class="slogan">SÖZ, YETKİ, KARAR<em>ARTIK ÜYELERİMİZİN!</em></div>
 
 <div class="hap"><span>YENİ PARTİ AYDIN İL BAŞKAN ADAYI</span></div>
 
