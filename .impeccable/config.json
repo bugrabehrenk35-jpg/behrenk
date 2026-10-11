@@ -69,6 +69,18 @@
         "value": "soz",
         "createdAt": "2026-10-11T13:22:42.466Z",
         "reason": "agent: tasarim/ social-media visuals use their own type, separate from the impeccable product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "afis",
+        "createdAt": "2026-10-11T13:28:50.468Z",
+        "reason": "agent: tasarim/ social visuals, separate from product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "afiso",
+        "createdAt": "2026-10-11T13:28:50.481Z",
+        "reason": "agent: tasarim/ social visuals, separate from product DESIGN.md"
       }
     ]
   },
