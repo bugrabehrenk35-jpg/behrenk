@@ -1,0 +1,77 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O6;src:url(../../fontlar-gecici/Oswald-600.ttf)}
+@font-face{font-family:M8;src:url(../../fontlar-gecici/Montserrat-800.ttf)}
+@font-face{font-family:M7;src:url(../../fontlar-gecici/Montserrat-700.ttf)}
+:root{--koyu:#414042;--kirmizi:#ED1C24;--etiket:#F6DFE0}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{position:relative;background:url(zemin-buyuk.png) 0 0/1080px 1920px no-repeat}
+.m{position:absolute;left:0;width:1080px;text-align:center;white-space:nowrap;line-height:1}
+
+/* Kuşadası şablonundan ölçülen değerler */
+.ust{top:var(--t1);font:64px M8;letter-spacing:.025em;padding-left:.025em;color:var(--koyu)}
+.sehir{top:var(--t2);font:var(--sehir-boy,150.6px) O7;letter-spacing:1.6px;color:var(--kirmizi)}
+.program{top:var(--t3);font:80.2px O6;letter-spacing:.186em;padding-left:.186em;color:var(--koyu)}
+
+.hap{position:absolute;left:50%;top:1494px;height:69px;transform:translateX(-50%);
+  background:#fff;border-radius:6px;display:flex;align-items:center;padding:0 40px;
+  font:var(--hap-boy,34px) M8;letter-spacing:var(--hap-ls,.2em);color:var(--kirmizi);white-space:nowrap}
+.hap span{margin-right:calc(-1*var(--hap-ls,.2em))}
+
+.kutu{position:absolute;box-sizing:border-box;border-radius:16px;
+  background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16);
+  display:flex;align-items:center;gap:25px;padding-left:31px;color:#fff}
+.kutu svg{flex:none;width:62px;height:62px}
+.kutu small{display:block;font:26px M7;letter-spacing:.114em;color:var(--etiket);margin-bottom:8px}
+.kutu b{font:68px/1 O7;font-weight:normal}
+.kutu .gun{font:46px O7;letter-spacing:.02em;color:#fff;margin-left:14px}
+.kutu b.yer{display:block;font-size:var(--yer-boy,60px);line-height:1.14;white-space:nowrap}
+.kutu .sol{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none}
+.kutu .sol small{margin:0}
+.slogan{position:absolute;left:var(--slogan-sol,710px);top:var(--slogan-ust,910px);
+  border-left:8px solid var(--kirmizi);padding:4px 0 6px 22px;white-space:nowrap;
+  font:54px/1.13 O7;letter-spacing:0;color:var(--koyu)}
+.slogan em{display:block;font-style:normal;color:var(--kirmizi)}
+.sehir .ve{color:var(--koyu);font-size:.62em;vertical-align:.16em;margin:0 .06em}
+.tarih-bant{position:absolute;left:56px;right:56px;top:1578px;height:72px;display:flex;align-items:center;justify-content:center;gap:18px;
+  color:#fff;border-top:2px solid rgba(255,255,255,.35);border-bottom:2px solid rgba(255,255,255,.35)}
+.tarih-bant svg{width:44px;height:44px}
+.tarih-bant b{font:52px/1 O7;font-weight:normal;letter-spacing:.02em}
+.tarih-bant span{font:52px/1 O7;letter-spacing:.02em;color:var(--etiket)}
+.durak{position:absolute;left:56px;right:56px;height:100px;display:flex;align-items:center;gap:22px;
+  background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16);border-radius:16px;padding:0 24px 0 10px;box-sizing:border-box;color:#fff}
+.durak .saat{flex:none;width:196px;height:80px;background:#fff;border-radius:10px;color:var(--kirmizi);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font:58px/1 O7}
+.durak .saat small{font:15px/1 M8;letter-spacing:.2em;color:var(--koyu);margin-bottom:3px}
+.durak .bilgi{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.durak .bilgi b{font:44px/1 O7;font-weight:normal;letter-spacing:.02em}
+.durak .bilgi span{font:27px/1.15 M7;margin-top:4px;white-space:nowrap}
+.durak .bilgi i{font:20px/1.15 M7;font-style:normal;color:var(--etiket);white-space:nowrap}
+</style>
+<body style="--t1:var(--T1,280px);--t2:var(--T2,332px);--t3:var(--T3,500px)">
+
+<div class="m ust">ADAY TANITIM TOPLANTISI</div>
+<div class="m sehir">AKBÜK <span class="ve">&amp;</span> SÖKE</div>
+<div class="m program">PROGRAMI</div>
+
+<div class="slogan">SÖZ, YETKİ,<br>KARAR<em>ARTIK<br>ÜYELERİMİZİN!</em></div>
+
+<div class="hap"><span>YENİ PARTİ AYDIN İL BAŞKAN ADAYI</span></div>
+
+<div class="tarih-bant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+  <b>13 EKİM 2026</b><span>SALI</span>
+</div>
+
+<div class="durak" style="top:1664px">
+  <div class="saat"><small>1. DURAK</small>12:00</div>
+  <div class="bilgi"><b>AKBÜK</b><span>Akbük Kumsal Kahvehanesi</span><i>(Akbük Doğa ve Yaşam Derneği bitişiği)</i></div>
+</div>
+<div class="durak" style="top:1774px">
+  <div class="saat"><small>2. DURAK</small>18:00</div>
+  <div class="bilgi"><b>SÖKE</b><span>Yeni Parti Söke İlçe Başkanlığı</span></div>
+</div>
+<div class="m" style="top:1886px;font:26px M8;letter-spacing:.156em;padding-left:.156em;color:#fff">TÜM ÜYELERİMİZ DAVETLİDİR</div>
+</body></html>
