@@ -93,6 +93,21 @@
         "value": "inter",
         "createdAt": "2026-10-12T15:31:53.896Z",
         "reason": "agent: tasarim/ documents, separate from product DESIGN.md"
+      },
+      {
+        "rule": "oversized-h1",
+        "value": "*",
+        "files": [
+          "tasarim/video/nazilli/nazilli-reels-akis.html"
+        ],
+        "createdAt": "2026-10-12T15:32:17.178Z",
+        "reason": "agent: A4 print document, h1 is 16pt, not a web hero"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-10-12T15:32:17.190Z",
+        "reason": "agent: Inter is the available stand-in for Helvetica Neue in the user's reference PDF"
       }
     ]
   },
