@@ -81,6 +81,12 @@
         "value": "afiso",
         "createdAt": "2026-10-11T13:28:50.481Z",
         "reason": "agent: tasarim/ social visuals, separate from product DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "govde",
+        "createdAt": "2026-10-12T09:50:28.524Z",
+        "reason": "agent: tasarim/ social visuals, separate from product DESIGN.md"
       }
     ]
   },
