@@ -4,13 +4,15 @@ import sys
 from PIL import Image, ImageDraw
 import numpy as np
 src, out = sys.argv[1], sys.argv[2]
+import os
+K=float(os.environ.get('KAYMA','0'))
 S=0.75; OX=135; W,H=1080,1440
 st=Image.open(src).convert("RGB").resize((810,1440),Image.LANCZOS)
 s=np.asarray(st).astype(float)
 c=np.zeros((H,W,3)); c[:,OX:OX+810]=s
 slope=90/1079
-def kenar_sol(x): return 1370*S+slope*(OX-x)
-def kenar_sag(x): return 1280*S-slope*(x-(OX+810))
+def kenar_sol(x): return (1370-K)*S+slope*(OX-x)
+def kenar_sag(x): return (1280-K)*S-slope*(x-(OX+810))
 # beyaz zemin: kenar sütunundaki yay piksellerini satırlar arası doldur
 def zemin_sutun(col):
   v=col.copy(); kirli=(v[:,0]-v[:,1]>12)
@@ -22,14 +24,14 @@ for x in range(0,OX):
   e=kenar_sol(x)
   for y in range(H):
     t=np.clip(y-e+0.5,0,1)
-    kir=s[max(y,int(1370*S)+2),0]
-    c[y,x]=solB[min(y,int(1370*S)-2)]*(1-t)+kir*t
+    kir=s[max(y,int((1370-K)*S)+2),0]
+    c[y,x]=solB[min(y,int((1370-K)*S)-2)]*(1-t)+kir*t
 for x in range(OX+810,W):
   e=kenar_sag(x)
   for y in range(H):
     t=np.clip(y-e+0.5,0,1)
-    kir=s[max(y,int(1280*S)+2),809]
-    c[y,x]=sagB[min(y,int(1280*S)-2)]*(1-t)+kir*t
+    kir=s[max(y,int((1280-K)*S)+2),809]
+    c[y,x]=sagB[min(y,int((1280-K)*S)-2)]*(1-t)+kir*t
 img=Image.fromarray(np.clip(c,0,255).astype("uint8"))
 # yaylar: hikâyedeki uç noktalardan aynı eğrilik ve incelme ile dışa uzatılır
 import math

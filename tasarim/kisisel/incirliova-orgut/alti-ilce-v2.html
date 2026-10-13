@@ -1,0 +1,91 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O6;src:url(../../fontlar-gecici/Oswald-600.ttf)}
+@font-face{font-family:M8;src:url(../../fontlar-gecici/Montserrat-800.ttf)}
+@font-face{font-family:M7;src:url(../../fontlar-gecici/Montserrat-700.ttf)}
+:root{--koyu:#414042;--kirmizi:#ED1C24;--etiket:#F6DFE0}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{position:relative;background:url(zemin-kucuk.png) 0 0/1080px 1920px no-repeat}
+.m{position:absolute;left:0;width:1080px;text-align:center;white-space:nowrap;line-height:1}
+
+/* Kuşadası şablonundan ölçülen değerler */
+.ust{top:var(--t1);font:64px M8;letter-spacing:.025em;padding-left:.025em;color:var(--koyu)}
+.sehir{top:var(--t2);font:var(--sehir-boy,150.6px) O7;letter-spacing:1.6px;color:var(--kirmizi)}
+.program{top:var(--t3);font:80.2px O6;letter-spacing:.186em;padding-left:.186em;color:var(--koyu)}
+
+.hap{position:absolute;z-index:2;left:50%;top:1328px;height:69px;transform:translateX(-50%);
+  background:#fff;border-radius:6px;display:flex;align-items:center;padding:0 40px;
+  font:var(--hap-boy,34px) M8;letter-spacing:var(--hap-ls,.2em);color:var(--kirmizi);white-space:nowrap}
+.hap span{margin-right:calc(-1*var(--hap-ls,.2em))}
+
+.kutu{position:absolute;box-sizing:border-box;border-radius:16px;
+  background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16);
+  display:flex;align-items:center;gap:25px;padding-left:31px;color:#fff}
+.kutu svg{flex:none;width:62px;height:62px}
+.kutu small{display:block;font:26px M7;letter-spacing:.114em;color:var(--etiket);margin-bottom:8px}
+.kutu b{font:68px/1 O7;font-weight:normal}
+.kutu .gun{font:46px O7;letter-spacing:.02em;color:#fff;margin-left:14px}
+.kutu b.yer{display:block;font-size:var(--yer-boy,60px);line-height:1.14;white-space:nowrap}
+.kutu .sol{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none}
+.kutu .sol small{margin:0}
+.slogan{position:absolute;left:var(--slogan-sol,690px);top:var(--slogan-ust,812px);
+  border-left:8px solid var(--kirmizi);padding:4px 0 6px 22px;white-space:nowrap;
+  font:54px/1.13 O7;letter-spacing:0;color:var(--koyu)}
+.slogan em{display:block;font-style:normal;color:var(--kirmizi)}
+.sehir .ve{color:var(--koyu);font-size:.62em;vertical-align:.16em;margin:0 .06em}
+.tarih-bant{position:absolute;z-index:2;left:56px;right:56px;top:1410px;height:60px;display:flex;align-items:center;justify-content:center;gap:18px;
+  color:#fff;border-top:2px solid rgba(255,255,255,.35);border-bottom:2px solid rgba(255,255,255,.35)}
+.tarih-bant svg{width:44px;height:44px}
+.tarih-bant b{font:52px/1 O7;font-weight:normal;letter-spacing:.02em}
+.tarih-bant span{font:52px/1 O7;letter-spacing:.02em;color:var(--etiket)}
+.durak{position:absolute;left:40px;right:40px;height:122px;display:flex;align-items:center;gap:20px;
+  background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16);border-radius:16px;padding:0 24px 0 10px;box-sizing:border-box;color:#fff}
+.durak .saat{flex:none;width:232px;height:106px;background:#fff;border-radius:10px;color:var(--kirmizi);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font:80px/1 O7}
+.durak .saat small{font:17px/1 M8;letter-spacing:.2em;color:var(--koyu);margin-bottom:3px}
+.durak .bilgi{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.durak .bilgi b{font:54px/1 O7;font-weight:normal;letter-spacing:.02em}
+.durak .bilgi span{font:33px/1.12 M7;margin-top:4px;white-space:nowrap}
+.durak .bilgi i{font:22px/1.15 M7;font-style:normal;color:var(--etiket);white-space:nowrap}
+.ust-logo{position:absolute;left:50%;top:104px;width:232px;transform:translateX(-50%)}
+.izgara{position:absolute;z-index:2;left:30px;right:30px;top:1484px;display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.kart{height:104px;display:flex;align-items:center;gap:12px;padding:0 6px 0 8px;box-sizing:border-box;border-radius:14px;
+  background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16);color:#fff}
+.kart .saat{flex:none;width:178px;height:88px;border-radius:10px;background:#fff;color:var(--kirmizi);
+  display:flex;align-items:center;justify-content:center;font:72px/1 O7}
+.kart .yer{display:flex;flex-direction:column;min-width:0}
+.kart b{font:56px/1 O7;font-weight:normal;letter-spacing:.01em;white-space:nowrap}
+.kart span{font:28px/1.05 M7;margin-top:4px;white-space:nowrap;color:var(--etiket)}
+.panel{position:absolute;z-index:1;left:0;right:0;top:0;bottom:0;
+  background:linear-gradient(100deg,#EF343C 0%,#ED1C24 30%,#E31B23 60%,#D5171F 100%);
+  clip-path:polygon(0 1160px,1080px 1070px,1080px 1920px,0 1920px)}
+.isim{z-index:2;top:1170px;font:106px O7;letter-spacing:2.7px;color:#fff;text-shadow:0 4px 14px rgba(0,0,0,.18)}
+</style>
+<body style="--t1:var(--T1,280px);--t2:var(--T2,332px);--t3:var(--T3,500px)">
+
+<img class="ust-logo" src="yp-logo-kirpik.png">
+<div class="m ust">ADAY TANITIM TOPLANTISI</div>
+<div class="m sehir">6 İLÇE</div>
+<div class="m program">BİR GÜNDE</div>
+
+<div class="slogan">SÖZ, YETKİ,<br>KARAR<em>ARTIK<br>ÜYELERİMİZİN!</em></div>
+
+<div class="panel"></div>
+<div class="m isim">DİLAVER DEMİR</div>
+<div class="hap"><span>YENİ PARTİ AYDIN İL BAŞKAN ADAYI</span></div>
+
+<div class="tarih-bant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+  <b>14 EKİM 2026</b><span>ÇARŞAMBA (YARIN)</span>
+</div>
+<div class="izgara">
+  <div class="kart"><div class="saat">12:00</div><div class="yer"><b>KÖŞK</b><span>İlçe Başkanlığı</span></div></div>
+  <div class="kart"><div class="saat">13:30</div><div class="yer"><b>YENİPAZAR</b><span>İlçe Başkanlığı</span></div></div>
+  <div class="kart"><div class="saat">15:00</div><div class="yer"><b>BOZDOĞAN</b><span>İlçe Başkanlığı</span></div></div>
+  <div class="kart"><div class="saat">17:00</div><div class="yer"><b>BUHARKENT</b><span>İlçe Başkanlığı</span></div></div>
+  <div class="kart"><div class="saat">18:30</div><div class="yer"><b>KUYUCAK</b><span>İlçe Başkanlığı</span></div></div>
+  <div class="kart"><div class="saat">20:00</div><div class="yer"><b>SULTANHİSAR</b><span>İlçe Başkanlığı</span></div></div>
+</div>
+</body></html>
