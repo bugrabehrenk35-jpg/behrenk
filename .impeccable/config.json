@@ -123,6 +123,15 @@
         "value": "imza",
         "createdAt": "2026-10-14T07:58:21.804Z",
         "reason": "agent: tasarim/ social visuals"
+      },
+      {
+        "rule": "radial-spotlight-glow",
+        "value": "*",
+        "files": [
+          "tasarim/erkan-karakis/halktv-erkan.html"
+        ],
+        "createdAt": "2026-10-14T07:58:43.038Z",
+        "reason": "agent: red glow behind the Halk TV logo is the intended on-air glow of a static social post"
       }
     ]
   },
