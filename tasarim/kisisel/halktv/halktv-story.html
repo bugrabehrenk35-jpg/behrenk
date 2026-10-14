@@ -1,0 +1,67 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Afis;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:AfisO;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:Govde;src:url(../../fontlar-gecici/RobotoCondensed-400.ttf);font-weight:400}
+@font-face{font-family:Govde;src:url(../../fontlar-gecici/RobotoCondensed-700.ttf);font-weight:700}
+
+:root{--kirmizi:#E30A17;--gece:#0E0F13;--krem:#F2EFEA;--gri:#9A9AA3}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{position:relative;background:var(--gece);color:var(--krem);font-family:Govde,sans-serif}
+/* şafak: alttan gelen soğuk mavi ışık, üstte gece */
+body::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 120% 50% at 50% 46%,rgba(70,90,140,.28),transparent 70%)}
+
+.ust{position:absolute;left:72px;right:72px;top:150px}
+.saat{display:inline-flex;align-items:center;gap:18px;font:30px/1 AfisO;letter-spacing:.2em;color:var(--gri)}
+.saat b{font:30px/1 Afis;color:#fff;background:var(--kirmizi);padding:12px 16px 12px 18px;letter-spacing:.08em}
+.manset{margin-top:40px;font:200px/1.12 Afis;letter-spacing:-.01em;text-transform:uppercase}
+.manset em{font-style:normal;color:var(--kirmizi)}
+
+/* zaman çizelgesi */
+.akis{margin-top:70px;border-left:4px solid rgba(242,239,234,.25);padding-left:40px}
+.olay{position:relative;padding-bottom:40px}
+.olay:last-child{padding-bottom:0}
+.olay::before{content:"";position:absolute;left:-54px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--gece);border:4px solid var(--krem)}
+.olay.kirmizi::before{background:var(--kirmizi);border-color:var(--kirmizi)}
+.olay small{display:block;font:28px/1 AfisO;letter-spacing:.18em;color:var(--gri);margin-bottom:12px}
+.olay p{margin:0;font:400 44px/1.25 Govde}
+.olay p b{font-weight:700;color:#fff}
+
+.cumle{margin-top:62px;font:400 40px/1.35 Govde;color:#D8D5CF}
+.cumle b{color:#fff;font-weight:700}
+
+.final{position:absolute;left:0;right:0;bottom:0;height:var(--final-h,540px);background:var(--kirmizi);padding:66px 72px 0;box-sizing:border-box}
+.final::before{content:"";position:absolute;left:72px;top:-34px;width:68px;height:68px;background:var(--kirmizi);transform:rotate(45deg)}
+.final .b1{font:54px/1.1 Afis;white-space:nowrap;text-transform:uppercase;color:#fff}
+.final .b2{margin-top:10px;font:76px/1.05 Afis;white-space:nowrap;text-transform:uppercase;color:#fff}
+.final .b2 u{text-decoration:none;border-bottom:8px solid #fff}
+.final .cizgi{position:absolute;left:72px;right:72px;bottom:250px;height:2px;background:rgba(255,255,255,.35)}
+.imza{position:absolute;left:72px;bottom:130px;width:290px}
+</style>
+<body>
+<div class="ust">
+  <div class="saat"><b>05.30</b>ŞAFAK VAKTİ</div>
+  <div class="manset">Tesadüf<br><em>mü?</em></div>
+
+  <div class="akis">
+    <div class="olay kirmizi">
+      <small>SABAH 05.30</small>
+      <p>Halk TV'ye <b>polis girdi, kayyum atandı.</b></p>
+    </div>
+    <div class="olay">
+      <small>AYNI SABAH</small>
+      <p>Ekrem İmamoğlu'nun <b>savunması başladı.</b></p>
+    </div>
+  </div>
+
+  <div class="cumle">Gerçeği anlatacak sesi susturarak adaleti saklayamazsınız. <b>Mahkemede savunmadan, ekranda gerçeklerden korkuyorlar.</b></div>
+</div>
+
+<div class="final">
+  <div class="b1">Şafak baskınıyla kanal susturulur</div>
+  <div class="b2">ama <u>millet susturulamaz!</u></div>
+  <div class="cizgi"></div>
+  <img class="imza" src="../imza-beyaz.png">
+</div>
+</body></html>
