@@ -117,6 +117,12 @@
         ],
         "createdAt": "2026-10-14T07:38:32.502Z",
         "reason": "agent: paper-white chosen to contrast the dark sibling post"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "imza",
+        "createdAt": "2026-10-14T07:58:21.804Z",
+        "reason": "agent: tasarim/ social visuals"
       }
     ]
   },
