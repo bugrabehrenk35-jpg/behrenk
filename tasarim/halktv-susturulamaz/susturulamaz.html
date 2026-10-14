@@ -1,0 +1,64 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Afis;src:url(../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:AfisO;src:url(../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:Govde;src:url(../fontlar-gecici/RobotoCondensed-400.ttf);font-weight:400}
+@font-face{font-family:Govde;src:url(../fontlar-gecici/RobotoCondensed-700.ttf);font-weight:700}
+@font-face{font-family:Sehir;src:url(../fontlar-gecici/Montserrat-800.ttf)}
+
+:root{--kirmizi:#E30A17;--gece:#0C0C0E;--krem:#F2EFEA}
+html,body{margin:0;width:1080px;height:1329px;overflow:hidden}
+body{position:relative;background:var(--gece);color:var(--krem);font-family:Govde,sans-serif}
+/* tarama çizgileri */
+body::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background:repeating-linear-gradient(to bottom,#fff 0 1px,transparent 1px 4px)}
+
+/* televizyon: yayın kesilmiş test kartı */
+.tv{position:absolute;left:110px;right:110px;top:92px;height:520px;background:#050506;border-radius:18px;padding:16px;box-sizing:border-box;
+  box-shadow:0 0 0 3px #1c1c20,0 40px 80px rgba(0,0,0,.6)}
+.ekran{position:relative;width:100%;height:100%;border-radius:8px;overflow:hidden;
+  background:linear-gradient(to right,#EDEDED 0 14.28%,#C9C9C9 14.28% 28.57%,#8E8E92 28.57% 42.85%,#E30A17 42.85% 57.14%,#5A5A5E 57.14% 71.42%,#B2101A 71.42% 85.71%,#2A2A2E 85.71% 100%)}
+.ekran::before{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;
+  background:linear-gradient(to right,#1a1a1d 0 25%,#F2EFEA 25% 37%,#1a1a1d 37% 62%,#E30A17 62% 75%,#0d0d0f 75% 100%)}
+.ekran::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,.18) 0 2px,transparent 2px 5px);mix-blend-mode:multiply}
+.kanal{position:absolute;left:50%;top:38%;width:236px;height:229px;transform:translate(-50%,-50%);z-index:2;
+  border-radius:10px;overflow:hidden;box-shadow:0 0 0 6px #050506,0 18px 40px rgba(0,0,0,.6)}
+.kanal img{width:100%;height:100%;display:block}
+.bant{position:absolute;left:-40px;right:-40px;top:70%;z-index:3;height:84px;background:#050506;transform:rotate(-6deg);
+  display:flex;align-items:center;justify-content:center;gap:22px;
+  box-shadow:0 0 0 4px var(--kirmizi)}
+.bant span{font:50px/1 Afis;letter-spacing:.14em;color:#fff;padding-left:.14em}
+.bant i{width:18px;height:18px;border-radius:50%;background:var(--kirmizi)}
+.ayak{position:absolute;left:50%;top:612px;width:300px;height:26px;transform:translateX(-50%);
+  background:linear-gradient(#1c1c20,#0a0a0b);clip-path:polygon(12% 0,88% 0,100% 100%,0 100%)}
+
+.baslik{position:absolute;left:0;right:0;top:688px;text-align:center}
+.baslik .b1{font:150px/1 Afis;letter-spacing:-.01em}
+.baslik .b1 em{font-style:normal;color:var(--kirmizi)}
+.baslik .b2{font:132px/1.02 Afis;letter-spacing:.01em;display:inline-block;position:relative}
+.baslik .b2::after{content:"";position:absolute;left:2%;right:2%;bottom:-18px;height:10px;background:var(--kirmizi);transform:skewX(-14deg)}
+.alt{position:absolute;left:0;right:0;top:1010px;text-align:center;font:400 36px/1.3 Govde;color:#C9C6C0}
+.alt b{color:#fff;font-weight:700}
+
+.imza-kutu{position:absolute;left:50%;bottom:var(--imza-alt,96px);transform:translateX(-50%)}
+.imza{display:block;width:290px}
+.logo{position:relative;width:835px;height:705px;zoom:.14}
+.logo img{position:absolute;left:0;top:0}
+.logo .sehir{position:absolute;left:0;width:852px;text-align:center;top:613px;font:800 119px/1 Sehir;color:#fff}
+</style>
+<body>
+<div class="tv"><div class="ekran">
+  <div class="kanal"><img src="halktv-kare.png"></div>
+  <div class="bant"><i></i><span>YAYIN KESİLEMEZ</span><i></i></div>
+</div></div>
+<div class="ayak"></div>
+
+<div class="baslik">
+  <div class="b1">#<em>HALKTV</em></div>
+  <div class="b2">SUSTURULAMAZ</div>
+</div>
+<div class="alt">Ekranı karartabilirsiniz, <b>gerçeği asla.</b></div>
+
+<div class="imza-kutu">__IMZA__</div>
+</body></html>
