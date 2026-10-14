@@ -1,0 +1,31 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:Afis;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:Alt;src:url(../../fontlar-gecici/Montserrat-800.ttf)}
+:root{--kirmizi:#E30A17;--gece:#08080A;--krem:#F4F1EC}
+html,body{margin:0;width:1080px;height:1329px;overflow:hidden}
+body{position:relative;background:var(--gece);color:#fff}
+.foto{position:absolute;left:0;right:0;top:290px;height:790px;background:url(foto.jpg) 62% 30%/cover}
+.foto::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,var(--gece) 0,rgba(8,8,10,.35) 22%,transparent 40%,transparent 68%,var(--gece) 100%)}
+.baslik{position:absolute;left:64px;top:70px}
+.b1{font:124px/.95 Afis;letter-spacing:-.005em;text-transform:uppercase}
+.b2{font:178px/.92 Afis;color:var(--kirmizi);text-transform:uppercase;letter-spacing:-.01em}
+.bilgi{position:absolute;right:56px;top:930px;text-align:right}
+.bilgi div{display:inline-block;font:46px/1 Afis;padding:12px 20px 14px;text-transform:uppercase}
+.tarih{background:#fff;color:var(--gece)}
+.yer{background:var(--kirmizi);color:#fff}
+.imza{position:absolute;left:0;right:0;bottom:62px;display:flex;justify-content:center;align-items:center;gap:30px}
+.imza img{height:96px}
+.imza .ayrac{width:2px;height:104px;background:rgba(255,255,255,.4)}
+.ad{font:62px/1 Afis;letter-spacing:.02em}
+.ad em{font-style:normal;color:#E04A4A}
+.gorev{margin-top:12px;font:22px/1 Alt;letter-spacing:.16em;color:#E8E5DF}
+</style>
+<body>
+<div class="foto"></div>
+<div class="baslik"><div class="b1">Millet iradesini</div><div class="b2">savunuyor!</div></div>
+<div class="bilgi"><div class="tarih">14 Ekim Çarşamba · 10.00</div><br><div class="yer">Silivri Zindanı</div></div>
+<div class="imza"><img src="yeni-parti-beyaz.png"><span class="ayrac"></span>
+  <div><div class="ad">DİLAVER <em>DEMİR</em></div><div class="gorev">YENİ PARTİ AYDIN İL BAŞKAN ADAYI</div></div></div>
+</body></html>
