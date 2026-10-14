@@ -108,6 +108,15 @@
         "value": "inter",
         "createdAt": "2026-10-12T15:32:17.190Z",
         "reason": "agent: Inter is the available stand-in for Helvetica Neue in the user's reference PDF"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "tasarim/halktv-susturulamaz/mikrofon.html"
+        ],
+        "createdAt": "2026-10-14T07:38:32.502Z",
+        "reason": "agent: paper-white chosen to contrast the dark sibling post"
       }
     ]
   },
