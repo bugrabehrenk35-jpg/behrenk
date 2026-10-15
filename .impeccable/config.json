@@ -132,6 +132,69 @@
         ],
         "createdAt": "2026-10-14T07:58:43.038Z",
         "reason": "agent: red glow behind the Halk TV logo is the intended on-air glow of a static social post"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:39.943Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m7",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:39.956Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ol",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:39.969Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:39.983Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m8",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:39.995Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:44.300Z",
+        "reason": "Küçük kırmızı vurgular alt kısımda koyu laciverdin (#0A1430) üstünde, gerçek kontrast 5.4:1; detektör degradenin en açık durağını ölçüyor"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sandik/sandik.html"
+        ],
+        "createdAt": "2026-10-15T13:40:44.313Z",
+        "reason": "Sandık satırları 50px yükseklikte dikey ortalı; alt çizgi ayraç, metin kenara yapışık değil"
       }
     ]
   },
