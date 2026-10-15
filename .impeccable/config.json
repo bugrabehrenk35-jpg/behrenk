@@ -195,6 +195,69 @@
         ],
         "createdAt": "2026-10-15T13:40:44.313Z",
         "reason": "Sandık satırları 50px yükseklikte dikey ortalı; alt çizgi ayraç, metin kenara yapışık değil"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.288Z",
+        "reason": "Küçük kırmızı vurgular koyu lacivert üstünde, detektör degradenin en açık durağını ölçüyor"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.300Z",
+        "reason": "Sandık satırları dikey ortalı; alt çizgi ayraç"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.313Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m7",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.327Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ol",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.341Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.356Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m8",
+        "files": [
+          "tasarim/kisisel/sandik/sandik-yatay.html"
+        ],
+        "createdAt": "2026-10-15T13:52:59.367Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları"
       }
     ]
   },

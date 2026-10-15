@@ -1,0 +1,131 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:OL;src:url(../../fontlar-gecici/Oswald-300.ttf)}
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:M6;src:url(../../fontlar-gecici/Montserrat-600.ttf)}
+@font-face{font-family:M7;src:url(../../fontlar-gecici/Montserrat-700.ttf)}
+@font-face{font-family:M8;src:url(../../fontlar-gecici/Montserrat-800.ttf)}
+:root{--gece:#0A1430;--lacivert:#13214A;--kirmizi:#E30A17;--acik:#F4F5F8;--cizgi:#E3E6EE;--gri:#6B7392}
+html,body{margin:0;width:1350px;height:1080px;overflow:hidden}
+body{position:relative;color:#fff;background:radial-gradient(ellipse 70% 55% at 72% 26%,#1E3270 0%,#12204A 45%,var(--gece) 100%)}
+/* arka planda ince çizgili DİDİM */
+.zemin-yazi{position:absolute;right:-30px;top:96px;font:300px/1 O7;letter-spacing:.02em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.07);white-space:nowrap}
+
+.logo{position:absolute;left:56px;top:50px;width:150px}
+.etiket{position:absolute;left:56px;top:178px;font:22px/1 M7;letter-spacing:.2em;color:#C9D0E6}
+.etiket b{color:#fff}
+.b1{position:absolute;left:52px;top:236px;font:96px/1 OL;letter-spacing:.005em}
+.b2{position:absolute;left:52px;top:336px;font:96px/1 O7;color:#FF3B47;letter-spacing:.005em}
+.saat{position:absolute;left:56px;top:440px;display:flex;align-items:center;gap:14px;height:58px;padding:0 24px 0 18px;border-radius:30px;background:#fff;color:var(--lacivert)}
+.saat svg{width:30px;height:30px}
+.saat b{font:34px/1 O7;letter-spacing:.02em}
+
+.kisi{position:absolute}
+.dilaver{left:548px;top:122px;width:338px}
+.ozel{left:812px;top:108px;width:288px}
+
+/* sandık paneli */
+.panel{position:absolute;left:36px;right:36px;top:514px;background:#fff;border-radius:22px;color:var(--lacivert);
+  box-shadow:0 -18px 50px rgba(0,0,0,.45);overflow:hidden}
+.yer{display:flex;align-items:center;gap:18px;padding:16px 26px;background:var(--lacivert);color:#fff}
+.yer.akbuk{background:var(--kirmizi)}
+.yer.akbuk .ad span,.yer.akbuk .no{color:#fff}
+.yer .pin{flex:none;width:46px;height:46px}
+.yer .ad{flex:1;min-width:0}
+.yer .ad b{display:block;font:39px/1.05 O7;letter-spacing:.01em;white-space:nowrap}
+.yer .ad span{display:block;margin-top:6px;font:23px/1 M6;color:rgba(255,255,255,.82)}
+.yer .no{flex:none;text-align:center;font:18px/1 M8;letter-spacing:.14em;color:rgba(255,255,255,.85)}
+.yer .no b{display:block;margin-top:4px;font:44px/1 O7;letter-spacing:.02em;color:#fff}
+
+.izgara{display:grid;grid-template-columns:1fr 1fr;padding:4px 26px 8px;column-gap:34px}
+.satir{display:flex;align-items:center;gap:14px;height:56px;border-bottom:1.5px solid var(--cizgi)}
+.satir i{flex:none;width:42px;height:42px;border-radius:50%;background:var(--acik);color:var(--kirmizi);display:flex;align-items:center;justify-content:center;font:25px/1 O7;font-style:normal}
+.satir .m{font:29px/1.15 M7;white-space:nowrap}
+.satir small{margin-left:auto;font:21px/1 M7;letter-spacing:.06em;color:#4A5272;background:var(--acik);padding:6px 9px;border-radius:6px}
+.genis{grid-column:1/-1}
+.satir.cok{height:auto;min-height:56px;padding:9px 0}
+.satir.cok .m{white-space:normal;font-size:26px;line-height:1.35}
+.izgara .son{border-bottom:0}
+
+.alt{position:absolute;left:0;right:0;bottom:26px;text-align:center}
+.alt .davet{font:24px/1 M8;letter-spacing:.2em;color:#fff}
+.alt .davet em{font-style:normal;color:#FF4651}
+.imza{margin-top:14px;display:flex;justify-content:center;align-items:baseline;gap:14px}
+.imza .ad{font:52px/1 OL;letter-spacing:.02em}
+.imza .ad b{font-family:O7;font-weight:normal;color:#FF3B47}
+.gorev{margin-top:10px;font:20px/1 M8;letter-spacing:.2em;color:#C9D0E6}
+.gorev em{font-style:normal;color:#FF4651}
+
+/* yatay düzen */
+body{background:radial-gradient(ellipse 60% 70% at 24% 72%,#1E3270 0%,#12204A 50%,var(--gece) 100%)}
+.zemin-yazi{right:auto;left:-20px;top:600px;font-size:250px}
+.logo{left:60px;top:52px;width:150px}
+.etiket{left:62px;top:186px}
+.b1{left:58px;top:240px;font-size:100px}
+.b2{left:58px;top:342px;font-size:100px}
+.saat{left:62px;top:466px}
+.dilaver{left:28px;top:590px;width:350px}
+.ozel{left:300px;top:572px;width:292px}
+.panel{left:620px;right:44px;top:44px}
+.izgara{padding:4px 24px 8px;column-gap:26px}
+.yer{padding:16px 24px;gap:16px}
+.yer .ad b{font-size:36px}
+.satir .m{font-size:28px}
+.satir small{font-size:20px}
+.satir.cok .m{font-size:26px}
+.alt{left:620px;right:44px;bottom:96px}
+.satir{height:64px}
+.satir .m{font-size:28px}
+.satir small{white-space:nowrap;font-size:19px}
+.satir.cok{min-height:64px;padding:12px 0}
+.yer{padding:20px 24px}
+.yer.akbuk .ad b{font-size:31px}
+.alt .davet{font-size:22px;letter-spacing:.12em;white-space:nowrap}
+.imza .ad{font-size:56px}
+</style>
+<body>
+<div class="zemin-yazi">DİDİM</div>
+<img class="kisi dilaver" src="dilaver-kesik.png">
+<img class="kisi ozel" src="ozel-kesik.png">
+
+<img class="logo" src="yp-logo-beyaz.png">
+<div class="etiket"><b>18 EKİM 2026</b> · PAZAR</div>
+<div class="b1">ÖN SEÇİM</div>
+<div class="b2">SANDIK YERİ</div>
+<div class="saat"><svg viewBox="0 0 24 24" fill="none" stroke="#E30A17" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2.5"/></svg><b>09.00 – 18.00</b></div>
+
+<div class="panel">
+  <div class="yer">
+    <svg class="pin" viewBox="0 0 24 24" fill="#E30A17"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>
+    <div class="ad"><b>YENİ MAHALLE MERKEZ PARK</b><span>Eski Belediye Düğün Salonu</span></div>
+    <div class="no">SANDIK<b>1 – 10</b></div>
+  </div>
+  <div class="izgara">
+    <div class="satir"><i>1</i><span class="m">Efeler</span><small>A–İ</small></div>
+    <div class="satir"><i>2</i><span class="m">Efeler</span><small>K–Z</small></div>
+    <div class="satir"><i>3</i><span class="m">Yenimahalle</span><small>A–İ</small></div>
+    <div class="satir"><i>4</i><span class="m">Yenimahalle</span><small>K–Z</small></div>
+    <div class="satir"><i>5</i><span class="m">Altınkum</span></div>
+    <div class="satir"><i>6</i><span class="m">Çamlık</span></div>
+    <div class="satir"><i>7</i><span class="m">Cumhuriyet</span></div>
+    <div class="satir"><i>8</i><span class="m">Hisar</span></div>
+    <div class="satir genis"><i>9</i><span class="m">Mavişehir · Mersindere · Fevzipaşa</span></div>
+    <div class="satir genis cok son"><i>10</i><span class="m">Akköy · Akyeniköy · Balat · Batıköy · Denizköy · Yalıköy · Mahallesizler</span></div>
+  </div>
+  <div class="yer akbuk">
+    <svg class="pin" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>
+    <div class="ad"><b>TÜRKAN SAYLAN KÜLTÜR MERKEZİ</b><span>Akbük</span></div>
+    <div class="no">SANDIK<b>11 – 12</b></div>
+  </div>
+  <div class="izgara">
+    <div class="satir son"><i>11</i><span class="m">Akbük</span><small>A–İ</small></div>
+    <div class="satir son"><i>12</i><span class="m">Akbük</span><small>K–Z</small></div>
+  </div>
+</div>
+
+<div class="alt">
+  <div class="davet">TÜM ÜYELERİMİZİ <em>SANDIĞA</em> BEKLİYORUZ</div>
+  <div class="imza"><span class="ad">DİLAVER <b>DEMİR</b></span></div>
+  <div class="gorev">YENİ PARTİ <em>AYDIN</em> İL BAŞKAN ADAYI</div>
+</div>
+</body></html>
