@@ -18,7 +18,7 @@ P = dict(
     d_sol=421,                        # Dilaver gövdesinin sol kenarı x (Buğra'nın sağ kol kesiğini örter)
     golge=0.38,
     b_sol=0,                          # Buğra'nın sol kenarı x
-    eri_bas=840, eri_bit=965,
+    eri_bas=820, eri_bit=960,
 )
 if len(sys.argv) > 1 and sys.argv[1].endswith('.json'):
     P.update(json.load(open(sys.argv[1])))
@@ -135,6 +135,7 @@ if P.get('sarma', 0):
 t = np.asarray(tuval).astype(np.float32)
 yy = np.arange(H)[:, None]
 eri = np.clip((P['eri_bit'] * K - yy) / ((P['eri_bit'] - P['eri_bas']) * K), 0, 1)
+eri = eri * eri * (3 - 2 * eri)
 t[..., 3] *= eri
 tuval = Image.fromarray(t.clip(0, 255).astype(np.uint8), 'RGBA')
 tuval.save(cikti)
