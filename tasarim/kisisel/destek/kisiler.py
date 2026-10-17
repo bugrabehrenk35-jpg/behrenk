@@ -106,8 +106,8 @@ def ten_olc(rgb, alfa, kutular):
     m &= (alfa > 0.95) & (L > 35) & (L < 92) & (C > 8) & (C < 48) & (h > 12) & (h < 78)
     return lab[m].mean(0)
 # Buğra'nın teni, Dilaver'in düzeltilmiş teninin aynı bölgelerine (alın + iki yanak) eşitlenir
-d_ten = ten_olc(drgb, da, P['d_olcum'])
-print('  Dilaver ten (alın+yanak)', d_ten.round(1))
+d_ten = ten_olc(drgb, da, P['d_olcum']) if P.get('b_dilavere') else None
+if d_ten is not None: print('  Dilaver ten (alın+yanak)', d_ten.round(1))
 brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), P.get('b_kutu', (760, 420, 1500, 1300)), P['ten_gucu_b'], hedef_ozel=d_ten if P.get('b_dilavere') else None)
 brgb = kenar_temizle(brgb, ba, P.get('kenar_b', 0), None)
 B_BAS_UST, B_CENE = 155, 1320
