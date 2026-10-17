@@ -35,8 +35,9 @@ def renk_duzelt(rgb, alfa, gomlek, yuz_kutu, gucu):
     L, A, B = lab[..., 0], lab[..., 1], lab[..., 2]
     h = np.degrees(np.arctan2(B, A)); C = np.hypot(A, B)
     ten = (alfa > 0.5) & (L > 30) & (L < 93) & (C > 7) & (C < 48) & (h > 12) & (h < 78)
-    x0, y0, x1, y1 = yuz_kutu
-    olc = np.zeros_like(ten); olc[y0:y1, x0:x1] = True
+    olc = np.zeros_like(ten)
+    for (x0, y0, x1, y1) in (yuz_kutu if isinstance(yuz_kutu[0], (list, tuple)) else [yuz_kutu]):
+        olc[y0:y1, x0:x1] = True
     ort = lab[ten & olc].mean(0)
     hedef = np.array(P['ten'], np.float32)
     fark = (hedef - ort) * gucu
@@ -52,12 +53,39 @@ def renk_duzelt(rgb, alfa, gomlek, yuz_kutu, gucu):
     print('  gömlek kazancı', kaz.round(3), 'ten ölçülen', ort.round(1), 'kaydırma', fark.round(1))
     return out.astype(np.float32)
 
+def kenar_temizle(rgb, alfa, px, zemin=None):
+    """Kesik kenarını eski fon renginden arındırır.
+    1) 0<alfa<1 piksellerde ön plan rengini fondan geri çözer: F = (C - (1-a)*Z) / a  (beyaz hale gider, saç teli korunur)
+       zemin: (r,g,b) sabit fon ya da None = en yakın tam saydam pikselin kaynaktaki rengi
+    2) iç sınırdan px piksellik bantta renk tonunu (a*, b*) içeriden alır, parlaklığı korur (mor/mavi renk saçağı gider)"""
+    if px <= 0: return rgb
+    a = alfa[..., None]
+    if zemin is None:
+        dis = alfa < 0.02
+        zy, zx = nd.distance_transform_edt(~dis, return_distances=False, return_indices=True)
+        Z = rgb[zy, zx]
+    else:
+        Z = np.array(zemin, np.float32)[None, None, :]
+    yari = (alfa > 0.02) & (alfa < 0.98)
+    on = rgb.copy()
+    on[yari] = np.clip((rgb[yari] - (1 - a[yari]) * (Z[yari] if Z.ndim == 3 and Z.shape[0] > 1 else Z[0, 0])) / np.maximum(a[yari], 0.05), 0, 255)
+    ic = nd.binary_erosion(alfa > 0.98, iterations=px)
+    iy, ix = nd.distance_transform_edt(~ic, return_distances=False, return_indices=True)
+    bant = (alfa > 0.02) & ~ic
+    lab = rgb2lab(on[bant][None] / 255)[0]
+    labi = rgb2lab(on[iy[bant], ix[bant]][None] / 255)[0]
+    lab[:, 0] = np.minimum(lab[:, 0], labi[:, 0] + P.get('kenar_tavan', 3.0))   # içeriden parlak olamaz: hale gider, tel korunur
+    lab[:, 1:] = labi[:, 1:]
+    on[bant] = np.clip(lab2rgb(lab[None])[0] * 255, 0, 255)
+    return on
+
 # --- Dilaver
 d = Image.open('/root/.claude/uploads/507a373d-836a-5ae5-b148-f939800e9b37/53e7bdb5-image.png')
 d = d.crop((600, 480, 3200, 5374))                     # boşlukları at (ölçüm kutuları buna göre)
 da = np.asarray(d)[..., 3].astype(np.float32) / 255
 print('Dilaver')
-drgb = renk_duzelt(np.asarray(d.convert('RGB')).astype(np.float32), da, (210.1, 210.6, 221.8), (960, 280, 1660, 1120), P['ten_gucu_d'])
+drgb = renk_duzelt(np.asarray(d.convert('RGB')).astype(np.float32), da, (210.1, 210.6, 221.8), P.get('d_kutu', (960, 280, 1660, 1120)), P['ten_gucu_d'])
+drgb = kenar_temizle(drgb, da, P.get('kenar_d', 0), P.get('zemin_d', (240, 238, 239)))
 D_BAS_UST, D_CENE = 559 - 480, 1625 - 480               # kırpılmış koordinatta saç üstü ve çene
 D_BBOX_SOL = 686 - 600
 s_d = P['bas'] * K / (D_CENE - D_BAS_UST)
@@ -70,12 +98,18 @@ dx = round(P['d_sol'] * K - D_BBOX_SOL * s_d); dy = round(P['goz'] * K - D_GOZ *
 b = Image.open('/home/user/behrenk/tasarim/kisisel/rozet/yeni-parti-rozetli-hd.jpg').convert('RGB')
 ba = np.asarray(Image.open('bugra-maske.png')).astype(np.float32) / 255
 print('Buğra')
-brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), (760, 420, 1500, 1300), P['ten_gucu_b'])
+brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), P.get('b_kutu', (760, 420, 1500, 1300)), P['ten_gucu_b'])
+brgb = kenar_temizle(brgb, ba, P.get('kenar_b', 0), None)
 B_BAS_UST, B_CENE = 155, 1320
 B_GOZ = 715                                            # kaynakta göz bebekleri hizası (ölçüldü)
 s_b = s_d * P['ipd_oran']                                  # göz bebeği mesafeleri eşit: yüzler aynı boyda
 bW, bH = round(b.width * s_b), round(b.height * s_b)
 bimg = Image.fromarray(np.dstack([np.clip(brgb, 0, 255), ba * 255]).astype(np.uint8), 'RGBA').resize((bW, bH), Image.LANCZOS)
+if P.get('gren_b', 0):
+    arr = np.asarray(bimg).astype(np.float32)
+    n = nd.gaussian_filter(np.random.default_rng(7).normal(0, 1, arr.shape[:2]).astype(np.float32), 0.6); n /= n.std()
+    arr[..., :3] += n[..., None] * P['gren_b']
+    bimg = Image.fromarray(arr.clip(0, 255).astype(np.uint8), 'RGBA')
 bx = round(P['b_sol'] * K); by = round(P['goz'] * K - B_GOZ * s_b)   # göz hizası ortak
 
 # --- birleştir
@@ -89,6 +123,14 @@ t = np.asarray(tuval).astype(np.float32)
 t[..., :3] *= (1 - P['golge'] * g)[..., None]
 tuval = Image.fromarray(t.clip(0, 255).astype(np.uint8), 'RGBA')
 tuval.alpha_composite(katman(dimg, dx, dy))
+# arka ışık sarması: sıcak fonun ışığı siluet kenarına hafifçe taşar (tek ortamda çekilmiş hissi)
+if P.get('sarma', 0):
+    t = np.asarray(tuval).astype(np.float32); al = t[..., 3] / 255
+    w = np.clip(nd.gaussian_filter(1 - al, P.get('sarma_r', 5) * K) * al * 2, 0, 1)
+    w *= np.clip((P.get('sarma_bit', 620) * K - np.arange(H)[:, None]) / (120 * K), 0, 1)   # sadece üst bölge (açık fon)
+    renk = np.array(P.get('sarma_renk', (255, 196, 150)), np.float32)
+    t[..., :3] = 255 - (255 - t[..., :3]) * (1 - w[..., None] * P['sarma'] * renk / 255)   # screen
+    tuval = Image.fromarray(t.clip(0, 255).astype(np.uint8), 'RGBA')
 # alt kısımda ikisini de koyu zemine erit (Buğra'nın fotoğrafı göğüste bitiyor)
 t = np.asarray(tuval).astype(np.float32)
 yy = np.arange(H)[:, None]
