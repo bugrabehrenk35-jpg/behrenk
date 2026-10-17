@@ -1,4 +1,4 @@
-# Dilaver Demir (önde, solda) ve Buğra Behrenk (arkada, sağda) katmanı.
+# Buğra Behrenk (solda) ve Dilaver Demir (sağda, omzu hafif önde) katmanı; aynı boy, ortak göz hizası.
 # Pozlama gömlek beyazından, ten tonu Lab uzayında ortak hedefe eşitlenir.
 # Kullanım: python3 kisiler.py [ayar.json] [cikti.png]
 import sys, json
@@ -12,8 +12,9 @@ P = dict(
     beyaz=(234, 235, 241),          # ortak gömlek beyazı
     ten=(65.0, 16.5, 19.0),         # ortak ten hedefi (Lab)
     ten_gucu_b=0.75, ten_gucu_d=0.75,
-    d_bas=300, d_ust=262, d_sag=790,  # Dilaver: baş yüksekliği, saç üstü y, gövde sağ kenarı x
-    b_bas=282, b_ust=244,             # Buğra: baş yüksekliği, saç üstü y (sağ kenar = tuval kenarı)
+    bas=290,                          # ikisinin de baş yüksekliği (saç üstü-çene), aynı boy
+    goz=390,                          # ortak göz hizası (y)
+    d_sol=435,                        # Dilaver gövdesinin sol kenarı x (Buğra'nın sağ kol kesiğini örter)
     golge=0.38,
     eri_bas=850, eri_bit=975,
 )
@@ -56,11 +57,12 @@ da = np.asarray(d)[..., 3].astype(np.float32) / 255
 print('Dilaver')
 drgb = renk_duzelt(np.asarray(d.convert('RGB')).astype(np.float32), da, (210.1, 210.6, 221.8), (960, 280, 1660, 1120), P['ten_gucu_d'])
 D_BAS_UST, D_CENE = 559 - 480, 1625 - 480               # kırpılmış koordinatta saç üstü ve çene
-D_BBOX_SAG = 3084 - 600
-s_d = P['d_bas'] * K / (D_CENE - D_BAS_UST)
+D_BBOX_SOL = 686 - 600
+s_d = P['bas'] * K / (D_CENE - D_BAS_UST)
 dW, dH = round(d.width * s_d), round(d.height * s_d)
 dimg = Image.fromarray(np.dstack([np.clip(drgb, 0, 255), da * 255]).astype(np.uint8), 'RGBA').resize((dW, dH), Image.LANCZOS)
-dx = round(P['d_sag'] * K - D_BBOX_SAG * s_d); dy = round(P['d_ust'] * K - D_BAS_UST * s_d)
+D_GOZ = 1070 - 480                                     # kaynakta göz hizası (ölçüldü)
+dx = round(P['d_sol'] * K - D_BBOX_SOL * s_d); dy = round(P['goz'] * K - D_GOZ * s_d)
 
 # --- Buğra
 b = Image.open('/home/user/behrenk/tasarim/kisisel/rozet/yeni-parti-rozetli-hd.jpg').convert('RGB')
@@ -68,10 +70,11 @@ ba = np.asarray(Image.open('bugra-maske.png')).astype(np.float32) / 255
 print('Buğra')
 brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), (760, 420, 1500, 1300), P['ten_gucu_b'])
 B_BAS_UST, B_CENE = 155, 1320
-s_b = P['b_bas'] * K / (B_CENE - B_BAS_UST)
+B_GOZ = 720
+s_b = P['bas'] * K / (B_CENE - B_BAS_UST)
 bW, bH = round(b.width * s_b), round(b.height * s_b)
 bimg = Image.fromarray(np.dstack([np.clip(brgb, 0, 255), ba * 255]).astype(np.uint8), 'RGBA').resize((bW, bH), Image.LANCZOS)
-bx = W - bW; by = round(P['b_ust'] * K - B_BAS_UST * s_b)
+bx = 0; by = round(P['goz'] * K - B_GOZ * s_b)              # sol kenara yaslı, göz hizası ortak
 
 # --- birleştir
 def katman(img, x, y):
@@ -79,7 +82,7 @@ def katman(img, x, y):
 tuval = katman(bimg, bx, by)
 # Dilaver'in Buğra üzerine gölgesi (sağa-aşağı kayık, yumuşak)
 dal = Image.new('L', (W, H), 0); dal.paste(dimg.split()[3], (dx, dy))
-g = nd.gaussian_filter(nd.shift(np.asarray(dal).astype(np.float32) / 255, (10 * K, 14 * K), order=1), 16 * K)
+g = nd.gaussian_filter(nd.shift(np.asarray(dal).astype(np.float32) / 255, (14 * K, -12 * K), order=1), 16 * K)
 t = np.asarray(tuval).astype(np.float32)
 t[..., :3] *= (1 - P['golge'] * g)[..., None]
 tuval = Image.fromarray(t.clip(0, 255).astype(np.uint8), 'RGBA')
