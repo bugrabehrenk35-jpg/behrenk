@@ -1,0 +1,39 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:OL;src:url(../../fontlar-gecici/Oswald-300.ttf)}
+@font-face{font-family:M6;src:url(../../fontlar-gecici/Montserrat-600.ttf)}
+@font-face{font-family:M8;src:url(../../fontlar-gecici/Montserrat-800.ttf)}
+:root{--kirmizi:#E30A17;--gece:#0B1631;--koyu:#141B33}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
+body{position:relative;background:linear-gradient(#FFFFFF 0%,#F4F4F6 45%,#ECECEF 100%)}
+/* arkada bulanık kırmızı bayrak parçaları */
+.bulut{position:absolute;filter:blur(38px);background:var(--kirmizi);opacity:.55}
+.b1{left:-60px;top:430px;width:260px;height:300px;transform:rotate(-8deg)}
+.b2{left:330px;top:250px;width:240px;height:220px;transform:rotate(6deg);opacity:.35}
+.b3{right:-40px;top:330px;width:250px;height:360px;transform:rotate(9deg);opacity:.5}
+.b4{left:620px;top:220px;width:150px;height:170px;opacity:.28}
+.logo{position:absolute;left:50%;top:30px;width:300px;transform:translateX(-50%)}
+.kisiler{position:absolute;left:0;top:0;width:1080px;height:1350px}
+.karanlik{position:absolute;left:0;right:0;bottom:0;height:640px;
+  background:linear-gradient(to bottom,rgba(11,22,49,0) 0%,rgba(11,22,49,.55) 22%,rgba(11,22,49,.92) 40%,var(--gece) 52%,var(--gece) 100%)}
+.etiket{position:absolute;left:64px;top:862px;padding-left:18px;border-left:5px solid var(--kirmizi);color:#fff}
+.etiket b{display:block;font:40px/1 O7;letter-spacing:.02em}
+.etiket span{display:block;margin-top:7px;font:19px/1 M6;letter-spacing:.04em;color:#D9DDEA}
+.slogan{position:absolute;left:0;right:0;top:958px;text-align:center;color:#fff}
+.s1{font:96px/1 O7;letter-spacing:.01em}
+.s2{margin-top:10px;font:64px/1 O7;letter-spacing:.01em;color:#FF2F3B}
+.imza{position:absolute;left:0;right:0;bottom:40px;display:flex;justify-content:center;align-items:center;gap:30px}
+.imza .gl{height:112px}
+.imza .ayrac{width:2px;height:128px;background:rgba(255,255,255,.55)}
+.imza .isim{height:132px}
+</style>
+<body>
+<div class="bulut b1"></div><div class="bulut b2"></div><div class="bulut b3"></div><div class="bulut b4"></div>
+<img class="logo" src="yp-logo-renkli.png">
+<img class="kisiler" src="kisiler.png">
+<div class="karanlik"></div>
+<div class="etiket"><b>DİLAVER DEMİR</b><span>Yeni Parti Aydın İl Başkan Adayı</span></div>
+<div class="slogan"><div class="s1">SÖZ GENÇLERİN,</div><div class="s2">DESTEĞİM DİLAVER DEMİR'E</div></div>
+<div class="imza"><img class="gl" src="yeni-genclik-beyaz.png"><span class="ayrac"></span><img class="isim" src="imza-isim.png"></div>
+</body></html>
