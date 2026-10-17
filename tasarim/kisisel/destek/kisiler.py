@@ -12,10 +12,11 @@ P = dict(
     beyaz=(234, 235, 241),          # ortak gömlek beyazı
     ten=(65.0, 16.5, 19.0),         # ortak ten hedefi (Lab)
     ten_gucu_b=0.75, ten_gucu_d=0.75,
-    bas=290,                          # ikisinin de baş yüksekliği (saç üstü-çene), aynı boy
-    goz=390,                          # ortak göz hizası (y)
-    d_sol=435,                        # Dilaver gövdesinin sol kenarı x (Buğra'nın sağ kol kesiğini örter)
+    bas=305,                          # ikisinin de baş yüksekliği (saç üstü-çene), aynı boy
+    goz=388,                          # ortak göz hizası (y)
+    d_sol=457,                        # Dilaver gövdesinin sol kenarı x (Buğra'nın sağ kol kesiğini örter)
     golge=0.38,
+    b_sol=0,                          # Buğra'nın sol kenarı x
     eri_bas=850, eri_bit=975,
 )
 if len(sys.argv) > 1 and sys.argv[1].endswith('.json'):
@@ -74,7 +75,7 @@ B_GOZ = 720
 s_b = P['bas'] * K / (B_CENE - B_BAS_UST)
 bW, bH = round(b.width * s_b), round(b.height * s_b)
 bimg = Image.fromarray(np.dstack([np.clip(brgb, 0, 255), ba * 255]).astype(np.uint8), 'RGBA').resize((bW, bH), Image.LANCZOS)
-bx = 0; by = round(P['goz'] * K - B_GOZ * s_b)              # sol kenara yaslı, göz hizası ortak
+bx = round(P['b_sol'] * K); by = round(P['goz'] * K - B_GOZ * s_b)   # göz hizası ortak
 
 # --- birleştir
 def katman(img, x, y):

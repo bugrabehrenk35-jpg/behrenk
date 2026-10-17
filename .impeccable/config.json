@@ -258,6 +258,42 @@
         ],
         "createdAt": "2026-10-15T13:52:59.367Z",
         "reason": "Oswald ve Montserrat'ın yerel takma adları"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/destek/destek.html"
+        ],
+        "createdAt": "2026-10-17T14:35:57.458Z",
+        "reason": "Beyaz yazılar kırmızı alt panelin üstünde (ölçülen kontrast 5:1 üstü); detektör paneli değil krem gövde degradesini ölçüyor"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/destek/destek.html"
+        ],
+        "createdAt": "2026-10-17T14:35:57.473Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/destek/destek.html"
+        ],
+        "createdAt": "2026-10-17T14:35:57.486Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m8",
+        "files": [
+          "tasarim/kisisel/destek/destek.html"
+        ],
+        "createdAt": "2026-10-17T14:35:57.499Z",
+        "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
       }
     ]
   },
