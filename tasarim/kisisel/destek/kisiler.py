@@ -25,7 +25,7 @@ if len(sys.argv) > 1 and sys.argv[1].endswith('.json'):
 cikti = sys.argv[2] if len(sys.argv) > 2 else 'kisiler.png'
 K = P['K']; W, H = P['W'] * K, P['H'] * K
 
-def renk_duzelt(rgb, alfa, gomlek, yuz_kutu, gucu):
+def renk_duzelt(rgb, alfa, gomlek, yuz_kutu, gucu, hedef_ozel=None):
     """rgb: float 0-255. gömlek beyazına göre kanal kazancı, sonra yüz ten tonunu hedefe kaydır."""
     kaz = np.array(P['beyaz'], np.float32) / np.array(gomlek, np.float32)
     x = rgb * kaz
@@ -39,7 +39,7 @@ def renk_duzelt(rgb, alfa, gomlek, yuz_kutu, gucu):
     for (x0, y0, x1, y1) in (yuz_kutu if isinstance(yuz_kutu[0], (list, tuple)) else [yuz_kutu]):
         olc[y0:y1, x0:x1] = True
     ort = lab[ten & olc].mean(0)
-    hedef = np.array(P['ten'], np.float32)
+    hedef = np.array(P['ten'] if hedef_ozel is None else hedef_ozel, np.float32)
     fark = (hedef - ort) * gucu
     # deliksiz, yumuşak ten bölgesi: kapat, doldur, bulanıklaştır
     tk = nd.binary_closing(ten, structure=np.ones((15, 15)))
@@ -98,7 +98,17 @@ dx = round(P['d_sol'] * K - D_BBOX_SOL * s_d); dy = round(P['goz'] * K - D_GOZ *
 b = Image.open('/home/user/behrenk/tasarim/kisisel/rozet/yeni-parti-rozetli-hd.jpg').convert('RGB')
 ba = np.asarray(Image.open('bugra-maske.png')).astype(np.float32) / 255
 print('Buğra')
-brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), P.get('b_kutu', (760, 420, 1500, 1300)), P['ten_gucu_b'])
+def ten_olc(rgb, alfa, kutular):
+    lab = rgb2lab(np.clip(rgb, 0, 255) / 255)
+    m = np.zeros(alfa.shape, bool)
+    for (x0, y0, x1, y1) in kutular: m[y0:y1, x0:x1] = True
+    L, A, B = lab[..., 0], lab[..., 1], lab[..., 2]; h = np.degrees(np.arctan2(B, A)); C = np.hypot(A, B)
+    m &= (alfa > 0.95) & (L > 35) & (L < 92) & (C > 8) & (C < 48) & (h > 12) & (h < 78)
+    return lab[m].mean(0)
+# Buğra'nın teni, Dilaver'in düzeltilmiş teninin aynı bölgelerine (alın + iki yanak) eşitlenir
+d_ten = ten_olc(drgb, da, P['d_olcum'])
+print('  Dilaver ten (alın+yanak)', d_ten.round(1))
+brgb = renk_duzelt(np.asarray(b).astype(np.float32), ba, (240.6, 241.7, 248.0), P.get('b_kutu', (760, 420, 1500, 1300)), P['ten_gucu_b'], hedef_ozel=d_ten if P.get('b_dilavere') else None)
 brgb = kenar_temizle(brgb, ba, P.get('kenar_b', 0), None)
 B_BAS_UST, B_CENE = 155, 1320
 B_GOZ = 715                                            # kaynakta göz bebekleri hizası (ölçüldü)
