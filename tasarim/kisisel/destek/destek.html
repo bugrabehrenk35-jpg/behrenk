@@ -4,23 +4,23 @@
 @font-face{font-family:M6;src:url(../../fontlar-gecici/Montserrat-600.ttf)}
 :root{--kirmizi:#C4161C;--murekkep:#2A2624;--bej:#E6E0D6}
 html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
-body{position:relative;background:radial-gradient(ellipse 80% 70% at 50% 40%,#EEE9E0 0%,#E4DDD2 60%,#D6CDBF 100%)}
-.doku{position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply}
-.lekeler{position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply}
+body{position:relative;background:radial-gradient(ellipse 80% 70% at 50% 40%,#FFFFFF 0%,#FBFBFB 60%,#F2F2F3 100%)}
+.doku{position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;display:none}
+.lekeler{display:none}
 .logo{position:absolute;left:50%;top:34px;width:180px;transform:translateX(-50%)}
 .kisiler{position:absolute;left:0;top:0;width:1080px;height:1350px;transform:scale(1.05);transform-origin:540px 390px}
 .zemin-golge{position:absolute;left:60px;right:60px;top:900px;height:120px;border-radius:50%;
-  background:radial-gradient(ellipse at center,rgba(60,45,35,.28),transparent 70%)}
+  background:radial-gradient(ellipse at center,rgba(40,40,45,.14),transparent 70%)}
 .etiket{position:absolute;right:56px;top:880px;padding-right:16px;border-right:5px solid var(--kirmizi);color:var(--murekkep);text-align:right}
 .etiket b{display:block;font:40px/1 O7;letter-spacing:.02em}
 .etiket span{display:block;margin-top:7px;font:19px/1 M6;letter-spacing:.04em;color:#5A524C}
-.slogan{position:absolute;left:0;right:0;top:1000px;text-align:center}
+.slogan{position:absolute;left:0;right:0;top:985px;text-align:center}
 .s-1{font:100px/1 O7;letter-spacing:.01em;color:var(--murekkep)}
 .s-2{margin-top:10px;font:66px/1 O7;letter-spacing:.01em;color:var(--kirmizi)}
-.imza{position:absolute;left:0;right:0;bottom:44px;display:flex;justify-content:center;align-items:center;gap:20px}
-.imza .gl{height:62px}
-.imza .ayrac{width:2px;height:72px;background:rgba(42,38,36,.45)}
-.imza .isim{height:74px}
+.imza{position:absolute;left:0;right:0;bottom:40px;display:flex;justify-content:center;align-items:center;gap:26px}
+.imza .gl{height:84px}
+.imza .ayrac{width:2px;height:98px;background:rgba(42,38,36,.45)}
+.imza .isim{height:100px}
 .doku.ust{opacity:.18}
 </style>
 <body>
