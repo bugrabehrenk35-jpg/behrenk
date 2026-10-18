@@ -312,6 +312,15 @@
         ],
         "createdAt": "2026-10-18T22:41:41.567Z",
         "reason": "Oswald'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zafer/zafer.html"
+        ],
+        "createdAt": "2026-10-18T22:42:08.962Z",
+        "reason": "Bant kenarındaki ince yırtık tırtık; 400x104 px bantta görünür değil, bilinçli stil"
       }
     ]
   },
