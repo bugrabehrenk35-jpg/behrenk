@@ -294,6 +294,24 @@
         ],
         "createdAt": "2026-10-17T14:35:57.499Z",
         "reason": "Oswald ve Montserrat'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/zafer/zafer.html"
+        ],
+        "createdAt": "2026-10-18T22:41:41.550Z",
+        "reason": "Oswald'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o6",
+        "files": [
+          "tasarim/kisisel/zafer/zafer.html"
+        ],
+        "createdAt": "2026-10-18T22:41:41.567Z",
+        "reason": "Oswald'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
       }
     ]
   },
