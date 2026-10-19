@@ -321,6 +321,33 @@
         ],
         "createdAt": "2026-10-18T22:42:08.962Z",
         "reason": "Bant kenarındaki ince yırtık tırtık; 400x104 px bantta görünür değil, bilinçli stil"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/zafer/zafer2-4x5.html"
+        ],
+        "createdAt": "2026-10-19T06:17:22.442Z",
+        "reason": "Oswald'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o6",
+        "files": [
+          "tasarim/kisisel/zafer/zafer2-4x5.html"
+        ],
+        "createdAt": "2026-10-19T06:17:22.462Z",
+        "reason": "Oswald'ın yerel takma adları; projedeki tüm parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zafer/zafer2-4x5.html"
+        ],
+        "createdAt": "2026-10-19T06:17:22.482Z",
+        "reason": "Bant kenarındaki ince yırtık tırtık; bilinçli stil"
       }
     ]
   },
