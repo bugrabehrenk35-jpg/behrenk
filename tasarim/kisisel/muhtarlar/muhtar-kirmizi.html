@@ -1,0 +1,65 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:M6;src:url(../../fontlar-gecici/Montserrat-600.ttf)}
+@font-face{font-family:El;src:url(../../fontlar-gecici/Yellowtail.ttf)}
+:root{--kirmizi:#C8161D;--murekkep:#2E2B29;--kagit:#F1EFEB}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
+body{position:relative;background:radial-gradient(ellipse 85% 70% at 50% 42%,#F7F6F3 0%,var(--kagit) 60%,#E3E0DA 100%);color:var(--murekkep)}
+.doku{position:absolute;inset:0;opacity:.45;mix-blend-mode:multiply}
+.ust{position:absolute;left:0;right:0;top:92px;text-align:center}
+.tarih{font:58px/1 O5;letter-spacing:.42em;padding-left:.42em}
+.ana{margin-top:14px;font:178px/1 O7;letter-spacing:.005em;color:var(--kirmizi)}
+.gun{margin-top:10px;font:58px/1 O5;letter-spacing:.42em;padding-left:.42em}
+.kutlu{margin-top:2px;font:92px/1 El;color:var(--murekkep);transform:rotate(-3deg)}
+.muhur{position:absolute;left:50%;top:600px;width:440px;height:440px;margin-left:-220px;transform:rotate(-11deg)}
+.not{position:absolute;left:150px;right:150px;top:1070px;text-align:center;font:27px/1.45 M6;color:#55504B}
+.not b{color:var(--kirmizi);font-weight:normal;font-family:M6}
+.alt{position:absolute;left:0;right:0;bottom:44px;display:flex;justify-content:center;align-items:center;gap:26px}
+.alt .gl{height:88px}.alt .ayrac{width:2px;height:96px;background:rgba(46,43,41,.4)}.alt .imza{height:96px}
+/* kırmızı sürüm */
+body.kirmizi{background:radial-gradient(ellipse 85% 70% at 50% 40%,#C21E3F 0%,#B2173A 55%,#8E1029 100%);color:#fff}
+body.kirmizi .doku{mix-blend-mode:overlay;opacity:.35}
+body.kirmizi .ana{color:#fff}
+body.kirmizi .tarih,body.kirmizi .gun{color:#FFE3E6}
+body.kirmizi .kutlu{color:#fff}
+body.kirmizi .not{color:#FFE3E6}
+body.kirmizi .not b{color:#fff}
+body.kirmizi .alt .ayrac{background:rgba(255,255,255,.5)}
+</style>
+<body class="kirmizi">
+<svg class="doku" width="1080" height="1350"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="6"/><feColorMatrix type="matrix" values="0 0 0 0 .5  0 0 0 0 .48  0 0 0 0 .45  0 0 0 .5 0"/></filter><rect width="1080" height="1350" filter="url(#n)"/></svg>
+<div class="ust">
+  <div class="tarih">19 EKİM</div>
+  <div class="ana">MUHTARLAR</div>
+  <div class="gun">GÜNÜ</div>
+  <div class="kutlu">Kutlu Olsun</div>
+</div>
+<svg class="muhur" viewBox="0 0 440 440">
+  <defs>
+    <filter id="murekkep" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="11" result="t"/>
+      <feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.3 1.75" result="m"/>
+      <feComposite in="SourceGraphic" in2="m" operator="in" result="a"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="t2"/>
+      <feColorMatrix in="t2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.5" result="m2"/>
+      <feComposite in="a" in2="m2" operator="in"/>
+    </filter>
+    <path id="ust-yay" d="M 70 220 A 150 150 0 0 1 370 220"/>
+    <path id="alt-yay" d="M 52 220 A 168 168 0 0 0 388 220"/>
+    <mask id="hilal"><rect width="440" height="440" fill="#000"/><circle cx="206" cy="220" r="56" fill="#fff"/><circle cx="224" cy="220" r="45" fill="#000"/></mask>
+  </defs>
+  <g filter="url(#murekkep)" fill="#FFFFFF" stroke="#FFFFFF">
+    <circle cx="220" cy="220" r="206" fill="none" stroke-width="9"/>
+    <circle cx="220" cy="220" r="190" fill="none" stroke-width="3"/>
+    <circle cx="220" cy="220" r="118" fill="none" stroke-width="3"/>
+    <text font-family="O7" font-size="40" letter-spacing="5" stroke="none"><textPath href="#ust-yay" startOffset="50%" text-anchor="middle">MAHALLE MUHTARLIĞI</textPath></text>
+    <text font-family="O5" font-size="30" letter-spacing="8" stroke="none"><textPath href="#alt-yay" startOffset="50%" text-anchor="middle">★ 19 EKİM ★</textPath></text>
+    <rect x="0" y="0" width="440" height="440" mask="url(#hilal)" stroke="none"/>
+    <polygon stroke="none" points="262,220 251.6,225.2 253.5,236.6 245.3,228.5 235,233.8 240.3,223.5 232.2,215.3 243.6,217.2 248.8,206.8 250.7,218.2"/>
+  </g>
+</svg>
+<div class="not">Mahallemizin sesi, halkımızın ilk kapısı olan<br><b>tüm muhtarlarımızın gününü kutluyoruz.</b></div>
+<div class="alt"><img class="gl" src="genclik-beyaz.png"><span class="ayrac"></span><img class="imza" src="imza-beyaz.png"></div>
+</body></html>

@@ -348,6 +348,87 @@
         ],
         "createdAt": "2026-10-19T06:17:22.482Z",
         "reason": "Bant kenarındaki ince yırtık tırtık; bilinçli stil"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.508Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o5",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.523Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.538Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-acik.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.552Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o5",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-acik.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.567Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-acik.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.583Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o7",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-kirmizi.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.597Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "o5",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-kirmizi.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.612Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "m6",
+        "files": [
+          "tasarim/kisisel/muhtarlar/muhtar-kirmizi.html"
+        ],
+        "createdAt": "2026-10-19T13:33:04.628Z",
+        "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
       }
     ]
   },
