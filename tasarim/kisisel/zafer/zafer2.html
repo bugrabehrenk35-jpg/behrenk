@@ -1,0 +1,51 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O6;src:url(../../fontlar-gecici/Oswald-600.ttf)}
+:root{--krem:#F3E6DF;--cerceve:#F0ECE4;--bordo:#A3262B;--perde:#5E7877}
+html,body{margin:0;width:1080px;height:1440px;overflow:hidden}
+body{position:relative;background:#050505}
+/* perde: dikey kıvrımlar, üstte aydınlık, alta doğru karanlığa iner */
+.perde{position:absolute;inset:0;
+  background:
+   repeating-linear-gradient(90deg,rgba(0,0,0,.20) 0 7px,rgba(255,255,255,.07) 22px,rgba(0,0,0,.12) 40px,rgba(255,255,255,.10) 58px,rgba(0,0,0,.22) 79px,rgba(255,255,255,.05) 96px,rgba(0,0,0,.18) 118px),
+   repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 31px,rgba(0,0,0,.10) 63px,rgba(255,255,255,.04) 95px),
+   linear-gradient(180deg,#6F8786 0%,var(--perde) 45%,#3E5251 72%,#0C0F0F 92%,#030303 100%)}
+.perde::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 52% 40%,rgba(255,240,220,.16),transparent 70%)}
+.gren{position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay}
+.baslik{position:absolute;left:0;right:0;top:40px;text-align:center;white-space:nowrap;font:92px/1 O7;letter-spacing:.01em;color:var(--krem);
+  text-shadow:0 4px 18px rgba(0,0,0,.25)}
+/* polaroid */
+.cerceve{position:absolute;left:112px;top:236px;width:868px;height:1050px;background:var(--cerceve);
+  box-shadow:0 30px 60px rgba(0,0,0,.45),0 2px 0 rgba(255,255,255,.6) inset}
+.pencere{position:absolute;left:162px;top:296px;width:768px;height:772px;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.pencere .ic{position:absolute;inset:0;background:inherit}
+.kisi{position:absolute;width:1206px;height:1352px;filter:contrast(1.04) saturate(1.05)}
+.pencere .kisi{left:-51px;top:-144px}
+/* yumruk ve kol çerçevenin dışına taşar */
+.tasma{position:absolute;left:0;top:0;width:1080px;height:296px;overflow:hidden;pointer-events:none}
+.tasma .kisi{left:111px;top:152px}
+.golge{position:absolute;left:0;top:0;width:1080px;height:296px;overflow:hidden;filter:blur(10px);opacity:.45}
+.golge .kisi{left:123px;top:168px;filter:brightness(0)}
+.bant{position:absolute;left:390px;top:170px;width:300px;height:104px;transform:rotate(-1.2deg);
+  background:linear-gradient(180deg,rgba(242,234,214,.92),rgba(232,222,198,.9));
+  box-shadow:0 2px 6px rgba(0,0,0,.18);
+  clip-path:polygon(1% 4%,4% 0,9% 5%,14% 1%,20% 4%,27% 0,33% 3%,40% 0,47% 4%,54% 1%,61% 4%,68% 0,75% 3%,82% 0,89% 4%,95% 1%,100% 5%,99% 96%,95% 100%,89% 96%,82% 100%,75% 97%,68% 100%,61% 96%,54% 100%,47% 96%,40% 100%,33% 97%,27% 100%,20% 96%,14% 100%,9% 95%,4% 100%,0 96%)}
+.bant::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.025) 0 2px,transparent 2px 9px)}
+.isim{position:absolute;left:112px;width:868px;top:1090px;text-align:center;color:var(--bordo)}
+.isim b{display:block;font:112px/1 O7;font-weight:normal;letter-spacing:.005em}
+.isim span{display:block;margin-top:10px;font:50px/1 O6;letter-spacing:.02em}
+.logo{position:absolute;left:50%;top:1306px;height:112px;transform:translateX(-50%)}
+.kisi2{position:absolute;left:-246px;top:-114px;width:1267px;height:1773px;filter:contrast(1.03)}
+</style>
+<body>
+<div class="perde"></div>
+<svg class="gren" width="1080" height="1440"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1440" filter="url(#g)"/></svg>
+<div class="baslik">MÜCADELE ŞİMDİ BAŞLIYOR</div>
+<div class="cerceve"></div>
+<div class="pencere"><div class="perde" style="left:-162px;top:-296px;width:1080px;height:1440px"></div><img class="kisi2" src="foto2.png" style="left:-232px;top:-100px;filter:brightness(0) blur(16px);opacity:.35"><img class="kisi2" src="foto2.png"></div>
+<div class="bant"></div>
+<div class="isim"><b>DİLAVER DEMİR</b><span>AYDIN İL BAŞKANI</span></div>
+<img class="logo" src="logo-beyaz.png">
+</body></html>
