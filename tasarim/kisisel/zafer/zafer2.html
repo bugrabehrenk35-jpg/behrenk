@@ -2,7 +2,7 @@
 <style>
 @font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
 @font-face{font-family:O6;src:url(../../fontlar-gecici/Oswald-600.ttf)}
-:root{--krem:#F3E6DF;--cerceve:#F0ECE4;--bordo:#A3262B;--perde:#5E7877}
+:root{--krem:#F2DCD4;--cerceve:#F1EDE6;--bordo:#A4312F;--perde:#6B7776}
 html,body{margin:0;width:1080px;height:1440px;overflow:hidden}
 body{position:relative;background:#050505}
 /* perde: dikey kıvrımlar, üstte aydınlık, alta doğru karanlığa iner */
@@ -10,8 +10,8 @@ body{position:relative;background:#050505}
   background:
    repeating-linear-gradient(90deg,rgba(0,0,0,.20) 0 7px,rgba(255,255,255,.07) 22px,rgba(0,0,0,.12) 40px,rgba(255,255,255,.10) 58px,rgba(0,0,0,.22) 79px,rgba(255,255,255,.05) 96px,rgba(0,0,0,.18) 118px),
    repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 31px,rgba(0,0,0,.10) 63px,rgba(255,255,255,.04) 95px),
-   linear-gradient(180deg,#6F8786 0%,var(--perde) 45%,#3E5251 72%,#0C0F0F 92%,#030303 100%)}
-.perde::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 52% 40%,rgba(255,240,220,.16),transparent 70%)}
+   linear-gradient(180deg,#6E7A79 0%,var(--perde) 45%,#454C4B 72%,#0E0D0D 92%,#050404 100%)}
+.perde::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 52% 40%,rgba(255,226,196,.20),transparent 70%)}
 .gren{position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay}
 .baslik{position:absolute;left:0;right:0;top:40px;text-align:center;white-space:nowrap;font:92px/1 O7;letter-spacing:.01em;color:var(--krem);
   text-shadow:0 4px 18px rgba(0,0,0,.25)}
@@ -37,7 +37,7 @@ body{position:relative;background:#050505}
 .isim b{display:block;font:112px/1 O7;font-weight:normal;letter-spacing:.005em}
 .isim span{display:block;margin-top:10px;font:50px/1 O6;letter-spacing:.02em}
 .logo{position:absolute;left:50%;top:1306px;height:112px;transform:translateX(-50%)}
-.kisi2{position:absolute;left:-246px;top:-114px;width:1267px;height:1773px;filter:contrast(1.03)}
+.kisi2{position:absolute;left:-246px;top:-114px;width:1267px;height:1773px;filter:sepia(.14) saturate(1.06) contrast(1.04) brightness(.97)}
 .alt{position:absolute;left:0;right:0;top:1304px;height:116px;display:flex;justify-content:center;align-items:center;gap:28px}
 .logo2{height:108px}
 .alt .ayrac{width:2px;height:96px;background:rgba(243,230,223,.6)}
@@ -46,7 +46,7 @@ body{position:relative;background:#050505}
 <body>
 <div class="perde"></div>
 <svg class="gren" width="1080" height="1440"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1440" filter="url(#g)"/></svg>
-<div class="baslik">MÜCADELE ŞİMDİ BAŞLIYOR</div>
+<div class="baslik">HEP BİRLİKTE, AYDIN İÇİN</div>
 <div class="cerceve"></div>
 <div class="pencere"><div class="perde" style="left:-162px;top:-296px;width:1080px;height:1440px"></div><img class="kisi2" src="foto2.png" style="left:-232px;top:-100px;filter:brightness(0) blur(16px);opacity:.35"><img class="kisi2" src="foto2.png"></div>
 <div class="bant"></div>
