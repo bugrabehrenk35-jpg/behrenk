@@ -429,6 +429,24 @@
         ],
         "createdAt": "2026-10-19T13:33:04.628Z",
         "reason": "Oswald/Montserrat yerel takma adları; parti görsellerinin yazı tipi"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/basak/basak.html"
+        ],
+        "createdAt": "2026-10-20T07:56:53.079Z",
+        "reason": "Kişisel sosyal medya postu; Oswald ve yırtık bant bilinçli"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/basak/basak.html"
+        ],
+        "createdAt": "2026-10-20T07:56:53.095Z",
+        "reason": "Kişisel sosyal medya postu; Oswald ve yırtık bant bilinçli"
       }
     ]
   },
