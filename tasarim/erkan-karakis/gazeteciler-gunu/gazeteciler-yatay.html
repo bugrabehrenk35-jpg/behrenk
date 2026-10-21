@@ -10,19 +10,19 @@ html,body{margin:0;width:1350px;height:1080px;overflow:hidden}
 body{position:relative;background:radial-gradient(ellipse 90% 70% at 50% 40%,#F6F2EA 0%,var(--kagit) 60%,#E4DDCF 100%);color:var(--murekkep)}
 .doku{position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply}
 .kat{position:absolute;left:0;right:0;top:540px;height:2px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.07) 20%,rgba(0,0,0,.07) 80%,transparent);box-shadow:0 1px 0 rgba(255,255,255,.6)}
-.sayfa{position:absolute;left:80px;right:80px;top:52px}
+.sayfa{position:absolute;left:80px;right:80px;top:76px}
 .ust{display:flex;justify-content:space-between;font:24px/1 O5;letter-spacing:.14em;color:var(--gri);padding-bottom:16px;border-bottom:2px solid var(--murekkep)}
 .manset{text-align:center;font:112px/1 PF;letter-spacing:-.01em;padding:18px 0 14px;white-space:nowrap}
 .alt-ust{display:flex;justify-content:space-between;font:24px/1 O5;letter-spacing:.14em;padding:14px 0;border-top:6px double var(--murekkep);border-bottom:2px solid var(--murekkep)}
 .alt-ust b{font-weight:normal;color:var(--kirmizi)}
-.baslik{margin-top:22px;font:134px/1.1 O7;white-space:nowrap;letter-spacing:-.005em;text-transform:uppercase}
+.baslik{margin-top:22px;font:114px/1.1 O7;white-space:nowrap;letter-spacing:-.005em;text-transform:uppercase}
 .baslik em{font-style:normal;color:var(--kirmizi)}
 .spot{margin-top:22px;font:34px/1.34 PI;max-width:1190px}
 .sutunlar{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px;height:0;overflow:hidden;display:none;
   -webkit-mask:linear-gradient(to bottom,#000 30%,transparent)}
 .sutun{background:repeating-linear-gradient(180deg,rgba(28,26,24,.20) 0 7px,transparent 7px 19px)}
 .sutun:nth-child(2){background:repeating-linear-gradient(180deg,rgba(28,26,24,.20) 0 7px,transparent 7px 19px) 0 0/88% 100% no-repeat}
-.imza{position:absolute;left:0;right:0;bottom:48px;display:flex;justify-content:center;align-items:center;gap:30px}
+.imza{position:absolute;left:0;right:0;bottom:76px;display:flex;justify-content:center;align-items:center;gap:30px}
 .imza img{height:84px}.imza .ayrac{width:3px;height:92px;background:var(--kirmizi)}
 .imza .ad{font:80px/1 Imza;color:var(--murekkep);white-space:nowrap;transform:translateY(2px)}
 </style>
@@ -39,4 +39,4 @@ body{position:relative;background:radial-gradient(ellipse 90% 70% at 50% 40%,#F6
 </div>
 <div class="imza"><img src="yp-logo-renkli.png"><span class="ayrac"></span><span class="ad">Erkan Karakış</span></div>
 </body></html>
-<script>document.fonts.ready.then(()=>{const b=document.querySelector('.baslik');const r=b.scrollWidth;if(r>1190){b.style.fontSize=(134*1190/r)+'px'}})</script>
+<script>document.fonts.ready.then(()=>{const b=document.querySelector('.baslik');const r=b.scrollWidth;if(r>1190){b.style.fontSize=(114*1190/r)+'px'}})</script>
