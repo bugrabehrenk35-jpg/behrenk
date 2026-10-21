@@ -456,6 +456,15 @@
         ],
         "createdAt": "2026-10-21T15:08:10.424Z",
         "reason": "Sosyal medya postu; gazete manşeti için Oswald/Playfair bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/erkan-karakis/gazeteciler-gunu/gazeteciler-yatay.html"
+        ],
+        "createdAt": "2026-10-21T15:09:24.517Z",
+        "reason": "Sosyal medya postu; gazete manşeti için Oswald/Playfair bilinçli"
       }
     ]
   },
