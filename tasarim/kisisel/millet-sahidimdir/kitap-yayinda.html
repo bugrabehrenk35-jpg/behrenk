@@ -1,0 +1,41 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:O3;src:url(../../fontlar-gecici/Oswald-300.ttf)}
+@font-face{font-family:PI;src:url(../../fontlar-gecici/PlayfairDisplay-500i.ttf)}
+:root{--kirmizi:#C8141C;--koyu:#8E0D13;--krem:#FBEFEA}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
+body{position:relative;background:radial-gradient(ellipse 75% 55% at 50% 50%,#D9222A 0%,var(--kirmizi) 45%,#9C0F16 100%);color:#fff}
+.gren{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay}
+.ust{position:absolute;left:0;right:0;top:78px;text-align:center}
+.etiket{font:30px/1 O5;letter-spacing:.32em;padding-left:.32em;color:var(--krem)}
+.baslik{margin-top:16px;font:150px/1 O7;letter-spacing:.01em}
+.alt-baslik{margin-top:18px;font:34px/1 O3;letter-spacing:.2em;padding-left:.2em;color:var(--krem)}
+/* kitap */
+.sahne{position:absolute;left:50%;top:388px;width:384px;height:646px;margin-left:-180px;perspective:2400px}
+.kitap{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(-20deg) rotateX(1deg)}
+.on{position:absolute;inset:0;background:url(kapak.jpg) center/cover;transform:translateZ(22px);border-radius:2px 6px 6px 2px;
+  box-shadow:inset 6px 0 10px -4px rgba(0,0,0,.35),inset -1px 0 0 rgba(255,255,255,.4)}
+.on::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.16) 38%,rgba(255,255,255,0) 52%,rgba(0,0,0,.06) 100%)}
+.sirt{position:absolute;left:0;top:0;width:44px;height:100%;background:linear-gradient(90deg,#6E080D,#B0121A 45%,#7E0A10);transform:rotateY(-90deg) translateZ(22px);transform-origin:left center;margin-left:0}
+.sayfalar{position:absolute;right:0;top:4px;width:42px;height:calc(100% - 8px);transform:rotateY(90deg) translateZ(-21px);transform-origin:right center;
+  background:repeating-linear-gradient(90deg,#F4EFE6 0 2px,#DED6C8 2px 3px)}
+.golge{position:absolute;left:50%;top:1010px;width:470px;height:56px;margin-left:-226px;background:radial-gradient(ellipse at center,rgba(40,0,0,.55),transparent 70%);filter:blur(6px)}
+.alinti{position:absolute;left:0;right:0;top:1080px;text-align:center;font:36px/1.25 PI;color:var(--krem)}
+.imza{position:absolute;left:0;right:0;bottom:70px;display:flex;justify-content:center;align-items:center;gap:26px}
+.imza .logo{height:104px}.imza .ayrac{width:2px;height:96px;background:rgba(255,255,255,.6)}.imza .ad{height:98px}
+.arka{position:absolute;left:520px;top:420px;width:330px;height:640px;margin-left:-180px;background:rgba(60,0,4,.55);filter:blur(26px);transform:skewX(-6deg);border-radius:10px}
+</style>
+<body>
+<svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
+<div class="ust">
+  <div class="etiket">EKREM İMAMOĞLU</div>
+  <div class="baslik">KİTAP YAYINDA</div>
+  <div class="alt-baslik">MİLLET ŞAHİDİMDİR</div>
+</div>
+<div class="golge"></div>
+<div class="arka"></div><div class="sahne"><div class="kitap"><div class="sirt"></div><div class="on"></div></div></div>
+<div class="alinti">“Güvencemiz halkımızdır. Gücümüz gençlerimizdir.”</div>
+<div class="imza"><img class="logo" src="logo-beyaz.png"><span class="ayrac"></span><img class="ad" src="imza-beyaz.png"></div>
+</body></html>
