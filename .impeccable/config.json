@@ -501,6 +501,15 @@
         ],
         "createdAt": "2026-10-24T12:18:06.870Z",
         "reason": "Kişisel sunum sayfası; Playfair/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/basak/dovme/taneler.html"
+        ],
+        "createdAt": "2026-10-24T12:19:16.958Z",
+        "reason": "Kişisel sunum sayfası; Playfair/Inter bilinçli"
       }
     ]
   },

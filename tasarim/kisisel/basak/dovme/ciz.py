@@ -2,7 +2,40 @@
 import math
 SW=3.0
 def P(x,y): return f'{x:.1f},{y:.1f}'
+MOD='beyaz'
+import random
+_mid=[0]
 def tane(x,y,ang,L,W,ic=True):
+    if MOD!='beyaz': return tane2(x,y,ang,L,W,ic)
+    return tane1(x,y,ang,L,W,ic)
+def tane2(x,y,ang,L,W,ic=True):
+    a=math.radians(ang); dx,dy=math.cos(a),math.sin(a); nx,ny=-dy,dx
+    t=(x+dx*L,y+dy*L)
+    c1=(x+dx*L*.42+nx*W*.6, y+dy*L*.42+ny*W*.6)
+    c2=(x+dx*L*.42-nx*W*.6, y+dy*L*.42-ny*W*.6)
+    d=f'M{P(x,y)} Q{P(*c1)} {P(*t)} Q{P(*c2)} {P(x,y)}Z'
+    if MOD=='karartma':   # tam dolu, ortada mürekkepsiz ince çizgi (ten rengi kalır)
+        _mid[0]+=1; mid=f'm{_mid[0]}'
+        return (f'<mask id="{mid}"><rect x="-50" y="-50" width="900" height="900" fill="#fff"/>'
+                f'<path d="M{P(x+dx*L*.24,y+dy*L*.24)} L{P(x+dx*L*.74,y+dy*L*.74)}" stroke="#000" stroke-width="2.4" stroke-linecap="round"/></mask>'
+                f'<path d="{d}" fill="#111" stroke="#111" stroke-width="{SW*.6:.2f}" stroke-linejoin="round" mask="url(#{mid})"/>'),t
+    if MOD=='yarim':      # yarısı dolu (gölge), yarısı sadece çizgi (ışık)
+        yari=f'M{P(x,y)} Q{P(*c2)} {P(*t)} Z'
+        return (f'<path d="{yari}" fill="#111"/>'
+                f'<path d="{d}" fill="none" stroke="#111" stroke-width="{SW}" stroke-linejoin="round"/>'),t
+    if MOD=='nokta':      # noktalama gölge: dipte yoğun, uca doğru seyrek
+        rnd=random.Random(int(x*7+y*13)); o=[f'<path d="{d}" fill="none" stroke="#111" stroke-width="{SW*.85:.2f}" stroke-linejoin="round"/>']
+        n=int(L*W/9)
+        for _ in range(n*3):
+            u=rnd.random(); v=rnd.uniform(-1,1)
+            gen=math.sin(math.pi*min(u/0.84,1))**.9*0.5*W*.62*1.2
+            if abs(v)>0.82 or rnd.random()>(1-u)**1.4: continue
+            px=x+dx*L*u+nx*gen*v; py=y+dy*L*u+ny*gen*v
+            o.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="1.25" fill="#111"/>')
+            n-=1
+            if n<=0: break
+        return ''.join(o),t
+def tane1(x,y,ang,L,W,ic=True):
     a=math.radians(ang); dx,dy=math.cos(a),math.sin(a); nx,ny=-dy,dx
     t=(x+dx*L,y+dy*L)
     c1=(x+dx*L*.42+nx*W*.6, y+dy*L*.42+ny*W*.6)
@@ -125,3 +158,9 @@ print('AB ok')
 for ad,b in (('AB-yildiz-dolu',True),('AB-yildiz-cizgi',False)):
     open(f'konsept-{ad}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="460" height="780" viewBox="190 14 460 780">'+''.join(birlesik(bes=b))+'</svg>')
 print('yildiz ok')
+
+for m in ('karartma','yarim','nokta'):
+    MOD=m
+    open(f'konsept-AB-{m}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="460" height="780" viewBox="190 14 460 780">'+''.join(birlesik(bes=True))+'</svg>')
+MOD='beyaz'
+print('modlar ok')
