@@ -1,0 +1,77 @@
+# Başak dövmesi konseptleri. Ölçek: 100 px = 1 cm. İnce çizgi (fineline) ~0,3 mm.
+import math
+SW=3.0
+def P(x,y): return f'{x:.1f},{y:.1f}'
+def tane(x,y,ang,L,W,ic=True):
+    a=math.radians(ang); dx,dy=math.cos(a),math.sin(a); nx,ny=-dy,dx
+    t=(x+dx*L,y+dy*L)
+    c1=(x+dx*L*.42+nx*W*.6, y+dy*L*.42+ny*W*.6)
+    c2=(x+dx*L*.42-nx*W*.6, y+dy*L*.42-ny*W*.6)
+    s=f'<path d="M{P(x,y)} Q{P(*c1)} {P(*t)} Q{P(*c2)} {P(x,y)}Z" fill="#fff" stroke="#111" stroke-width="{SW}" stroke-linejoin="round"/>'
+    if ic: s+=f'<path d="M{P(x+dx*L*.2,y+dy*L*.2)} L{P(x+dx*L*.7,y+dy*L*.7)}" stroke="#111" stroke-width="{SW*.55:.2f}" stroke-linecap="round"/>'
+    return s,t
+def yol(pts,w=SW,dash=None):
+    d='M'+' L'.join(P(*p) for p in pts)
+    da=f' stroke-dasharray="{dash}"' if dash else ''
+    return f'<path d="{d}" fill="none" stroke="#111" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round"{da}/>'
+def kilcik(x,y,ang,L,bukum=0):
+    a=math.radians(ang); pts=[]
+    for i in range(21):
+        u=i/20; aa=a+math.radians(bukum)*u
+        pts.append((x+math.cos(aa)*L*u, y+math.sin(aa)*L*u))
+    return yol(pts,w=SW*.6)
+def basak(eksen, tlist, aci=26, kil=True, kil_L=110):
+    """eksen(t)->(x,y), t: 0 dip 1 uç. tlist: [(t,L,W)] alttan üste, taraf dönüşümlü"""
+    g=[yol([eksen(i/80) for i in range(81)])]
+    taraf=1; ucs=[]
+    for i,(t,L,W) in enumerate(tlist):
+        x,y=eksen(t); x2,y2=eksen(min(t+.01,1)); ea=math.degrees(math.atan2(y2-y,x2-x))
+        s,u=tane(x,y,ea+taraf*aci,L,W); g.append(s); ucs.append((u,ea+taraf*aci)); taraf*=-1
+    if kil:
+        for (u,a) in ucs[-5:]:
+            g.append(kilcik(u[0],u[1],a+(-6 if a<-90 else 6),kil_L*.8,0))
+        x,y=eksen(1); x2,y2=eksen(.99); ea=math.degrees(math.atan2(y-y2,x-x2))
+        g.append(kilcik(x,y,ea,kil_L))
+    return g
+def yildiz(cx,cy,r):
+    pts=[]
+    for i in range(8):
+        a=math.radians(-90+i*45); rr=r if i%2==0 else r*.26
+        pts.append((cx+rr*math.cos(a),cy+rr*math.sin(a)))
+    return f'<path d="M{" L".join(P(*p) for p in pts)}Z" fill="#111"/>'
+
+def mors():
+    kod=['-...','.-','...','.-','-.-']   # B A S A K (Ş yerine S, açıklamaya bak)
+    eksen=lambda t:(350+14*math.sin(t*2.6)-6*t, 760-680*t)
+    tl=[]; t=.25; ad=.036; lg=.05
+    for h in kod:
+        for s in h:
+            tl.append((t, 66 if s=='-' else 34, 22 if s=='-' else 21)); t+=ad
+        t+=lg
+    g=basak(eksen,tl,aci=24,kil=True,kil_L=95)
+    return g
+def spika():
+    eksen=lambda t:(200+36*t+22*math.sin(t*2), 770-400*t)
+    tl=[(.40+i*.07,52-i*2.6,24) for i in range(9)]
+    g=basak(eksen,tl,aci=30,kil=False)
+    x,y=eksen(1)
+    g.append(f'<path d="M{P(x,y-6)} Q{P(x+30,y-190)} {P(x+200,y-268)}" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 13"/>')
+    g.append(yildiz(x+224,y-280,30))
+    for dx,dy,r in [(300,-215,6),(150,-330,5),(320,-320,4.5),(60,-300,4)]:
+        g.append(f'<circle cx="{x+dx:.1f}" cy="{y+dy:.1f}" r="{r}" fill="#111"/>')
+    return g
+def tohum():
+    zem=640; g=[yol([(30,zem),(670,zem)],w=2.2)]
+    s,_=tane(55,zem-12,-8,56,32); g.append(s)
+    g.append(yol([(220+2*math.sin(u*3),zem-90*u) for u in [i/20 for i in range(21)]]))
+    s,_=tane(221,zem-60,-55,38,20,ic=False); g.append(s)
+    s,_=tane(219,zem-48,-128,30,18,ic=False); g.append(s)
+    e3=lambda t:(380+6*math.sin(t*2), zem-260*t)
+    g+=basak(e3,[(.6+i*.09,36,20) for i in range(5)],aci=28,kil=True,kil_L=50)
+    e4=lambda t:(560+50*t*t, zem-470*t+30*t*t)
+    g+=basak(e4,[(.5+i*.058,46,24) for i in range(9)],aci=28,kil=True,kil_L=85)
+    return g
+for ad,f in (('A',mors),('B',spika),('C',tohum)):
+    g=f()
+    open(f'konsept-{ad}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800">'+''.join(g)+'</svg>')
+print('ok')
