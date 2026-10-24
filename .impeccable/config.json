@@ -483,6 +483,15 @@
         ],
         "createdAt": "2026-10-24T12:13:08.920Z",
         "reason": "Kişisel sunum sayfası; Playfair/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/basak/dovme/final.html"
+        ],
+        "createdAt": "2026-10-24T12:16:09.539Z",
+        "reason": "Kişisel sunum sayfası; Playfair/Inter bilinçli"
       }
     ]
   },

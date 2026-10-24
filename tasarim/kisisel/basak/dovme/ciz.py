@@ -75,3 +75,37 @@ for ad,f in (('A',mors),('B',spika),('C',tohum)):
     g=f()
     open(f'konsept-{ad}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800">'+''.join(g)+'</svg>')
 print('ok')
+
+# ---------- A+B: Gizli isimli başak, kendi yıldızına uzanır
+def birlesik(kil_L=60, egim=1.0):
+    kod=['-...','.-','...','.-','-.-']
+    eksen=lambda t:(240+60*t*t*egim+10*math.sin(t*2.4), 790-500*t)
+    tl=[]; t=.22; ad=.037; lg=.046
+    for h in kod:
+        for s in h:
+            tl.append((t, 66 if s=='-' else 36, 22 if s=='-' else 21)); t+=ad
+        t+=lg
+    g=basak(eksen,tl,aci=24,kil=False)
+    ucs=[]
+    # üstteki tanelerden kısa kılçıklar
+    x,y=eksen(1)
+    g.append(f'<path d="M{P(x,y-4)} Q{P(x+18,y-150)} {P(x+190,y-200)}" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 12"/>')
+    sx,sy=x+214,y-206
+    g.append(yildiz(sx,sy,30))
+    for dx,dy,r in [(84,-40,5.5),(-140,6,4.5),(70,92,4),(128,44,4)]:
+        g.append(f'<circle cx="{sx+dx:.1f}" cy="{sy+dy:.1f}" r="{r}" fill="#111"/>')
+    return g
+g=birlesik()
+def etiketli():
+    kod=['-...','.-','...','.-','-.-']; harfler='BAŞAK'
+    eksen=lambda t:(240+60*t*t+10*math.sin(t*2.4), 790-500*t)
+    e=[]; t=.22; ad=.037; lg=.046
+    for h,c in zip(kod,harfler):
+        t0=t; t+=ad*len(h); t1=t-ad; t+=lg
+        x0,y0=eksen(t0); x1,y1=eksen(t1+.03)
+        e.append(f'<path d="M{P(x0-60,y0)} L{P(x0-70,y0)} L{P(x1-70,y1)} L{P(x1-60,y1)}" fill="none" stroke="#A8402F" stroke-width="2"/>')
+        e.append(f'<text x="{x0-84:.1f}" y="{(y0+y1)/2+9:.1f}" text-anchor="end" font-family="sans-serif" font-size="26" fill="#A8402F">{c}  {h.replace("-","−").replace(".","·")}</text>')
+    return e
+open('konsept-AB-aciklamali.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800">'+''.join(g+etiketli())+'</svg>')
+open('konsept-AB.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="440" height="780" viewBox="190 14 440 780">'+''.join(g)+'</svg>')
+print('AB ok')
