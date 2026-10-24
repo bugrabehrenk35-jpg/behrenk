@@ -33,6 +33,13 @@ def basak(eksen, tlist, aci=26, kil=True, kil_L=110):
         x,y=eksen(1); x2,y2=eksen(.99); ea=math.degrees(math.atan2(y-y2,x-x2))
         g.append(kilcik(x,y,ea,kil_L))
     return g
+def yildiz5(cx,cy,r,dolu=True,don=0):
+    pts=[]
+    for i in range(10):
+        a=math.radians(-90+don+i*36); rr=r if i%2==0 else r*.42
+        pts.append((cx+rr*math.cos(a),cy+rr*math.sin(a)))
+    d='M'+' L'.join(P(*p) for p in pts)+'Z'
+    return f'<path d="{d}" fill="{"#111" if dolu else "none"}" stroke="#111" stroke-width="{max(2.4,r*.16) if dolu else SW}" stroke-linejoin="round"/>'
 def yildiz(cx,cy,r):
     pts=[]
     for i in range(8):
@@ -77,7 +84,7 @@ for ad,f in (('A',mors),('B',spika),('C',tohum)):
 print('ok')
 
 # ---------- A+B: Gizli isimli başak, kendi yıldızına uzanır
-def birlesik(kil_L=60, egim=1.0):
+def birlesik(kil_L=60, egim=1.0, bes=None):
     kod=['-...','.-','...','.-','-.-']
     eksen=lambda t:(240+60*t*t*egim+10*math.sin(t*2.4), 790-500*t)
     tl=[]; t=.22; ad=.037; lg=.046
@@ -91,9 +98,14 @@ def birlesik(kil_L=60, egim=1.0):
     x,y=eksen(1)
     g.append(f'<path d="M{P(x,y-4)} Q{P(x+18,y-150)} {P(x+190,y-200)}" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 12"/>')
     sx,sy=x+214,y-206
-    g.append(yildiz(sx,sy,30))
-    for dx,dy,r in [(84,-40,5.5),(-140,6,4.5),(70,92,4),(128,44,4)]:
-        g.append(f'<circle cx="{sx+dx:.1f}" cy="{sy+dy:.1f}" r="{r}" fill="#111"/>')
+    if bes is None:
+        g.append(yildiz(sx,sy,30))
+        for dx,dy,r in [(84,-40,5.5),(-140,6,4.5),(70,92,4),(128,44,4)]:
+            g.append(f'<circle cx="{sx+dx:.1f}" cy="{sy+dy:.1f}" r="{r}" fill="#111"/>')
+    else:
+        g.append(yildiz5(sx,sy,32,dolu=bes,don=-6))
+        for dx,dy,r,dn in [(66,-50,13,8),(-136,10,10,-8),(58,88,8,10),(-62,64,6,-4)]:
+            g.append(yildiz5(sx+dx,sy+dy,r,dolu=True,don=dn))
     return g
 g=birlesik()
 def etiketli():
@@ -109,3 +121,7 @@ def etiketli():
 open('konsept-AB-aciklamali.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800">'+''.join(g+etiketli())+'</svg>')
 open('konsept-AB.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="440" height="780" viewBox="190 14 440 780">'+''.join(g)+'</svg>')
 print('AB ok')
+
+for ad,b in (('AB-yildiz-dolu',True),('AB-yildiz-cizgi',False)):
+    open(f'konsept-{ad}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="460" height="780" viewBox="190 14 460 780">'+''.join(birlesik(bes=b))+'</svg>')
+print('yildiz ok')
