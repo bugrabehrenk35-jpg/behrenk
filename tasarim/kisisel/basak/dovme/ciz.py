@@ -164,3 +164,25 @@ for m in ('karartma','yarim','nokta'):
     open(f'konsept-AB-{m}.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="460" height="780" viewBox="190 14 460 780">'+''.join(birlesik(bes=True))+'</svg>')
 MOD='beyaz'
 print('modlar ok')
+
+# ---------- El üstü yerleşim: dikey, yüzük parmağı hizası, yıldız bileğe yakın
+def dikey(ana_dolu=False):
+    kod=['-...','.-','...','.-','-.-']
+    eksen=lambda t:(118+52*t*t-6*math.sin(t*3), 720-470*t)
+    tl=[]; t=.22; ad=.037; lg=.046
+    for h in kod:
+        for s in h:
+            tl.append((t, 64 if s=='-' else 35, 22 if s=='-' else 21)); t+=ad
+        t+=lg
+    g=basak(eksen,tl,aci=24,kil=False)
+    x,y=eksen(1)
+    sx,sy=142,62
+    g.append(f'<path d="M{P(x,y-6)} Q{P(x+8,y-110)} {P(sx+6,sy+42)}" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 12"/>')
+    g.append(yildiz5(sx,sy,32,dolu=ana_dolu,don=-4))
+    for dx,dy,r,dn in [(64,-30,11,8),(-74,10,9,-8),(70,58,7,10),(-46,-46,6,-4)]:
+        g.append(yildiz5(sx+dx,sy+dy,r,dolu=True,don=dn))
+    return g
+MOD='nokta'
+open('el-dikey.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" width="300" height="740" viewBox="0 0 300 740">'+''.join(dikey())+'</svg>')
+MOD='beyaz'
+print('dikey ok')
