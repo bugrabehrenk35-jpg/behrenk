@@ -510,6 +510,15 @@
         ],
         "createdAt": "2026-10-24T12:19:16.958Z",
         "reason": "Kişisel sunum sayfası; Playfair/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/29-ekim/cumhuriyet.html"
+        ],
+        "createdAt": "2026-10-27T15:34:02.738Z",
+        "reason": "Sosyal medya postu; Oswald/Playfair bilinçli"
       }
     ]
   },
