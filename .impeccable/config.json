@@ -519,6 +519,24 @@
         ],
         "createdAt": "2026-10-27T15:34:02.738Z",
         "reason": "Sosyal medya postu; Oswald/Playfair bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/29-ekim/cumhuriyet2.html"
+        ],
+        "createdAt": "2026-10-27T15:35:19.018Z",
+        "reason": "Sosyal medya postu; Oswald/Playfair bilinçli"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/29-ekim/cumhuriyet2.html"
+        ],
+        "createdAt": "2026-10-27T15:35:19.032Z",
+        "reason": "Yırtık kâğıt kenarı bilinçli"
       }
     ]
   },

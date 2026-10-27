@@ -1,0 +1,46 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:PI;src:url(../../fontlar-gecici/PlayfairDisplay-500i.ttf)}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
+body{position:relative;background:radial-gradient(ellipse 90% 70% at 50% 85%,#EE1C25 0%,#E30A17 45%,#A60812 100%);color:#fff}
+.foto{position:absolute;left:0;top:0;width:1080px;height:830px;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block;filter:contrast(1.06) brightness(1.02)}
+.foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(60,0,4,.35) 100%)}
+.kenar{position:absolute;left:0;right:0;top:818px;height:24px;background:#E30A17;
+ clip-path:polygon(0 50%,3% 30%,7% 55%,11% 25%,15% 50%,19% 35%,24% 60%,28% 30%,33% 52%,37% 28%,42% 55%,46% 32%,51% 58%,55% 30%,60% 50%,64% 27%,69% 55%,73% 34%,78% 58%,82% 30%,87% 52%,91% 30%,96% 55%,100% 35%,100% 100%,0 100%)}
+.gren{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none}
+.metin{position:absolute;left:80px;right:80px;top:892px}
+.ust{font:26px/1 O5;letter-spacing:.32em;color:rgba(255,240,234,.85)}
+.ana{margin-top:16px;font:118px/1 O7;letter-spacing:.005em;white-space:nowrap}
+.alt{margin-top:18px;font:32px/1.3 PI;color:#FFF0EA}
+.muhur{position:absolute;right:70px;top:700px;width:220px;height:220px;transform:rotate(-12deg)}
+.imza{position:absolute;left:0;right:0;bottom:52px;display:flex;justify-content:center;align-items:center;gap:26px}
+.imza .logo{height:88px}.imza .ayrac{width:2px;height:80px;background:rgba(255,255,255,.6)}.imza .ad{height:84px}
+</style>
+<body>
+<div class="foto"><img src="ataturk-kurdu.jpg"></div>
+<div class="kenar"></div>
+<svg class="muhur" viewBox="0 0 240 240">
+<defs><filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+<feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="11" result="t"/>
+<feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.2 1.7" result="m"/>
+<feComposite in="SourceGraphic" in2="m" operator="in" result="a"/>
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="3" result="t2"/>
+<feColorMatrix in="t2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.8 1.45" result="m2"/>
+<feComposite in="a" in2="m2" operator="in"/></filter></defs>
+<g filter="url(#ink)" fill="#fff" stroke="#fff">
+<circle cx="120" cy="120" r="108" fill="none" stroke-width="14"/>
+<circle cx="120" cy="120" r="88" fill="none" stroke-width="4"/>
+<text x="120" y="112" text-anchor="middle" font-family="O7" font-size="64" stroke="none">103</text>
+<text x="120" y="152" text-anchor="middle" font-family="O5" font-size="28" letter-spacing="6" stroke="none">YIL</text>
+</g></svg>
+<div class="metin">
+  <div class="ust">29 EKİM 1923 · 29 EKİM 2026</div>
+  <div class="ana">SÖZ, ŞİMDİ BİZDE.</div>
+  <div class="alt">O çocuklar söz verdi. 103 yıl sonra o sözü biz tutacağız.</div>
+</div>
+<svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="9"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
+<div class="imza"><img class="logo" src="logo-beyaz.png"><span class="ayrac"></span><img class="ad" src="imza-beyaz.png"></div>
+</body></html>
