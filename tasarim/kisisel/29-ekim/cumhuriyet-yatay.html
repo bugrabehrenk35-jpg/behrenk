@@ -1,0 +1,33 @@
+<!doctype html><html lang="tr"><meta charset="utf-8">
+<style>
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:PI;src:url(../../fontlar-gecici/PlayfairDisplay-500i.ttf)}
+:root{--krem:#F3E7D3;--kirmizi:#E3141E}
+html,body{margin:0;width:1350px;height:1080px;overflow:hidden;background:#140D08}
+.foto{position:absolute;inset:0}
+.foto img{position:absolute;left:0;top:-20px;width:1350px;filter:sepia(.35) contrast(1.08) brightness(.98)}
+/* tek parça: alttan sıcak koyu kahveye erir, kenarlar hafif kararır */
+.ton{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(20,13,8,0) 60%,rgba(20,13,8,.65) 73%,rgba(20,13,8,.93) 84%,#140D08 95%),
+  radial-gradient(ellipse 85% 75% at 50% 35%,rgba(0,0,0,0) 55%,rgba(20,13,8,.55) 100%)}
+.gren{position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay}
+.metin{position:absolute;left:0;right:0;top:812px;text-align:center}
+.ust{display:flex;justify-content:center;align-items:center;gap:18px;font:24px/1 O5;letter-spacing:.32em;color:var(--krem);opacity:.85}
+.ust i{display:block;width:56px;height:3px;background:var(--kirmizi)}
+.ana{margin-top:18px;font:122px/.95 O7;color:var(--krem);white-space:nowrap}
+.ana em{font-style:normal;color:var(--kirmizi)}
+.alt{margin-top:18px;font:34px/1.35 PI;color:rgba(243,231,211,.88)}
+.imza{position:absolute;left:0;right:0;bottom:46px;display:flex;justify-content:center;align-items:center;gap:22px;opacity:.95}
+.imza .logo{height:84px}.imza .ayrac{width:2px;height:76px;background:rgba(243,231,211,.5)}.imza .ad{height:80px}
+</style>
+<body>
+<div class="foto"><img src="ataturk-kurdu.jpg"></div>
+<div class="ton"></div>
+<svg class="gren" width="1350" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="9"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1350" height="1080" filter="url(#g)"/></svg>
+<div class="metin">
+  <div class="ust"><i></i>29 EKİM 1923 — 2026<i></i></div>
+  <div class="alt">O çocuklar söz verdi. 103 yıl sonra o sözü biz tutacağız.</div>
+</div>
+<div class="imza"><img class="logo" src="logo-beyaz.png"><span class="ayrac"></span><img class="ad" src="imza-beyaz.png"></div>
+</body></html>
