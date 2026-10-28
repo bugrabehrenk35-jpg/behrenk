@@ -564,6 +564,42 @@
         ],
         "createdAt": "2026-10-28T15:31:09.283Z",
         "reason": "Instagram story; Oswald/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-1-beyaz.html"
+        ],
+        "createdAt": "2026-10-28T15:33:16.474Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-1-kirmizi.html"
+        ],
+        "createdAt": "2026-10-28T15:33:16.491Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-2-beyaz.html"
+        ],
+        "createdAt": "2026-10-28T15:33:16.525Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-2-kirmizi.html"
+        ],
+        "createdAt": "2026-10-28T15:33:16.541Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
       }
     ]
   },
