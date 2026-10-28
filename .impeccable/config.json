@@ -546,6 +546,24 @@
         ],
         "createdAt": "2026-10-27T15:45:17.839Z",
         "reason": "Sosyal medya postu; Oswald/Playfair bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-1.html"
+        ],
+        "createdAt": "2026-10-28T15:31:09.269Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tezcan-aciklama/story-2.html"
+        ],
+        "createdAt": "2026-10-28T15:31:09.283Z",
+        "reason": "Instagram story; Oswald/Inter bilinçli"
       }
     ]
   },
