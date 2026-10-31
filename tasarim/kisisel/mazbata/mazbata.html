@@ -2,48 +2,41 @@
 <style>
 @font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
 @font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
-@font-face{font-family:O3;src:url(../../fontlar-gecici/Oswald-300.ttf)}
-:root{--kirmizi:#E3141E;--koyu:#5E060B}
+:root{--kirmizi:#E3141E}
 html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
 body{position:relative;color:#fff;background:
- radial-gradient(ellipse 60% 45% at 50% 38%,#F2333A 0%,rgba(242,51,58,0) 70%),
- linear-gradient(180deg,#E3141E 0%,#C80F18 55%,#7A0810 100%)}
+ radial-gradient(ellipse 55% 45% at 28% 45%,#F2333A 0%,rgba(242,51,58,0) 70%),
+ linear-gradient(180deg,#E3141E 0%,#C80F18 60%,#8E0912 100%)}
 .isik{position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,0) 0 120px,rgba(255,255,255,.035) 160px,rgba(255,255,255,0) 210px)}
 .gren{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay}
-.logo{position:absolute;left:50%;top:46px;height:82px;transform:translateX(-50%)}
-.dev{position:absolute;left:0;right:0;top:196px;text-align:center;font:262px/1 O7;letter-spacing:.01em;color:rgba(255,255,255,.13);white-space:nowrap}
-.dev2{position:absolute;left:0;right:0;top:196px;text-align:center;font:262px/1 O7;letter-spacing:.01em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.35);white-space:nowrap}
-.kisi{position:absolute;left:50%;top:236px;width:600px;margin-left:-300px;filter:drop-shadow(0 30px 40px rgba(60,0,4,.45))}
-.alt{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(180deg,rgba(94,6,11,0) 0%,rgba(94,6,11,.85) 38%,#4A0509 70%)}
-.blok{position:absolute;left:0;right:0;top:830px;text-align:center}
-.unvan{font:28px/1 O5;letter-spacing:.34em;padding-left:.34em;color:rgba(255,255,255,.85)}
-.ad{margin-top:12px;font:104px/1 O7;letter-spacing:.01em}
-.cizgi{width:90px;height:5px;background:#fff;margin:20px auto 0}
-.mazbata{margin-top:20px;font:34px/1 O3;letter-spacing:.12em}
-.mazbata b{font-family:O7;font-weight:normal}
-.kart{position:absolute;left:60px;right:60px;top:1112px;height:98px;background:#fff;color:#1B1A1A;display:flex;align-items:center;border-radius:4px;box-shadow:0 18px 40px rgba(40,0,3,.4)}
-.kart div{flex:1;text-align:center;padding:0 10px}
-.kart div+div{border-left:2px solid #E6E1DC}
-.kart small{display:block;font:17px/1 O5;letter-spacing:.24em;color:var(--kirmizi);margin-bottom:8px}
-.kart span{display:block;font:27px/1 O7;white-space:nowrap}
-.davet{position:absolute;left:0;right:0;top:1240px;text-align:center;font:34px/1 O7;letter-spacing:.3em;padding-left:.3em}
+.logo{position:absolute;left:60px;top:52px;height:74px}
+.baslik{position:absolute;left:60px;right:60px;top:150px;font:112px/1 O7;letter-spacing:.01em;white-space:nowrap}
+.baslik span{color:#FFD9DB}
+.kisi{position:absolute;left:-40px;top:300px;width:560px;filter:drop-shadow(0 30px 40px rgba(60,0,4,.45))}
+.sag{position:absolute;left:530px;right:56px;top:318px}
+.ad{font:76px/1.08 O7}
+.unvan{margin-top:14px;font:30px/1.2 O5;letter-spacing:.06em;color:#FFE3E4}
+.bilgi{margin-top:44px}
+.satir{border-top:3px solid rgba(255,255,255,.45);padding:20px 0 22px}
+.satir small{display:block;font:24px/1 O5;letter-spacing:.2em;color:#FFD0D3;margin-bottom:10px}
+.satir b{display:block;font:60px/1.1 O7;font-weight:normal}
+.satir i{display:block;font:36px/1.1 O5;font-style:normal;margin-top:4px}
+.band{position:absolute;left:0;right:0;bottom:0;height:150px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 -14px 40px rgba(60,0,4,.3)}
+.band div{font:64px/1 O7;color:var(--kirmizi);letter-spacing:.04em}
 </style><body>
 <div class="isik"></div>
 <svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
 <img class="logo" src="yp-logo-beyaz.png">
-<div class="dev">MAZBATA</div><div class="dev2">MAZBATA</div>
+<div class="baslik">MAZBATA TÖRENİ</div>
 <img class="kisi" src="dilaver-kesik.png">
-<div class="alt"></div>
-<div class="blok">
+<div class="sag">
+ <div class="ad">DİLAVER<br>DEMİR</div>
  <div class="unvan">YENİ PARTİ AYDIN İL BAŞKANI</div>
- <div class="ad">DİLAVER DEMİR</div>
- <div class="cizgi"></div>
- <div class="mazbata"><b>MAZBATA</b> TÖRENİ</div>
+ <div class="bilgi">
+  <div class="satir"><small>TARİH</small><b>2 KASIM 2026</b><i>PAZARTESİ</i></div>
+  <div class="satir"><small>SAAT</small><b>14.30</b></div>
+  <div class="satir"><small>YER</small><b>EFELER İLÇE<br>SEÇİM MÜDÜRLÜĞÜ</b></div>
+ </div>
 </div>
-<div class="kart">
- <div><small>TARİH</small><span>2 KASIM 2026 PAZARTESİ</span></div>
- <div style="flex:.55"><small>SAAT</small><span>14.30</span></div>
- <div><small>YER</small><span>EFELER İLÇE SEÇİM MÜDÜRLÜĞÜ</span></div>
-</div>
-<div class="davet">TÜM HALKIMIZ DAVETLİDİR</div>
+<div class="band"><div>TÜM HALKIMIZ DAVETLİDİR</div></div>
 </body></html>
