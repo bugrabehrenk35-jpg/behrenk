@@ -16,7 +16,7 @@ base+=(s**8)[...,None]*np.array([5,4,4],np.float32)
 d=np.hypot((xx-W/2)/(W/2),(yy-H/2)/(H/2)); base*=(1-0.45*np.clip(d-0.55,0,1))[...,None]
 img=Image.fromarray(base.clip(0,255).astype(np.uint8)).convert('RGBA')
 # imza: renkli sürüm, koyu gri kısımlar açık renge
-im=Image.open('../imza-orijinal.png').convert('RGBA'); a=np.asarray(im).astype(np.float32)
+im=Image.open('imza-duzen.png').convert('RGBA'); a=np.asarray(im).astype(np.float32)
 r,gc,b,al=a[...,0],a[...,1],a[...,2],a[...,3]
 koyu=(r-gc<40)&(np.maximum(np.maximum(r,gc),b)<150)
 a[koyu,0:3]=[232,226,220]
