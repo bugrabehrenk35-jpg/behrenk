@@ -22,8 +22,9 @@ img+=np.exp(-(xx**2/.12+yy**2/.03))[...,None]*np.array([20,14,10])
 d=np.hypot(xx*2,(y-.5)*2); img*=(1-0.5*np.clip(d-0.6,0,1))[...,None]
 img+=rng.normal(0,4.5,(H,W,1))
 bg=Image.fromarray(img.clip(0,255).astype(np.uint8)).convert('RGBA')
-im=Image.open('imza-krem.png'); iw=int(W*.80); im=im.resize((iw,int(im.height*iw/im.width)),Image.LANCZOS)
+import sys
+im=Image.open(sys.argv[1] if len(sys.argv)>1 else 'imza-krem.png'); iw=int(W*.80); im=im.resize((iw,int(im.height*iw/im.width)),Image.LANCZOS)
 px,py=(W-iw)//2,int(H*.635)-im.height//2
 m=Image.new('L',bg.size,0); m.paste(im.split()[3],(px,py)); sh=Image.new('RGBA',bg.size,(0,0,0,0)); sh.putalpha(m.filter(ImageFilter.GaussianBlur(36)).point(lambda v:int(v*.75)))
 bg.alpha_composite(sh); bg.alpha_composite(im,(px,py))
-bg.convert('RGB').resize((1206,2622),Image.LANCZOS).save('wallpaper-iphone17pro-perde.png',optimize=True)
+bg.convert('RGB').resize((1206,2622),Image.LANCZOS).save(sys.argv[2] if len(sys.argv)>2 else 'wallpaper-iphone17pro-perde.png',optimize=True)
