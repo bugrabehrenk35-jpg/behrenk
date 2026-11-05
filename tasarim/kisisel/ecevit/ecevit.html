@@ -4,29 +4,28 @@
 @font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
 @font-face{font-family:O3;src:url(../../fontlar-gecici/Oswald-300.ttf)}
 html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#0b0908}
-.foto{position:absolute;left:0;top:0;width:1080px;height:900px;overflow:hidden}
-.foto img{position:absolute;width:1760px;left:-360px;top:-10px}
+.foto{position:absolute;left:0;top:0;width:1080px;height:796px;overflow:hidden}
+.foto img{position:absolute;width:1320px;left:-232px;top:0}
 .foto::after{content:"";position:absolute;inset:0;background:
- linear-gradient(180deg,rgba(11,9,8,.55) 0%,rgba(11,9,8,0) 22%,rgba(11,9,8,0) 55%,rgba(11,9,8,.85) 85%,#0b0908 100%),
+ linear-gradient(180deg,rgba(11,9,8,.35) 0%,rgba(11,9,8,0) 14%,rgba(11,9,8,0) 52%,rgba(11,9,8,.8) 84%,#0b0908 100%),
  radial-gradient(ellipse 70% 80% at 50% 40%,transparent 50%,rgba(11,9,8,.6) 100%)}
 .gren{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay}
 .ust{position:absolute;left:0;right:0;top:54px;text-align:center;font:26px/1 O5;letter-spacing:.5em;padding-left:.5em;color:#e9e1d6}
 .blok{position:absolute;left:0;right:0;top:820px;text-align:center}
-.karaoglan{font:30px/1 O3;letter-spacing:.62em;padding-left:.62em;color:#e9e1d6}
+.karaoglan{font:26px/1 O3;letter-spacing:.42em;padding-left:.42em;color:#e9e1d6}
 .ad{margin-top:14px;font:118px/1 PF;color:#E21E28;letter-spacing:.01em;text-shadow:0 6px 30px rgba(0,0,0,.6)}
 .yil{margin-top:20px;display:flex;justify-content:center;align-items:center;gap:22px;font:30px/1 O5;letter-spacing:.18em;color:#e9e1d6}
 .yil i{width:60px;height:2px;background:#E21E28;display:block}
 .soz{margin-top:26px;font:40px/1.2 PI;color:#f2ebe1}
-.imza{position:absolute;left:50%;bottom:58px;height:128px;transform:translateX(-50%)}
+.imza{position:absolute;left:0;right:0;bottom:58px;display:flex;justify-content:center;align-items:center;gap:30px}.imza .lg{height:118px}.imza .ay{width:2px;height:104px;background:#6b6f75}.imza .is{height:108px}
 </style><body>
 <div class="foto"><img src="ecevit-ton.jpg"></div>
 <svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
-<div class="ust">VEFATININ 20. YILINDA</div>
 <div class="blok">
- <div class="karaoglan">KARAOĞLAN</div>
+ <div class="karaoglan">VEFATININ 20. YILINDA · KARAOĞLAN</div>
  <div class="ad">BÜLENT ECEVİT</div>
  <div class="yil"><i></i>1925 – 2006<i></i></div>
  <div class="soz">Saygı ve özlemle…</div>
 </div>
-<img class="imza" src="imza-beyaz-kirmizi.png">
+<div class="imza"><img class="lg" src="logo-genclik-beyaz.png"><span class="ay"></span><img class="is" src="imza-isim-gri.png"></div>
 </body></html>
