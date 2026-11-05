@@ -6,14 +6,14 @@
 @font-face{font-family:M6;src:url(../../fontlar-gecici/Montserrat-600.ttf)}
 :root{--k:#E3141E}
 html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#120607;color:#fff}
-.bg{position:absolute;left:0;top:0;width:1080px;height:760px;-webkit-mask:linear-gradient(180deg,#000 0,#000 55%,transparent 80%);background:url(kalabalik-kirmizi.jpg) 40px -330px/1360px auto no-repeat;opacity:.85}
+.bg{position:absolute;left:0;top:0;width:1080px;height:760px;-webkit-mask:linear-gradient(180deg,#000 0,#000 55%,transparent 80%);background:url(kalabalik-kirmizi.jpg) 40px -150px/1360px auto no-repeat;opacity:.85}
 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,6,7,.92) 0%,rgba(18,6,7,.6) 38%,rgba(18,6,7,.05) 62%),linear-gradient(180deg,rgba(18,6,7,0) 55%,#120607 100%)}
 .gren{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay}
-.ozel{position:absolute;left:380px;top:236px;width:740px;-webkit-mask:linear-gradient(180deg,#000 0,#000 66%,transparent 92%);filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+.ozel{position:absolute;left:478px;top:330px;width:720px;-webkit-mask:linear-gradient(180deg,#000 0,#000 62%,transparent 90%);filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
 .ozel-fade{position:absolute;left:0;right:0;top:560px;height:160px;background:linear-gradient(180deg,rgba(18,6,7,0),#120607)}
 .etiket{position:absolute;left:60px;top:70px;font:28px/1 O5;letter-spacing:.3em;color:#ffd6d8}
 .baslik{position:absolute;left:56px;top:112px;font:80px/1.06 O7;letter-spacing:.005em}
-.slogan{position:absolute;left:60px;top:300px;background:var(--k);padding:14px 22px 16px;font:64px/1 O7;transform:rotate(-2deg);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.slogan{position:absolute;left:60px;top:300px;line-height:1.05!important;background:var(--k);padding:14px 22px 16px;font:64px/1 O7;transform:rotate(-2deg);box-shadow:0 14px 30px rgba(0,0,0,.45)}
 .zaman{position:absolute;left:0;right:0;top:586px;display:flex;justify-content:center;gap:0}
 .zaman div{text-align:center;padding:0 40px}
 .zaman div+div{border-left:3px solid var(--k)}
@@ -24,17 +24,17 @@ html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#120607
 .yer .b{font:27px/1.12 M8;white-space:nowrap;color:#fff}
 .yer .m{margin-top:5px;font:23px/1.2 M6;color:#ffcfd2}
 .yer.genis{grid-column:1/3}
-.alt{position:absolute;left:0;right:0;bottom:30px;display:flex;justify-content:center;align-items:center;gap:26px}
+.alt{position:absolute;left:0;right:0;bottom:62px;display:flex;justify-content:center;align-items:center;gap:26px}
 .alt .lg{height:96px}.alt .ay{width:2px;height:84px;background:#4b4f55}.alt .is{height:88px}
 .cagri{position:absolute;left:0;right:0;top:1158px;text-align:center;font:30px/1 O7;letter-spacing:.06em;color:#fff}
 </style><body>
 <div class="bg"></div>
-<img class="ozel" src="ozel-kesik.png">
 <div class="ozel-fade"></div>
 <svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
 <div class="etiket">YENİ PARTİ DİDİM</div>
 <div class="baslik">GENEL BAŞKANLIK<br>ÖN SEÇİMİ</div>
-<div class="slogan">BU KEZ SÖZ ÜYENİN!</div>
+<div class="slogan">BU KEZ<br>SÖZ ÜYENİN!</div>
+<img class="ozel" src="ozel-kesik.png">
 <div class="zaman"><div><small>TARİH</small><b>8 KASIM PAZAR</b></div><div><small>SAAT</small><b>08.00–19.00</b></div></div>
 <div class="liste">
  <div class="yer"><div class="b">Akbük</div><div class="m">Türkan Saylan Kültür Merkezi</div></div>
@@ -45,6 +45,5 @@ html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#120607
  <div class="yer"><div class="b">Fevzipaşa – Denizköy</div><div class="m">Uslu Sitesi Çay Bahçesi</div></div>
  <div class="yer genis"><div class="b">Altınkum – Çamlık – Efeler – Yeni Mh. – Hisar – Cumhuriyet</div><div class="m">Merkez Park, Eski Belediye Nikâh Salonu</div></div>
 </div>
-<div class="cagri">DİDİM'DE DAHA GÜÇLÜ BİR YENİ PARTİ İÇİN</div>
 <div class="alt"><img class="lg" src="logo-genclik-gri.png"><span class="ay"></span><img class="is" src="imza-isim-gri.png"></div>
 </body></html>
