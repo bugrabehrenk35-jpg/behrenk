@@ -609,6 +609,15 @@
         ],
         "createdAt": "2026-10-31T14:04:08.633Z",
         "reason": "Sosyal medya postu; Oswald bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ecevit/ecevit.html"
+        ],
+        "createdAt": "2026-11-05T10:21:59.585Z",
+        "reason": "Anma postu; Playfair/Oswald bilinçli"
       }
     ]
   },
