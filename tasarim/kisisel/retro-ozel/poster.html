@@ -1,47 +1,40 @@
 <!doctype html><html lang="tr"><meta charset="utf-8"><style>
 @font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin-ext.woff2)}@font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin-ext.woff2)}@font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin.woff2);unicode-range:U+0000-00FF}
-@font-face{font-family:AR;src:url(../../fontlar-gecici/ArchivoNarrow-latin-ext.woff2)}@font-face{font-family:AR;src:url(../../fontlar-gecici/ArchivoNarrow-latin.woff2);unicode-range:U+0000-00FF}
-@font-face{font-family:PC;src:url(../../fontlar-gecici/Pacifico-latin-ext.woff2)}@font-face{font-family:PC;src:url(../../fontlar-gecici/Pacifico-latin.woff2);unicode-range:U+0000-00FF}
-:root{--a:#2C2E33;--a2:#7A2328;--a3:#8E9198;--k:#ECE2C6;--k2:#7A2328}
-html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:var(--a)}
-.panel{position:absolute;left:26px;top:26px;right:26px;bottom:26px;border-radius:38px;background:radial-gradient(ellipse 80% 70% at 50% 45%,#F1E9D2 0%,var(--k) 55%,#DDD1B0 100%);overflow:hidden}
+@font-face{font-family:BB;src:url(../../fontlar-gecici/BebasNeue-latin-ext.woff2)}@font-face{font-family:BB;src:url(../../fontlar-gecici/BebasNeue-latin.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:YT;src:url(../../fontlar-gecici/Yellowtail.ttf)}
+/* referans: mor -> antrasit kırmızı, sarı -> antrasit beyaz */
+:root{--kr:#6E1A1F;--kr2:#93303A;--kr3:#B4545D;--b:#E6E3DE;--b2:#D3CFC8;--b3:#F2F0EC}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:var(--kr)}
+.panel{position:absolute;left:30px;top:30px;right:30px;bottom:30px;border-radius:40px;background:radial-gradient(ellipse 85% 75% at 50% 42%,var(--b3) 0%,var(--b) 55%,var(--b2) 100%);overflow:hidden}
 svg.l{position:absolute;left:0;top:0}
-.portre{position:absolute;left:-36px;top:418px;width:1100px}
-.pus{position:absolute;left:0;right:0;top:930px;height:280px;background:linear-gradient(180deg,rgba(236,226,198,0) 0%,rgba(226,214,180,.55) 55%,rgba(236,226,198,0) 100%)}
+.portre{position:absolute;left:-40px;top:392px;width:1100px}
 .isim{mix-blend-mode:multiply}
-.alt{position:absolute;left:0;right:0;text-align:center;font:44px/1 AR;color:var(--a);letter-spacing:.01em;white-space:nowrap}
-.alt small{font-size:26px;vertical-align:4px;margin-right:6px}
-.doku{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55}
-.toz{position:absolute;inset:0;mix-blend-mode:screen;opacity:.12}
+.alt{position:absolute;left:0;right:0;text-align:center;font:50px/1.1 BB;color:var(--kr);letter-spacing:.01em;white-space:nowrap}
+.alt small{font-size:28px;vertical-align:10px;margin-right:4px}
+.gren{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.35}
 </style><body>
 <div class="panel">
- <svg class="l" width="1028" height="1298" viewBox="0 0 1028 1298">
-  <!-- büyük kelimenin arkasındaki bant -->
-  <polygon points="58,168 970,168 918,290 110,290" fill="var(--a2)"/>
-  <!-- VOTE: açık gölge + ana -->
-  <text id="g" x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="var(--a3)" textLength="930" lengthAdjust="spacingAndGlyphs" transform="translate(-14,12)">VOTE</text>
-  <text x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="var(--a)" textLength="930" lengthAdjust="spacingAndGlyphs">VOTE</text>
-  <!-- harflerin içinde ince krem çizgi (eski baskı ışığı) -->
-  <text x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="none" stroke="var(--k)" stroke-opacity=".18" stroke-width="3" textLength="930" lengthAdjust="spacingAndGlyphs" transform="translate(6,-5)">VOTE</text>
-  <text x="514" y="240" text-anchor="middle" font-family="PC" font-size="64" fill="var(--k)">the</text>
-  <!-- şerit -->
-  <path d="M290,40 Q514,18 738,40 L760,128 Q514,104 268,128 Z" fill="var(--k2)"/>
-  <path d="M268,128 L250,100 L290,40 Z" fill="#4E1518"/><path d="M760,128 L778,100 L738,40 Z" fill="#4E1518"/>
-  <text x="514" y="112" text-anchor="middle" font-family="AN" font-size="82" fill="var(--k)" letter-spacing="3">GET OUT</text>
-  
+ <svg class="l" width="1020" height="1290" viewBox="0 0 1020 1290">
+  <!-- VOTE arkasındaki ters yamuk bant (açık kırmızı) -->
+  <polygon points="58,138 962,138 905,262 115,262" fill="var(--kr2)"/>
+  <!-- VOTE: açık gölge sola-aşağı, sonra koyu harf -->
+  <text x="510" y="742" text-anchor="middle" font-family="AN" font-size="610" fill="var(--kr3)" textLength="900" lengthAdjust="spacingAndGlyphs" transform="translate(-16,14)">VOTE</text>
+  <text x="510" y="742" text-anchor="middle" font-family="AN" font-size="610" fill="var(--b3)" textLength="900" lengthAdjust="spacingAndGlyphs" transform="translate(-5,4)">VOTE</text>
+  <text x="510" y="742" text-anchor="middle" font-family="AN" font-size="610" fill="var(--kr)" textLength="900" lengthAdjust="spacingAndGlyphs">VOTE</text>
+  <!-- GET OUT şeridi (antrasit beyaz, hafif kavisli) -->
+  <path d="M282,30 Q510,10 738,30 L756,118 Q510,96 264,118 Z" fill="var(--b2)"/>
+  <text x="510" y="104" text-anchor="middle" font-family="AN" font-size="86" fill="var(--kr)" letter-spacing="2" transform="rotate(-1.2 510 70)">GET OUT</text>
+  <text x="510" y="214" text-anchor="middle" font-family="YT" font-size="74" fill="var(--b3)">the</text>
  </svg>
  <img class="portre" src="ozel-erime.png">
- <div class="pus"></div>
- <svg class="l isim" width="1028" height="1298" viewBox="0 0 1028 1298">
-  <defs><linearGradient id="ig" x1="0" y1="985" x2="0" y2="1130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2C2E33" stop-opacity=".35"/><stop offset=".5" stop-color="#2C2E33" stop-opacity=".85"/><stop offset="1" stop-color="#2C2E33"/></linearGradient>
-  <filter id="kir"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="2" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6 1.9" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter></defs>
-  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="url(#ig)" filter="url(#kir)" textLength="940" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
+ <svg class="l isim" width="1020" height="1290" viewBox="0 0 1020 1290">
+  <defs><linearGradient id="ig" x1="0" y1="960" x2="0" y2="1100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6E1A1F" stop-opacity=".45"/><stop offset=".55" stop-color="#6E1A1F" stop-opacity=".9"/><stop offset="1" stop-color="#6E1A1F"/></linearGradient></defs>
+  <text x="510" y="1100" text-anchor="middle" font-family="AW" font-size="172" font-weight="900" fill="url(#ig)" textLength="950" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
  </svg>
- <div class="alt" style="top:1150px"><small>YENİ PARTİ</small>GENEL BAŞKANLIK ÖN SEÇİMİ</div>
- <div class="alt" style="top:1198px">8 KASIM 2026 PAZAR • DİDİM</div>
- <div class="alt" style="top:1246px">SANDIK AÇILIŞ: 08.00 &nbsp;•&nbsp; KAPANIŞ: 19.00</div>
- <svg class="doku" width="1028" height="1298"><filter id="p"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .42 0 0 0 .55 0"/></filter><rect width="1028" height="1298" filter="url(#p)"/></svg>
- <svg class="toz" width="1028" height="1298"><filter id="t"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="4" seed="9"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 .97 0 0 0 0 .9 0 0 0 1.6 -.9"/></filter><rect width="1028" height="1298" filter="url(#t)"/></svg>
+ <div class="alt" style="top:1118px"><small>YENİ PARTİ</small> GENEL BAŞKANLIK ÖN SEÇİMİ</div>
+ <div class="alt" style="top:1174px">8 KASIM 2026 PAZAR • DİDİM</div>
+ <div class="alt" style="top:1230px">SANDIK AÇILIŞ: 08.00 &nbsp;•&nbsp; KAPANIŞ: 19.00</div>
+ <svg class="gren" width="1020" height="1290"><filter id="p"><feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 .5 0 0 0 0 .48 0 0 0 0 .46 0 0 0 .6 0"/></filter><rect width="1020" height="1290" filter="url(#p)"/></svg>
 </div>
 </body></html>
