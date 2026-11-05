@@ -618,6 +618,15 @@
         ],
         "createdAt": "2026-11-05T10:21:59.585Z",
         "reason": "Anma postu; Playfair/Oswald bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/on-secim/onsecim.html"
+        ],
+        "createdAt": "2026-11-05T19:40:57.096Z",
+        "reason": "Sosyal medya afişi; Oswald/Montserrat bilinçli"
       }
     ]
   },
