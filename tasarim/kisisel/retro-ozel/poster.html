@@ -7,7 +7,9 @@
 html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:var(--a)}
 .panel{position:absolute;left:26px;top:26px;right:26px;bottom:26px;border-radius:38px;background:radial-gradient(ellipse 80% 70% at 50% 45%,#F1E9D2 0%,var(--k) 55%,#DDD1B0 100%);overflow:hidden}
 svg.l{position:absolute;left:0;top:0}
-.portre{position:absolute;left:40px;top:440px;width:950px;-webkit-mask:linear-gradient(180deg,#000 0,#000 70%,transparent 96%)}
+.portre{position:absolute;left:-36px;top:418px;width:1100px}
+.pus{position:absolute;left:0;right:0;top:930px;height:280px;background:linear-gradient(180deg,rgba(236,226,198,0) 0%,rgba(226,214,180,.55) 55%,rgba(236,226,198,0) 100%)}
+.isim{mix-blend-mode:multiply}
 .alt{position:absolute;left:0;right:0;text-align:center;font:44px/1 AR;color:var(--a);letter-spacing:.01em;white-space:nowrap}
 .alt small{font-size:26px;vertical-align:4px;margin-right:6px}
 .doku{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55}
@@ -29,10 +31,12 @@ svg.l{position:absolute;left:0;top:0}
   <text x="514" y="112" text-anchor="middle" font-family="AN" font-size="82" fill="var(--k)" letter-spacing="3">GET OUT</text>
   
  </svg>
- <img class="portre" src="ozel-kesik.png">
- <svg class="l" width="1028" height="1298" viewBox="0 0 1028 1298">
-  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="var(--a3)" textLength="940" lengthAdjust="spacingAndGlyphs" transform="translate(-8,7)" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
-  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="var(--a)" textLength="940" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
+ <img class="portre" src="ozel-erime.png">
+ <div class="pus"></div>
+ <svg class="l isim" width="1028" height="1298" viewBox="0 0 1028 1298">
+  <defs><linearGradient id="ig" x1="0" y1="985" x2="0" y2="1130" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2C2E33" stop-opacity=".35"/><stop offset=".5" stop-color="#2C2E33" stop-opacity=".85"/><stop offset="1" stop-color="#2C2E33"/></linearGradient>
+  <filter id="kir"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="2" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6 1.9" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter></defs>
+  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="url(#ig)" filter="url(#kir)" textLength="940" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
  </svg>
  <div class="alt" style="top:1150px"><small>YENİ PARTİ</small>GENEL BAŞKANLIK ÖN SEÇİMİ</div>
  <div class="alt" style="top:1198px">8 KASIM 2026 PAZAR • DİDİM</div>
