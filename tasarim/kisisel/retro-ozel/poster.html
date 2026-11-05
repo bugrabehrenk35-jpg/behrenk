@@ -2,6 +2,7 @@
 @font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin-ext.woff2)}@font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin-ext.woff2)}@font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:BB;src:url(../../fontlar-gecici/BebasNeue-latin-ext.woff2)}@font-face{font-family:BB;src:url(../../fontlar-gecici/BebasNeue-latin.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:DG;src:url(../../fontlar-gecici/X-DelaGothicOne400-latin-ext.woff2)}@font-face{font-family:DG;src:url(../../fontlar-gecici/X-DelaGothicOne400-latin.woff2);unicode-range:U+0000-00FF}
 @font-face{font-family:YT;src:url(../../fontlar-gecici/Yellowtail.ttf)}
 /* referans: mor -> antrasit kırmızı, sarı -> antrasit beyaz */
 :root{--kr:#6E1A1F;--kr2:#93303A;--kr3:#B4545D;--b:#E6E3DE;--b2:#D3CFC8;--b3:#F2F0EC}
@@ -30,11 +31,13 @@ svg.l{position:absolute;left:0;top:0}
  <img class="portre" src="ozel-erime.png">
  <svg class="l isim" width="1020" height="1290" viewBox="0 0 1020 1290">
   <defs><linearGradient id="ig" x1="0" y1="960" x2="0" y2="1100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6E1A1F" stop-opacity=".45"/><stop offset=".55" stop-color="#6E1A1F" stop-opacity=".9"/><stop offset="1" stop-color="#6E1A1F"/></linearGradient></defs>
-  <text x="510" y="1100" text-anchor="middle" font-family="AW" font-size="172" font-weight="900" fill="url(#ig)" textLength="950" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
+  <text x="510" y="1100" text-anchor="middle" font-family="DG" font-size="150" fill="url(#ig)" textLength="960" lengthAdjust="spacingAndGlyphs" transform="translate(510 1100) scale(1 .82) translate(-510 -1100)">ÖZGÜR ÖZEL</text>
  </svg>
- <div class="alt" style="top:1118px"><small>YENİ PARTİ</small> GENEL BAŞKANLIK ÖN SEÇİMİ</div>
- <div class="alt" style="top:1174px">8 KASIM 2026 PAZAR • DİDİM</div>
- <div class="alt" style="top:1230px">SANDIK AÇILIŞ: 08.00 &nbsp;•&nbsp; KAPANIŞ: 19.00</div>
+ <svg class="l" width="1020" height="1290" viewBox="0 0 1020 1290" style="font-family:AN;fill:var(--kr)">
+  <text x="510" y="1162" text-anchor="middle" font-size="50" textLength="900" lengthAdjust="spacingAndGlyphs"><tspan font-size="30" dy="-2">YENİ PARTİ</tspan><tspan dy="2"> GENEL BAŞKANLIK ÖN SEÇİMİ</tspan></text>
+  <text x="510" y="1218" text-anchor="middle" font-size="50" textLength="930" lengthAdjust="spacingAndGlyphs">8 KASIM 2026, PAZAR • DİDİM, AYDIN</text>
+  <text x="510" y="1272" text-anchor="middle" font-size="50" textLength="780" lengthAdjust="spacingAndGlyphs">SANDIK AÇILIŞ: 08.00 • KAPANIŞ: 19.00</text>
+ </svg>
  <svg class="gren" width="1020" height="1290"><filter id="p"><feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 .5 0 0 0 0 .48 0 0 0 0 .46 0 0 0 .6 0"/></filter><rect width="1020" height="1290" filter="url(#p)"/></svg>
 </div>
 </body></html>
