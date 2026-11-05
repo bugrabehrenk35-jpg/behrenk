@@ -627,6 +627,15 @@
         ],
         "createdAt": "2026-11-05T19:40:57.096Z",
         "reason": "Sosyal medya afişi; Oswald/Montserrat bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/retro-ozel/poster.html"
+        ],
+        "createdAt": "2026-11-05T21:07:36.708Z",
+        "reason": "Retro afiş; Anton/Archivo bilinçli"
       }
     ]
   },

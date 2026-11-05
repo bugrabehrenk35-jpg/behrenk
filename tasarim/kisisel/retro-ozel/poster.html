@@ -1,0 +1,43 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><style>
+@font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin-ext.woff2)}@font-face{font-family:AN;src:url(../../fontlar-gecici/Anton-latin.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin-ext.woff2)}@font-face{font-family:AW;src:url(../../fontlar-gecici/Archivo-latin.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:AR;src:url(../../fontlar-gecici/ArchivoNarrow-latin-ext.woff2)}@font-face{font-family:AR;src:url(../../fontlar-gecici/ArchivoNarrow-latin.woff2);unicode-range:U+0000-00FF}
+@font-face{font-family:PC;src:url(../../fontlar-gecici/Pacifico-latin-ext.woff2)}@font-face{font-family:PC;src:url(../../fontlar-gecici/Pacifico-latin.woff2);unicode-range:U+0000-00FF}
+:root{--a:#2C2E33;--a2:#5D6169;--a3:#8A8E95;--k:#ECE2C6;--k2:#D9CBA3}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:var(--a)}
+.panel{position:absolute;left:26px;top:26px;right:26px;bottom:26px;border-radius:38px;background:radial-gradient(ellipse 80% 70% at 50% 45%,#F1E9D2 0%,var(--k) 55%,#DDD1B0 100%);overflow:hidden}
+svg.l{position:absolute;left:0;top:0}
+.portre{position:absolute;left:40px;top:440px;width:950px;-webkit-mask:linear-gradient(180deg,#000 0,#000 70%,transparent 96%)}
+.alt{position:absolute;left:0;right:0;text-align:center;font:44px/1 AR;color:var(--a);letter-spacing:.01em;white-space:nowrap}
+.alt small{font-size:26px;vertical-align:4px;margin-right:6px}
+.doku{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55}
+.toz{position:absolute;inset:0;mix-blend-mode:screen;opacity:.12}
+</style><body>
+<div class="panel">
+ <svg class="l" width="1028" height="1298" viewBox="0 0 1028 1298">
+  <!-- büyük kelimenin arkasındaki bant -->
+  <polygon points="60,150 968,150 915,236 113,236" fill="var(--a2)"/>
+  <!-- ÜYENİN: açık gölge + ana -->
+  <text id="g" x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="var(--a3)" textLength="930" lengthAdjust="spacingAndGlyphs" transform="translate(-14,12)">ÜYENİN</text>
+  <text x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="var(--a)" textLength="930" lengthAdjust="spacingAndGlyphs">ÜYENİN</text>
+  <!-- harflerin içinde ince krem çizgi (eski baskı ışığı) -->
+  <text x="514" y="700" text-anchor="middle" font-family="AN" font-size="540" fill="none" stroke="var(--k)" stroke-opacity=".18" stroke-width="3" textLength="930" lengthAdjust="spacingAndGlyphs" transform="translate(6,-5)">ÜYENİN</text>
+  <text x="514" y="214" text-anchor="middle" font-family="PC" font-size="62" fill="var(--k)" stroke="var(--a2)" stroke-width="10" paint-order="stroke">söz</text>
+  <!-- şerit -->
+  <path d="M290,40 Q514,18 738,40 L760,128 Q514,104 268,128 Z" fill="var(--k2)"/>
+  <path d="M268,128 L250,100 L290,40 Z" fill="#BFB08A"/><path d="M760,128 L778,100 L738,40 Z" fill="#BFB08A"/>
+  <text x="514" y="112" text-anchor="middle" font-family="AN" font-size="82" fill="var(--a)" letter-spacing="3">BU KEZ</text>
+  
+ </svg>
+ <img class="portre" src="ozel-kesik.png">
+ <svg class="l" width="1028" height="1298" viewBox="0 0 1028 1298">
+  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="var(--a3)" textLength="940" lengthAdjust="spacingAndGlyphs" transform="translate(-8,7)" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
+  <text x="514" y="1128" text-anchor="middle" font-family="AW" font-size="168" font-weight="900" fill="var(--a)" textLength="940" lengthAdjust="spacingAndGlyphs" style="font-stretch:125%">ÖZGÜR ÖZEL</text>
+ </svg>
+ <div class="alt" style="top:1150px"><small>YENİ PARTİ</small>GENEL BAŞKANLIK ÖN SEÇİMİ</div>
+ <div class="alt" style="top:1198px">8 KASIM 2026 PAZAR • DİDİM</div>
+ <div class="alt" style="top:1246px">SANDIK AÇILIŞ: 08.00 &nbsp;•&nbsp; KAPANIŞ: 19.00</div>
+ <svg class="doku" width="1028" height="1298"><filter id="p"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .42 0 0 0 .55 0"/></filter><rect width="1028" height="1298" filter="url(#p)"/></svg>
+ <svg class="toz" width="1028" height="1298"><filter id="t"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="4" seed="9"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 .97 0 0 0 0 .9 0 0 0 1.6 -.9"/></filter><rect width="1028" height="1298" filter="url(#t)"/></svg>
+</div>
+</body></html>
