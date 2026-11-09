@@ -645,6 +645,15 @@
         ],
         "createdAt": "2026-11-09T10:04:11.329Z",
         "reason": "Anma görseli; Playfair/Cormorant/Oswald bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/10-kasim/bugra/anma.html"
+        ],
+        "createdAt": "2026-11-09T10:43:06.323Z",
+        "reason": "Sosyal medya posteri, sistem fontu değil"
       }
     ]
   },

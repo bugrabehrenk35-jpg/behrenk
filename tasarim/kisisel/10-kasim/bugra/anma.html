@@ -1,0 +1,34 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><style>
+@font-face{font-family:PF;src:url(../../../fontlar-gecici/PlayfairDisplay-600.ttf)}
+@font-face{font-family:CG;src:url(../../../fontlar-gecici/CormorantGaramond-500i.ttf)}
+@font-face{font-family:O5;src:url(../../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:O3;src:url(../../../fontlar-gecici/Oswald-300.ttf)}
+:root{--murekkep:#1B1918;--gri:#6E6862;--kir:#B8202A;--krem:#EFE8DD}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#111}
+.foto{position:absolute;left:0;top:0;width:1080px;height:1350px;overflow:hidden}
+.foto img{position:absolute;left:-40px;top:-470px;width:1180px}
+.alt{position:absolute;left:0;right:0;bottom:0;height:680px;background:linear-gradient(180deg,rgba(17,16,15,0) 0%,rgba(17,16,15,.18) 14%,rgba(17,16,15,.55) 30%,rgba(17,16,15,.88) 45%,#11100F 62%)}
+.gren{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay}
+.sol{position:absolute;left:78px;top:96px}
+.ust{font:22px/1 O5;letter-spacing:.42em;color:var(--gri)}
+.cizgi{width:64px;height:2px;background:var(--kir);margin:24px 0 28px}
+.tarih{font:146px/.9 PF;color:var(--murekkep)}
+.yil{margin-top:18px;display:flex;align-items:baseline;gap:20px;font:44px/1 O3;color:var(--murekkep);letter-spacing:.08em}
+.yil b{font:42px/1 O5;color:var(--kir);font-weight:normal}
+.soz{position:absolute;left:78px;right:78px;top:925px;font:44px/1.3 CG;color:var(--krem)}
+.soz small{display:block;margin-top:18px;font:21px/1 O5;letter-spacing:.34em;color:#A39B90;font-style:normal}
+.imza{position:absolute;left:0;right:0;bottom:56px;display:flex;justify-content:center;align-items:center;gap:30px}
+.imza .lg{height:96px}.imza .ay{width:1.5px;height:88px;background:#5a5650}.imza .is{height:90px}
+</style><body>
+<div class="foto"><img src="ataturk2-ton.jpg"></div>
+<div class="alt"></div>
+<svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
+<div class="sol">
+ <div class="ust">SAYGI VE ÖZLEMLE</div>
+ <div class="cizgi"></div>
+ <div class="tarih">10<br>Kasım</div>
+ <div class="yil"><span>1938</span><b>09.05</b></div>
+</div>
+<div class="soz">“Ey Türk gençliği! Birinci vazifen, Türk istiklâlini, Türk Cumhuriyetini, ilelebet muhafaza ve müdafaa etmektir.”<small>MUSTAFA KEMAL ATATÜRK</small></div>
+<div class="imza"><img class="lg" src="logo-genclik-gri.png"><span class="ay"></span><img class="is" src="imza-isim-gri.png"></div>
+</body></html>
