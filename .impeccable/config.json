@@ -663,6 +663,15 @@
         ],
         "createdAt": "2026-11-09T10:45:05.622Z",
         "reason": "Sosyal medya posteri"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/aliaga/aliaga.html"
+        ],
+        "createdAt": "2026-11-09T14:39:34.918Z",
+        "reason": "Sosyal medya posteri"
       }
     ]
   },
