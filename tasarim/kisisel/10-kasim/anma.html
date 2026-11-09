@@ -1,0 +1,52 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><style>
+@font-face{font-family:PF;src:url(../../fontlar-gecici/PlayfairDisplay-600.ttf)}
+@font-face{font-family:CG;src:url(../../fontlar-gecici/CormorantGaramond-500i.ttf)}
+@font-face{font-family:O5;src:url(../../fontlar-gecici/Oswald-500.ttf)}
+@font-face{font-family:O3;src:url(../../fontlar-gecici/Oswald-300.ttf)}
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+@font-face{font-family:YT;src:url(../../fontlar-gecici/Yellowtail.ttf)}
+@font-face{font-family:IN;src:url(../../fontlar-gecici/Inter-400.ttf)}
+:root{--krem:#EDE4D6;--gri:#A79E92;--kir:#C8202B}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;background:#0E0C0B}
+.foto{position:absolute;left:150px;top:0;width:930px;height:1060px;overflow:hidden}
+.foto img{position:absolute;right:-50px;top:-20px;height:1280px;-webkit-mask:linear-gradient(90deg,transparent 0%,#000 38%)}
+.foto::after{content:"";position:absolute;inset:0;background:
+ linear-gradient(90deg,#0E0C0B 0%,rgba(14,12,11,.75) 18%,rgba(14,12,11,0) 45%),
+ linear-gradient(180deg,rgba(14,12,11,.35) 0%,rgba(14,12,11,0) 18%,rgba(14,12,11,0) 60%,#0E0C0B 96%)}
+.isik{position:absolute;left:380px;top:80px;width:700px;height:700px;background:radial-gradient(circle,rgba(237,228,214,.10),transparent 65%)}
+.gren{position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay}
+.sol{position:absolute;left:78px;top:110px;width:520px}
+.ust{font:22px/1 O5;letter-spacing:.42em;color:var(--gri)}
+.cizgi{width:64px;height:2px;background:var(--kir);margin:26px 0 30px}
+.tarih{font:150px/.9 PF;color:var(--krem);letter-spacing:-.01em}
+.yil{margin-top:18px;display:flex;align-items:baseline;gap:22px;font:46px/1 O3;color:var(--krem);letter-spacing:.08em}
+.yil b{font:44px/1 O5;color:var(--kir);font-weight:normal;letter-spacing:.06em}
+.soz{position:absolute;left:78px;top:880px;width:640px;font:40px/1.3 CG;color:var(--krem)}
+.soz small{display:block;margin-top:16px;font:20px/1 O5;letter-spacing:.34em;color:var(--gri);font-style:normal}
+.metin{position:absolute;left:78px;top:1010px;width:900px;font:23px/1.5 IN;color:#C9C0B4}
+.imza{position:absolute;left:0;right:0;bottom:56px;display:flex;justify-content:center;align-items:center;gap:30px}
+.logo{display:flex;flex-direction:column;align-items:center}
+.logo img{height:74px}
+.logo span{margin-top:6px;font:24px/1 O7;letter-spacing:.32em;padding-left:.32em;color:var(--kir)}
+.ayrac{width:1.5px;height:96px;background:rgba(237,228,214,.35)}
+.ad{display:flex;flex-direction:column;align-items:flex-start}
+.ad .g{font:52px/.9 YT;color:var(--krem)}
+.ad .u{font:46px/1 O7;letter-spacing:.06em;color:var(--krem);margin-top:2px}
+.ad .t{font:15px/1 O5;letter-spacing:.14em;color:var(--gri);margin-top:6px}
+</style><body>
+<div class="isik"></div>
+<div class="foto"><img src="ataturk-ton.jpg"></div>
+<svg class="gren" width="1080" height="1350"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="11"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#g)"/></svg>
+<div class="sol">
+ <div class="ust">SAYGI VE ÖZLEMLE</div>
+ <div class="cizgi"></div>
+ <div class="tarih">10<br>Kasım</div>
+ <div class="yil"><span>1938</span><b>09.05</b></div>
+</div>
+<div class="soz">“Benim naçiz vücudum elbet bir gün toprak olacaktır, ancak Türkiye Cumhuriyeti ilelebet payidar kalacaktır.”<small>MUSTAFA KEMAL ATATÜRK</small></div>
+<div class="imza">
+ <div class="logo"><img src="yp-logo.png"><span>DİDİM</span></div>
+ <span class="ayrac"></span>
+ <div class="ad"><span class="g">Gökhan</span><span class="u">UZMAN</span><span class="t">YENİ PARTİ DİDİM İLÇE BAŞKANI</span></div>
+</div>
+</body></html>

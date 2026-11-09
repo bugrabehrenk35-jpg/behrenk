@@ -636,6 +636,15 @@
         ],
         "createdAt": "2026-11-05T21:07:36.708Z",
         "reason": "Retro afiş; Anton/Archivo bilinçli"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/10-kasim/anma.html"
+        ],
+        "createdAt": "2026-11-09T10:04:11.329Z",
+        "reason": "Anma görseli; Playfair/Cormorant/Oswald bilinçli"
       }
     ]
   },
