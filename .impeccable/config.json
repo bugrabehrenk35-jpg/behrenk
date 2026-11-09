@@ -672,6 +672,15 @@
         ],
         "createdAt": "2026-11-09T14:39:34.918Z",
         "reason": "Sosyal medya posteri"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/erkan-karakis/10-kasim/anma.html"
+        ],
+        "createdAt": "2026-11-09T20:37:16.831Z",
+        "reason": "Sosyal medya posteri"
       }
     ]
   },
