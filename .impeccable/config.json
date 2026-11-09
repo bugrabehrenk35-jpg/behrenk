@@ -654,6 +654,15 @@
         ],
         "createdAt": "2026-11-09T10:43:06.323Z",
         "reason": "Sosyal medya posteri, sistem fontu değil"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/10-kasim/bugra-modern/modern.html"
+        ],
+        "createdAt": "2026-11-09T10:45:05.622Z",
+        "reason": "Sosyal medya posteri"
       }
     ]
   },
