@@ -681,6 +681,15 @@
         ],
         "createdAt": "2026-11-09T20:37:16.831Z",
         "reason": "Sosyal medya posteri"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "yeni-parti/rehber/ilce-baskani-rehberi.html"
+        ],
+        "createdAt": "2026-11-10T12:51:02.402Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font (kimlik/kurumsal-fontlar.pdf)"
       }
     ]
   },
