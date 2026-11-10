@@ -699,6 +699,15 @@
         ],
         "createdAt": "2026-11-10T12:56:00.282Z",
         "reason": "Gökhan Uzman's established signature fonts (Yellowtail, Oswald) alongside corporate Oxygen"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "tasarim/kisisel/facebook-kisitlama/aciklama.html"
+        ],
+        "createdAt": "2026-11-10T13:19:39.951Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font"
       }
     ]
   },
