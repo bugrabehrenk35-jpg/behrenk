@@ -708,6 +708,15 @@
         ],
         "createdAt": "2026-11-10T13:19:39.951Z",
         "reason": "Oxygen is Yeni Parti's official alternative corporate font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "yeni-parti/rehber/genclik-baskani-rehberi.html"
+        ],
+        "createdAt": "2026-11-10T20:12:47.829Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font"
       }
     ]
   },
