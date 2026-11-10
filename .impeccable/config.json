@@ -690,6 +690,15 @@
         ],
         "createdAt": "2026-11-10T12:51:02.402Z",
         "reason": "Oxygen is Yeni Parti's official alternative corporate font (kimlik/kurumsal-fontlar.pdf)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "yeni-parti/rehber/ilce-baskani-rehberi.html"
+        ],
+        "createdAt": "2026-11-10T12:56:00.282Z",
+        "reason": "Gökhan Uzman's established signature fonts (Yellowtail, Oswald) alongside corporate Oxygen"
       }
     ]
   },
