@@ -726,6 +726,15 @@
         ],
         "createdAt": "2026-11-10T20:18:23.720Z",
         "reason": "Oxygen is Yeni Parti's official alternative corporate font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "yeni-parti/rehber/hedef-takip-2027.html"
+        ],
+        "createdAt": "2026-11-10T20:34:31.784Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font"
       }
     ]
   },
