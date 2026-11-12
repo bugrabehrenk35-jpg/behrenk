@@ -744,6 +744,15 @@
         ],
         "createdAt": "2026-11-12T14:09:01.722Z",
         "reason": "Oxygen is Yeni Parti's official alternative corporate font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "yeni-parti/rehber/iyk-konusma-12-11-2026.html"
+        ],
+        "createdAt": "2026-11-12T14:41:39.904Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font"
       }
     ]
   },
