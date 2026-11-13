@@ -780,6 +780,15 @@
         ],
         "createdAt": "2026-11-13T09:31:26.598Z",
         "reason": "Personal product ad, not party branding"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi/story.html"
+        ],
+        "createdAt": "2026-11-13T09:32:14.844Z",
+        "reason": "Personal product ad, not party branding"
       }
     ]
   },
