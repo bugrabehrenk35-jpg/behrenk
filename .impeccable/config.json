@@ -771,6 +771,15 @@
         ],
         "createdAt": "2026-11-12T18:02:52.060Z",
         "reason": "Corporate Oxygen plus Gökhan Uzman's established signature fonts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi/ilan.html"
+        ],
+        "createdAt": "2026-11-13T09:31:26.598Z",
+        "reason": "Personal product ad, not party branding"
       }
     ]
   },
