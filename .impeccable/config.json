@@ -825,6 +825,15 @@
         ],
         "createdAt": "2026-11-15T08:56:23.714Z",
         "reason": "User asked for unconventional typography"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ecevit-kibris/story.html"
+        ],
+        "createdAt": "2026-11-15T16:36:40.547Z",
+        "reason": "Commemorative poster typography"
       }
     ]
   },
