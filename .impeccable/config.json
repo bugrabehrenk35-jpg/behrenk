@@ -816,6 +816,15 @@
         ],
         "createdAt": "2026-11-15T08:48:08.225Z",
         "reason": "Event visual with Gökhan Uzman signature fonts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/kktc-bugra/post.html"
+        ],
+        "createdAt": "2026-11-15T08:56:23.714Z",
+        "reason": "User asked for unconventional typography"
       }
     ]
   },
