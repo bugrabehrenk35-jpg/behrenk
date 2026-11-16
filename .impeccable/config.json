@@ -834,6 +834,15 @@
         ],
         "createdAt": "2026-11-15T16:36:40.547Z",
         "reason": "Commemorative poster typography"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sahaya-cikiyoruz/post.html"
+        ],
+        "createdAt": "2026-11-16T19:32:51.339Z",
+        "reason": "Montserrat for full Turkish glyphs plus Gökhan Uzman signature fonts"
       }
     ]
   },
