@@ -852,6 +852,15 @@
         ],
         "createdAt": "2026-11-17T07:45:47.366Z",
         "reason": "Corporate Oxygen plus Gökhan Uzman signature fonts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sozcu-bugra/post.html"
+        ],
+        "createdAt": "2026-11-17T07:52:28.597Z",
+        "reason": "Corporate Oxygen plus mono for TV test-card concept"
       }
     ]
   },
