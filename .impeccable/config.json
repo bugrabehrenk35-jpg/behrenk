@@ -861,6 +861,15 @@
         ],
         "createdAt": "2026-11-17T07:52:28.597Z",
         "reason": "Corporate Oxygen plus mono for TV test-card concept"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sozcu-bugra/sade.html"
+        ],
+        "createdAt": "2026-11-17T07:54:02.705Z",
+        "reason": "Corporate Oxygen plus mono accent"
       }
     ]
   },
