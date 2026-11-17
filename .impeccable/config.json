@@ -843,6 +843,15 @@
         ],
         "createdAt": "2026-11-16T19:32:51.339Z",
         "reason": "Montserrat for full Turkish glyphs plus Gökhan Uzman signature fonts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sozcu-kayyum/post.html"
+        ],
+        "createdAt": "2026-11-17T07:45:47.366Z",
+        "reason": "Corporate Oxygen plus Gökhan Uzman signature fonts"
       }
     ]
   },
