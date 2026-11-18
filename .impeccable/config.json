@@ -879,6 +879,15 @@
         ],
         "createdAt": "2026-11-18T10:55:17.045Z",
         "reason": "Corporate Oxygen plus logo wordmark font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/vekil-ziyaret/grup.html"
+        ],
+        "createdAt": "2026-11-18T11:03:31.507Z",
+        "reason": "Corporate Oxygen plus display headline font"
       }
     ]
   },

@@ -1,0 +1,40 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><style>
+@font-face{font-family:Ox;font-weight:400;src:url(oxygen-latin-ext-400-normal.woff2);unicode-range:U+0100-0130,U+0132-024F}
+@font-face{font-family:Ox;font-weight:400;src:url(oxygen-latin-400-normal.woff2);unicode-range:U+0000-00FF,U+0131,U+2000-206F}
+@font-face{font-family:Ox;font-weight:700;src:url(oxygen-latin-ext-700-normal.woff2);unicode-range:U+0100-0130,U+0132-024F}
+@font-face{font-family:Ox;font-weight:700;src:url(oxygen-latin-700-normal.woff2);unicode-range:U+0000-00FF,U+0131,U+2000-206F}
+@font-face{font-family:AB;src:url(../../fontlar-gecici/ArchivoBlack.ttf)}
+@font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
+:root{--kir:#EC1E27}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden;color:#fff;font-family:Ox,sans-serif;
+background:radial-gradient(700px 520px at 50% 40%,#F2363E 0,#C8141E 38%,#6E0A10 72%,#200406 100%)}
+.isin{position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 46%,rgba(255,255,255,.07) 0 4deg,transparent 4deg 13deg);-webkit-mask:radial-gradient(circle at 50% 46%,#000 0,transparent 62%)}
+.gren{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.arka{position:absolute;left:0;right:0;top:200px;text-align:center;font:250px/1 AB;letter-spacing:-.04em;color:rgba(255,255,255,.12)}
+.ust{position:absolute;left:0;right:0;top:56px;text-align:center}
+.ust .k{font:700 22px/1 Ox;letter-spacing:.36em;color:#FFD9DB}
+.ust h1{margin:18px 0 0;font:72px/1.1 AB;white-space:nowrap;letter-spacing:-.03em}
+.p{position:absolute;filter:drop-shadow(0 18px 30px rgba(30,0,0,.55))}
+.alt{position:absolute;left:0;right:0;bottom:0;height:520px;background:linear-gradient(180deg,rgba(32,4,6,0) 0,rgba(32,4,6,.85) 32%,#1C0305 60%)}
+.isimler{position:absolute;left:40px;right:40px;top:930px;display:flex;justify-content:space-between;text-align:center}
+.isimler div{width:240px}.isimler b{display:block;font:700 26px/1.15 Ox}.isimler span{display:block;margin-top:6px;font:400 18px/1.2 Ox;color:#FFB3B7}
+.bilgi{position:absolute;left:70px;right:70px;top:1062px;display:flex;align-items:center;justify-content:center;gap:34px;padding:22px 0;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.bilgi b{font:700 36px/1 Ox}.bilgi i{width:9px;height:9px;border-radius:50%;background:var(--kir);display:inline-block}
+.yer{position:absolute;left:0;right:0;top:1176px;text-align:center;font:400 28px/1 Ox;color:#E8D2D3}
+.logo{position:absolute;left:0;right:0;bottom:42px;display:flex;justify-content:center;align-items:center;gap:14px}
+.logo img{height:58px}.logo span{font:22px/1 O7;letter-spacing:.34em;color:#fff;padding-left:14px;border-left:1.5px solid rgba(255,255,255,.4)}
+</style><body>
+<div class="isin"></div>
+<div class="arka">DİDİM</div>
+<div class="ust"><div class="k">SEÇİMİN ARDINDAN İLK SAHA BULUŞMASI</div><h1>Aydın, Didim’de buluşuyor</h1></div>
+<img class="p" src="bulbul-g.png" style="left:-50px;top:330px;width:420px;z-index:1">
+<img class="p" src="karakoz-g.png" style="left:710px;top:330px;width:420px;z-index:1">
+<img class="p" src="tezcan-g.png" style="left:175px;top:300px;width:450px;z-index:2">
+<img class="p" src="demir-g.png" style="left:455px;top:300px;width:450px;z-index:2">
+<div class="alt"></div>
+<div class="isimler"><div><b>Süleyman Bülbül</b><span>Aydın Milletvekili</span></div><div><b>Bülent Tezcan</b><span>Aydın Milletvekili</span></div><div><b>Dilaver Demir</b><span>Aydın İl Başkanı</span></div><div><b>Evrim Karakoz</b><span>Aydın Milletvekili</span></div></div>
+<div class="bilgi"><b>20 Kasım Cuma</b><i></i><b>16.00</b></div>
+<div class="yer">Yeni Parti Didim İlçe Başkanlığı · Tüm halkımız davetlidir</div>
+<div class="logo"><img src="yp-beyaz.png"><span>DİDİM</span></div>
+<svg class="gren" width="1080" height="1350"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="1080" height="1350" filter="url(#n)"/></svg>
+</body></html>
