@@ -888,6 +888,15 @@
         ],
         "createdAt": "2026-11-18T11:03:31.507Z",
         "reason": "Corporate Oxygen plus display headline font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ox",
+        "files": [
+          "tasarim/kisisel/cocuk-haklari/story.html"
+        ],
+        "createdAt": "2026-11-19T12:07:37.316Z",
+        "reason": "Oxygen is Yeni Parti's official alternative corporate font"
       }
     ]
   },
