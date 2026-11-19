@@ -906,6 +906,15 @@
         ],
         "createdAt": "2026-11-19T12:08:53.832Z",
         "reason": "Oxygen is Yeni Parti's official alternative corporate font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/cocuk-haklari-gokhan/post.html"
+        ],
+        "createdAt": "2026-11-19T12:18:50.280Z",
+        "reason": "Corporate Oxygen plus Gökhan Uzman signature fonts"
       }
     ]
   },
