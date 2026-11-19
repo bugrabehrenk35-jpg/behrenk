@@ -942,6 +942,24 @@
         ],
         "createdAt": "2026-11-19T12:23:52.158Z",
         "reason": "Corporate Oxygen plus signature fonts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi-2/post.html"
+        ],
+        "createdAt": "2026-11-19T18:10:33.096Z",
+        "reason": "Personal product ad, not party branding"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi-2/story.html"
+        ],
+        "createdAt": "2026-11-19T18:10:33.117Z",
+        "reason": "Personal product ad, not party branding"
       }
     ]
   },
