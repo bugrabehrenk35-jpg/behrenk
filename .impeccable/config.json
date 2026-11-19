@@ -978,6 +978,24 @@
         ],
         "createdAt": "2026-11-19T18:46:26.657Z",
         "reason": "Personal product ad, not party branding"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi-2/st2.html"
+        ],
+        "createdAt": "2026-11-19T18:52:12.126Z",
+        "reason": "Personal product ad, not party branding"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/zeytinyagi-2/st3.html"
+        ],
+        "createdAt": "2026-11-19T18:52:12.144Z",
+        "reason": "Personal product ad, not party branding"
       }
     ]
   },
