@@ -1014,6 +1014,15 @@
         ],
         "createdAt": "2026-11-20T06:35:48.077Z",
         "reason": "Sosyal medya afişi; referans tasarımdaki gibi Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/cocuk-haklari-ataturk/post4.html"
+        ],
+        "createdAt": "2026-11-20T06:37:42.728Z",
+        "reason": "Sosyal medya afişi; Anton başlık"
       }
     ]
   },
