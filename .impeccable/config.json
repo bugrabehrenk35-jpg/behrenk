@@ -1005,6 +1005,15 @@
         ],
         "createdAt": "2026-11-20T06:34:13.371Z",
         "reason": "Sosyal medya görseli; anma alıntısı için Playfair, imza için Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/cocuk-haklari-ataturk/post2.html"
+        ],
+        "createdAt": "2026-11-20T06:35:48.077Z",
+        "reason": "Sosyal medya afişi; referans tasarımdaki gibi Anton başlık"
       }
     ]
   },
