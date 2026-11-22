@@ -1059,6 +1059,15 @@
         ],
         "createdAt": "2026-11-22T09:58:07.159Z",
         "reason": "Başsağlığı görseli; Gökhan Uzman imzası Yellowtail/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sehit-yalin-gergun/story-bugra.html"
+        ],
+        "createdAt": "2026-11-22T10:34:59.415Z",
+        "reason": "Başsağlığı story; imza Oswald"
       }
     ]
   },
