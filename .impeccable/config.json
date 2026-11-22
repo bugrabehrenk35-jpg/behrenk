@@ -1041,6 +1041,24 @@
         ],
         "createdAt": "2026-11-20T06:44:58.632Z",
         "reason": "Sosyal medya story; Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sehit-yalin-gergun/post.html"
+        ],
+        "createdAt": "2026-11-22T09:58:07.148Z",
+        "reason": "Başsağlığı görseli; Gökhan Uzman imzası Yellowtail/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sehit-yalin-gergun/story.html"
+        ],
+        "createdAt": "2026-11-22T09:58:07.159Z",
+        "reason": "Başsağlığı görseli; Gökhan Uzman imzası Yellowtail/Oswald"
       }
     ]
   },
