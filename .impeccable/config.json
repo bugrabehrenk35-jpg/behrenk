@@ -1086,6 +1086,15 @@
         ],
         "createdAt": "2026-11-23T20:29:23.143Z",
         "reason": "Öğretmenler Günü görseli; Playfair başlık, Gökhan Uzman imzası"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ogretmenler-bugra/post.html"
+        ],
+        "createdAt": "2026-11-23T20:43:12.305Z",
+        "reason": "Öğretmenler Günü afişi; Anton başlık"
       }
     ]
   },
