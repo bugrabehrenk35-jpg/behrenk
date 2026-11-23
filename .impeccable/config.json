@@ -1077,6 +1077,15 @@
         ],
         "createdAt": "2026-11-23T20:13:09.005Z",
         "reason": "Destek görseli; başlık Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ogretmenler-gunu/post.html"
+        ],
+        "createdAt": "2026-11-23T20:29:23.143Z",
+        "reason": "Öğretmenler Günü görseli; Playfair başlık, Gökhan Uzman imzası"
       }
     ]
   },
