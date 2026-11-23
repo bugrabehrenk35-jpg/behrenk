@@ -1068,6 +1068,15 @@
         ],
         "createdAt": "2026-11-22T10:34:59.415Z",
         "reason": "Başsağlığı story; imza Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ibrahim-destek/post.html"
+        ],
+        "createdAt": "2026-11-23T20:13:09.005Z",
+        "reason": "Destek görseli; başlık Oswald"
       }
     ]
   },
