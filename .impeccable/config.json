@@ -1095,6 +1095,15 @@
         ],
         "createdAt": "2026-11-23T20:43:12.305Z",
         "reason": "Öğretmenler Günü afişi; Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ogretmenler-bugra/story.html"
+        ],
+        "createdAt": "2026-11-23T20:45:05.187Z",
+        "reason": "Öğretmenler Günü story; Anton başlık"
       }
     ]
   },
