@@ -1104,6 +1104,15 @@
         ],
         "createdAt": "2026-11-23T20:45:05.187Z",
         "reason": "Öğretmenler Günü story; Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/hikmet-cetin/post.html"
+        ],
+        "createdAt": "2026-11-24T17:24:04.420Z",
+        "reason": "Anma görseli; Oswald isim, Gökhan Uzman imzası"
       }
     ]
   },
