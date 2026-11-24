@@ -1113,6 +1113,42 @@
         ],
         "createdAt": "2026-11-24T17:24:04.420Z",
         "reason": "Anma görseli; Oswald isim, Gökhan Uzman imzası"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/aydin-butce/slayt1.html"
+        ],
+        "createdAt": "2026-11-24T18:38:09.566Z",
+        "reason": "Sosyal medya karuseli; Anton rakamlar, Oxygen metin"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/aydin-butce/slayt2.html"
+        ],
+        "createdAt": "2026-11-24T18:38:09.584Z",
+        "reason": "Sosyal medya karuseli; Anton rakamlar, Oxygen metin"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/aydin-butce/slayt3.html"
+        ],
+        "createdAt": "2026-11-24T18:38:09.600Z",
+        "reason": "Sosyal medya karuseli; Anton rakamlar, Oxygen metin"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/aydin-butce/slayt4.html"
+        ],
+        "createdAt": "2026-11-24T18:38:09.624Z",
+        "reason": "Sosyal medya karuseli; Anton rakamlar, Oxygen metin"
       }
     ]
   },
