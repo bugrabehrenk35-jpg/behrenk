@@ -1167,6 +1167,24 @@
         ],
         "createdAt": "2026-11-24T18:51:08.768Z",
         "reason": "Başsağlığı görseli; Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sehit-eskisehir/bs-post.html"
+        ],
+        "createdAt": "2026-11-24T18:58:13.899Z",
+        "reason": "Başsağlığı afişi; Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sehit-eskisehir/bs-story.html"
+        ],
+        "createdAt": "2026-11-24T18:58:13.917Z",
+        "reason": "Başsağlığı afişi; Anton başlık"
       }
     ]
   },
