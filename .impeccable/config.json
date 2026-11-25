@@ -1185,6 +1185,33 @@
         ],
         "createdAt": "2026-11-24T18:58:13.917Z",
         "reason": "Başsağlığı afişi; Anton başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ibrahim-eyvallah/story.html"
+        ],
+        "createdAt": "2026-11-25T20:08:07.863Z",
+        "reason": "Kişisel story ve imza; Cormorant/Yellowtail/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ibrahim-eyvallah/imza-beyaz.html"
+        ],
+        "createdAt": "2026-11-25T20:08:07.888Z",
+        "reason": "Kişisel story ve imza; Cormorant/Yellowtail/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ibrahim-eyvallah/imza-koyu.html"
+        ],
+        "createdAt": "2026-11-25T20:08:07.910Z",
+        "reason": "Kişisel story ve imza; Cormorant/Yellowtail/Oswald"
       }
     ]
   },
