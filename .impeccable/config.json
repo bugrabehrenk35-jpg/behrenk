@@ -1212,6 +1212,15 @@
         ],
         "createdAt": "2026-11-25T20:08:07.910Z",
         "reason": "Kişisel story ve imza; Cormorant/Yellowtail/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/ibrahim-eyvallah/story2.html"
+        ],
+        "createdAt": "2026-11-25T20:10:02.605Z",
+        "reason": "Kişisel story; Playfair/Cormorant"
       }
     ]
   },
