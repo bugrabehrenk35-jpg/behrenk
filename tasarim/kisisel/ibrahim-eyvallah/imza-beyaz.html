@@ -1,9 +1,13 @@
 <!doctype html><html lang="tr"><meta charset="utf-8"><style>
 @font-face{font-family:YT;src:url(../../fontlar-gecici/Yellowtail.ttf)}
 @font-face{font-family:O7;src:url(../../fontlar-gecici/Oswald-700.ttf)}
-html,body{margin:0;width:600px;height:300px;background:transparent;color:#f4efe9}
-.imza{position:absolute;left:40px;top:40px;display:flex;flex-direction:column;align-items:flex-start}
-.g{font:92px/.8 YT;margin-left:6px;transform:rotate(-4deg);transform-origin:left bottom}
-.u{font:84px/1 O7;letter-spacing:.06em;margin-top:2px}
-.s{margin-top:14px;width:330px;height:2px;background:linear-gradient(90deg,#EC1E27,transparent)}
-</style><body><div class="imza"><span class="g">İbrahim</span><span class="u">BÖCÜ</span><span class="s"></span></div></body></html>
+html,body{margin:0;width:600px;height:400px;background:transparent;color:#f4efe9}
+.imza{position:absolute;left:50%;top:40px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+.g{font:96px/.85 YT;padding:0 10px}
+.u{font:84px/1 O7;margin-top:4px;white-space:nowrap}
+.s{margin-top:14px;height:2px;background:linear-gradient(90deg,transparent,#EC1E27,transparent)}
+</style><body><div class="imza"><span class="g" id="g">İbrahim</span><span class="u" id="u">BÖCÜ</span><span class="s" id="s"></span></div>
+<script>document.fonts.ready.then(()=>{const g=document.getElementById('g').getBoundingClientRect().width-20,u=document.getElementById('u');
+u.style.letterSpacing='.08em';u.style.marginRight='-.08em';const w0=u.getBoundingClientRect().width-0.08*84;const fs=84*g/w0;u.style.fontSize=fs+'px';
+document.getElementById('s').style.width=g+'px';});</script>
+</body></html>
