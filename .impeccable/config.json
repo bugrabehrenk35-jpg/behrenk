@@ -1221,6 +1221,15 @@
         ],
         "createdAt": "2026-11-25T20:10:02.605Z",
         "reason": "Kişisel story; Playfair/Cormorant"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/su-indirimi/post.html"
+        ],
+        "createdAt": "2026-11-26T15:33:24.481Z",
+        "reason": "Sosyal medya görseli; Anton başlık, Gökhan Uzman imzası"
       }
     ]
   },
