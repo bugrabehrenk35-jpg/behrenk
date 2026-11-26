@@ -1239,6 +1239,15 @@
         ],
         "createdAt": "2026-11-26T15:34:34.845Z",
         "reason": "Sosyal medya görseli; Anton başlık, Gökhan Uzman imzası"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/dosya/dosya.html"
+        ],
+        "createdAt": "2026-11-26T18:22:21.371Z",
+        "reason": "Basılı bilgi dosyası; Playfair başlık"
       }
     ]
   },
