@@ -1248,6 +1248,60 @@
         ],
         "createdAt": "2026-11-26T18:22:21.371Z",
         "reason": "Basılı bilgi dosyası; Playfair başlık"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/p1.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.816Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/p2.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.833Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/p3.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.852Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/p4.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.872Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/p5.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.891Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/s1.html"
+        ],
+        "createdAt": "2026-11-26T18:42:26.911Z",
+        "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
       }
     ]
   },
