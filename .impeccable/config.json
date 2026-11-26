@@ -1302,6 +1302,24 @@
         ],
         "createdAt": "2026-11-26T18:42:26.911Z",
         "reason": "Ziraat odası kampanya görseli; Playfair/Oswald"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/profil.html"
+        ],
+        "createdAt": "2026-11-26T18:55:21.329Z",
+        "reason": "Kampanya görseli; Oswald/Playfair"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/sukru-caglar/sosyal/kapak.html"
+        ],
+        "createdAt": "2026-11-26T18:55:21.345Z",
+        "reason": "Kampanya görseli; Oswald/Playfair"
       }
     ]
   },
