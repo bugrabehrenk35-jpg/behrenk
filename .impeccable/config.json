@@ -1230,6 +1230,15 @@
         ],
         "createdAt": "2026-11-26T15:33:24.481Z",
         "reason": "Sosyal medya görseli; Anton başlık, Gökhan Uzman imzası"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/su-indirimi/post-metin.html"
+        ],
+        "createdAt": "2026-11-26T15:34:34.845Z",
+        "reason": "Sosyal medya görseli; Anton başlık, Gökhan Uzman imzası"
       }
     ]
   },
