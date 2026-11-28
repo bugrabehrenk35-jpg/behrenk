@@ -1320,6 +1320,15 @@
         ],
         "createdAt": "2026-11-26T18:55:21.345Z",
         "reason": "Kampanya görseli; Oswald/Playfair"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "tasarim/kisisel/tahir-elci/post.html"
+        ],
+        "createdAt": "2026-11-28T11:26:45.010Z",
+        "reason": "Anma görseli; Playfair, Gökhan Uzman imzası"
       }
     ]
   },
